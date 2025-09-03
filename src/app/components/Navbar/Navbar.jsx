@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./nav.css";
@@ -8,6 +8,7 @@ import Image from "next/image";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
   const navItems = [
@@ -16,45 +17,48 @@ function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
         <Link href="/" className="nav-logo">
           <div className="nav-logo-container">
             <Image
               src="/images/header-suarez.webp"
               alt="Suarez"
-              width={80}
-              height={40}
-              style={{
-                width: 'auto',
-                height: '100%',
-                objectFit: 'contain',
-              }}
+              width={90}
+              height={45}
+              quality={100}
               priority
               className="nav-logo-image"
+              sizes="(max-width: 480px) 80px, (max-width: 768px) 90px, 100px"
             />
-            <div className="nav-logo-divider">|</div>
+            <div className="nav-logo-divider"></div>
             <Image
               src="/images/header-taller-chapa-y-pintura.webp"
               alt="Taller de Chapa y Pintura"
-              width={120}
-              height={40}
-              style={{
-                width: 'auto',
-                height: '100%',
-                objectFit: 'contain',
-              }}
+              width={145}
+              height={45}
+              quality={100}
+              priority
               className="nav-logo-image"
+              sizes="(max-width: 480px) 110px, (max-width: 768px) 130px, 150px"
             />
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
         <ul className="nav-menu">
           {navItems.map((item) => (
             <li key={item.name} className="nav-item">
@@ -67,8 +71,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        
-        {/* Mobile Menu Button */}
+
         <button
           className={`nav-toggle ${isMenuOpen ? "active" : ""}`}
           onClick={toggleMenu}
@@ -79,13 +82,14 @@ function Navbar() {
           <span className="hamburger-line"></span>
         </button>
 
-        {/* Mobile Navigation */}
         <ul className={`nav-menu-mobile ${isMenuOpen ? "active" : ""}`}>
           {navItems.map((item) => (
             <li key={item.name} className="nav-item-mobile">
               <Link
                 href={item.href}
-                className={`nav-link-mobile ${pathname === item.href ? "active" : ""}`}
+                className={`nav-link-mobile ${
+                  pathname === item.href ? "active" : ""
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
