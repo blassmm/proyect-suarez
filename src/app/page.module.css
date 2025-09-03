@@ -7,12 +7,13 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #121212;
 }
 
 .heroTitle {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #fff;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -21,7 +22,7 @@
   font-size: 1.2rem;
   max-width: 600px;
   line-height: 1.6;
-  color: #666;
+  color: #ccc;
   margin: 0 0 2rem 0;
 }
 
@@ -160,35 +161,35 @@
   .heroTitle {
     font-size: 2.2rem;
   }
-  
+
   .heroDescription {
     font-size: 1.1rem;
   }
-  
+
   .heroImagesGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     max-width: 90%;
   }
-  
+
   .heroImageContainer {
     height: 200px;
     max-width: 100%;
   }
-  
+
   .sectionTitle {
     font-size: 2rem;
   }
-  
+
   .featuresGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .featureCard {
     padding: 1.5rem;
   }
-  
+
   .hero,
   .featuresSection,
   .ctaSection {
@@ -202,16 +203,16 @@
     gap: 1rem;
     max-width: 95%;
   }
-  
+
   .heroImageContainer {
     height: 150px;
     max-width: 100%;
   }
-  
+
   .heroTitle {
     font-size: 1.8rem;
   }
-  
+
   .heroDescription {
     font-size: 1rem;
   }
@@ -221,15 +222,15 @@
   .heroTitle {
     font-size: 1.8rem;
   }
-  
+
   .heroDescription {
     font-size: 1rem;
   }
-  
+
   .sectionTitle {
     font-size: 1.6rem;
   }
-  
+
   .hero,
   .featuresSection,
   .ctaSection {
@@ -239,26 +240,24 @@
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .heroTitle,
   .sectionTitle {
     color: #fff;
   }
-  
-  .heroDescription,
+
   .featureDescription,
   .ctaDescription {
     color: #ccc;
   }
-  
+
   .featuresSection {
     background-color: #1a1a1a;
   }
-  
+
   .featureCard {
     background-color: #2a2a2a;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
   }
-  
+
   .featureCard:hover {
     box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1);
   }
