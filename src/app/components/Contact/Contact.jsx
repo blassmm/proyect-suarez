@@ -149,7 +149,6 @@ export default function Contact() {
             </div>
           </div>
 
-          <h2 className={styles.socialTitle}>Redes sociales</h2>
           <div className={styles.socialLinks}>
             <a
               href="https://www.facebook.com/TallerSuarezChapaYPintura"
