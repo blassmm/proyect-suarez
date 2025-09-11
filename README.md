@@ -10,8 +10,6 @@ v5 branch
 
 ## Environment Variables
 
-For SendGrid email functionality, create a `.env.local` file with:
-
 ```
 SENDGRID_API_KEY=YOUR_SENDGRID_API_KEY
 ```
