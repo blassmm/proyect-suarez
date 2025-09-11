@@ -4,6 +4,7 @@ import { initHomeAnimations } from "./animations";
 import styles from "./page.module.css";
 import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
+import LogoMarquee from "./components/Marquee/LogoMarquee";
 
 export default function Home() {
   const featuresRef = useRef();
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <Hero />
       <Services />
+      <LogoMarquee />
 
       <section className={styles.featuresSection} ref={featuresRef}>
         <h2 className={styles.sectionTitle}>Features</h2>
