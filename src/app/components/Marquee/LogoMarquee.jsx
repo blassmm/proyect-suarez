@@ -71,7 +71,7 @@ function LogoMarquee() {
         <MarqueeFade side="right" className={isMobile ? "w-40" : "w-150"} />
         <MarqueeContent
           autoFill={false}
-          pauseOnHover
+          pauseOnHover={false}
           speed={100}
           gradient={false}
         >
