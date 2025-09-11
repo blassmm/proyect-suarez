@@ -3,6 +3,7 @@ import { useRef, useEffect } from "react";
 import { initHomeAnimations } from "./animations";
 import styles from "./page.module.css";
 import Hero from "./components/Hero/Hero";
+import Services from "./components/Services/Services";
 
 export default function Home() {
   const featuresRef = useRef();
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Services />
 
       <section className={styles.featuresSection} ref={featuresRef}>
         <h2 className={styles.sectionTitle}>Features</h2>

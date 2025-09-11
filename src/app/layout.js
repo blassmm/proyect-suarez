@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import LenisWrapper from "./components/LenisWrapper";
 
 const geistSans = Geist({
@@ -20,7 +21,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <body
@@ -30,9 +30,8 @@ export default function RootLayout({ children }) {
           <header>
             <Navbar />
           </header>
-          <main>
-            {children}
-          </main>
+          <main>{children}</main>
+          <Footer />
         </LenisWrapper>
       </body>
     </html>
