@@ -1,4 +1,4 @@
-team branch 
+main branch
 
 # Nextjs - No TS - src Dir - Talwind - App Router
 
@@ -6,7 +6,7 @@ team branch
 
 # npm i gsap @gsap/react lenis
 
-# npm i react-leaflet leaflet @sendgrid/mail     (Leaflet y sendgrid para form de contacto)
+# npm i react-leaflet leaflet @sendgrid/mail (Leaflet y sendgrid para form de contacto)
 
 ## Environment Variables
 
