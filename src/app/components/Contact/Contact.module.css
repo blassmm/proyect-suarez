@@ -6,19 +6,130 @@
   gap: 2rem;
 }
 
+.contactForm {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-height: 120px;
+  resize: vertical;
+  transition: all 0.2s ease;
+}
+
+.formTextarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.errorMessage {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.submitButton {
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+}
+
 .contactInfo {
   margin-bottom: 2rem;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .contactInfo h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   color: #333;
+  text-align: center;
+}
+
+.infoItemsContainer {
+  margin-bottom: 1.5rem;
 }
 
 .infoItem {
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.infoIcon {
+  margin-right: 0.75rem;
+  font-size: 1.25rem;
+  color: #3b82f6;
+  min-width: 1.5rem;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.infoContent {
+  flex: 1;
 }
 
 .infoItem span {
@@ -26,14 +137,55 @@
   margin-right: 0.5rem;
 }
 
+.socialTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.socialLinks {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.socialLink:hover {
+  color: #3b82f6;
+  background-color: #f1f5f9;
+}
+
+.socialIcon {
+  margin-right: 0.75rem;
+  font-size: 1.25rem;
+  color: #3b82f6;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
 .mapContainer {
   width: 100%;
   height: 500px;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   position: relative;
   z-index: 1;
+  margin-top: 2rem;
+  border: 2px solid #e2e8f0;
 }
 
 .map {
@@ -42,12 +194,79 @@
 }
 
 /* Responsive styles */
+@media (max-width: 640px) {
+  .contactContainer {
+    padding: 1rem;
+  }
+
+  .contactForm {
+    padding: 1.5rem;
+  }
+
+  .contactInfo {
+    padding: 1.5rem;
+  }
+
+  .infoItem {
+    margin-bottom: 1.25rem;
+  }
+
+  .infoContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infoItem span {
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+
+  .socialLink span {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .infoItem {
+    margin-bottom: 1.25rem;
+  }
+
+  .socialLink {
+    padding: 0.75rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .contactContainer {
     padding: 3rem 4rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .contactForm {
+    flex: 1;
+    margin-right: 2rem;
+    align-self: stretch;
+    max-height: none;
+  }
+
+  .contactInfoAndMap {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
   }
 
   .mapContainer {
-    height: 600px;
+    flex-grow: 1;
+    height: 450px;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mapContainer {
+    height: 500px;
   }
 }
