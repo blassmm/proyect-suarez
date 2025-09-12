@@ -33,8 +33,8 @@ const BrandLogo = memo(({ brand, index }) => (
         quality={90}
         priority={index < 3}
         loading={index < 3 ? "eager" : "lazy"}
-        className="h-auto max-h-24 w-auto object-contain transition-transform hover:scale-110 duration-300"
-        style={{ maxWidth: "none" }}
+        className="object-contain transition-transform hover:scale-110 duration-300"
+        style={{ width: "auto", height: "auto" }}
         sizes="(max-width: 768px) 120px, 160px"
       />
     </div>

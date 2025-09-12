@@ -15,6 +15,7 @@ function Navbar() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
+    { name: "Restauraciones", href: "/restauraciones" },
   ];
 
   useEffect(() => {
