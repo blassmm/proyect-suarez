@@ -1,0 +1,244 @@
+.trabajosSection {
+  background-color: #121212;
+  color: #f8f9fa;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Aspectos Claves Section */
+.aspectosClaves {
+  background-color: #14b89a;
+  padding: 4rem 2rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  position: relative;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.aspectosGrid {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.aspectoItem {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.aspectoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.aspectoDesc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* Trabajos Section */
+.trabajosContainer {
+  padding: 4rem 2rem;
+  padding-top: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trabajosTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.trabajosGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.trabajoCard {
+  background-color: #1a1a1a;
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.trabajoCard:hover {
+  transform: translateY(-10px);
+}
+
+.trabajoImageContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.trabajoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trabajoCard:hover .trabajoImage {
+  transform: scale(1.05);
+}
+
+.trabajoInfo {
+  padding: 1.5rem;
+}
+
+.trabajoModelo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.trabajoAño {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin-bottom: 0.5rem;
+}
+
+.trabajoDesc {
+  font-size: 1rem;
+  color: #a0a0a0;
+}
+
+.verMasContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-right: 1rem;
+}
+
+.verMasBtn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.verMasBtn:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+/* Estadísticas Section */
+.estadisticasSection {
+  background-color: #14b89a;
+  padding: 3rem 2rem;
+  background-image: url("/nuestros-trabajos/ultima.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.estadisticasSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 184, 154, 0.8);
+}
+
+.estadisticasContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.estadisticaItem {
+  text-align: center;
+  flex: 1;
+}
+
+.estadisticaValor {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.estadisticaUnidad {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.estadisticaDesc {
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .trabajosGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estadisticasContainer {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .estadisticaItem {
+    flex-basis: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .aspectosGrid {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .estadisticasContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .estadisticaItem {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trabajosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+}
