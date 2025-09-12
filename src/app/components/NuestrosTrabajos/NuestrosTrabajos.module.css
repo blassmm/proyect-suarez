@@ -7,11 +7,26 @@
 
 /* Aspectos Claves Section */
 .aspectosClaves {
-  background-color: #14b89a;
+  background-color: rgba(20, 184, 154, 0.8);
+  background-image: url("/nuestros-trabajos/ultima.webp");
+  background-size: cover;
+  background-position: center;
   padding: 4rem 2rem;
   padding-bottom: 5rem;
   text-align: center;
   position: relative;
+  backdrop-filter: blur(5px);
+}
+
+.aspectosClaves::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 184, 154, 0.7);
+  z-index: 0;
 }
 
 .mainTitle {
@@ -20,6 +35,8 @@
   margin-bottom: 3rem;
   color: #ffffff;
   line-height: 1.2;
+  position: relative;
+  z-index: 1;
 }
 
 .aspectosGrid {
@@ -28,12 +45,26 @@
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .aspectoItem {
   flex: 1;
   text-align: center;
-  padding: 0 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aspectoItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 
 .aspectoTitle {
@@ -41,12 +72,15 @@
   font-weight: 700;
   margin-bottom: 1rem;
   color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .aspectoDesc {
   font-size: 1rem;
-  line-height: 1.5;
-  color: #ffffff;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Trabajos Section */
