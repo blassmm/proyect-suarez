@@ -14,3 +14,4 @@ Team marketing component
 -Que esta nueva seccion se encuentre en el Home, debajo de la Seccion del Team
 -Usa las imagenes de la carpeta "nuestros-trabajos"
 -Que sea para un theme dark los colores
+!!!Crea un Readme con la documentacion sobre una guia de como usar el componente
