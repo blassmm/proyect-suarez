@@ -83,6 +83,95 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Restauración Premiada Section */
+.restauracionContainer {
+  padding: 7rem 0 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.restauracionPremiada {
+  background-color: rgba(20, 20, 20, 0.95);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.restauracionInfo {
+  width: 40%;
+  padding: 3rem;
+  z-index: 1;
+}
+
+.restauracionInfo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.restauracionInfo h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.restauracionInfo h2 span {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.restauracionInfo h4 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.premioInsignia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d4af37;
+  color: #000;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: rotate(15deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+.premioInsignia span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.premioAño {
+  font-size: 1.2rem !important;
+  margin-top: 5px;
+}
+
+.restauracionImagen {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.restauracionImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* Trabajos Section */
 .trabajosContainer {
   padding: 4rem 2rem;
@@ -264,6 +353,24 @@
 
   .estadisticaItem {
     margin-bottom: 1.5rem;
+  }
+
+  .restauracionPremiada {
+    flex-direction: column;
+  }
+
+  .restauracionInfo,
+  .restauracionImagen {
+    width: 100%;
+    position: relative;
+  }
+
+  .restauracionInfo {
+    padding: 2rem;
+  }
+
+  .restauracionInfo h2 {
+    font-size: 2.5rem;
   }
 }
 

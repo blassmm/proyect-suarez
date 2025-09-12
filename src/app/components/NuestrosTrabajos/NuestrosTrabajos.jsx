@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./NuestrosTrabajos.module.css";
 import FlechaAbajo from "../FlechaAbajo/FlechaAbajo";
+import AwardBadge from "../Insignia/AwardBadge";
 
 const NuestrosTrabajos = () => {
   const trabajos = [
@@ -106,6 +107,28 @@ const NuestrosTrabajos = () => {
       </div>
 
       <FlechaAbajo horizontalPosition={3} />
+
+      <div className={styles.restauracionContainer}>
+        <div className={styles.restauracionPremiada}>
+          <div className={styles.restauracionInfo}>
+            <h3>RESTAURACIÓN PREMIADA</h3>
+            <h2>
+              Alfa Romeo 6C 2500cc <span>(1948)</span>
+            </h2>
+            <h4>2022</h4>
+          </div>
+          <div className={styles.restauracionImagen}>
+            <Image
+              src="/restauraciones/1.webp"
+              alt="Alfa Romeo 6C 2500cc"
+              width={800}
+              height={450}
+              className={styles.restauracionImg}
+            />
+            <AwardBadge year="2022" position="left" />
+          </div>
+        </div>
+      </div>
 
       <div className={styles.trabajosContainer}>
         <h2 className={styles.trabajosTitle}>Nuestros Trabajos</h2>
