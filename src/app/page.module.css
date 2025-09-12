@@ -53,100 +53,6 @@
   transform: scale(1.05);
 }
 
-.featuresSection {
-  padding: 4rem 2rem;
-  min-height: 100vh;
-  background-color: #f8f9fa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.sectionTitle {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #333;
-  font-weight: 600;
-}
-
-.featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  width: 100%;
-}
-
-.featureCard {
-  padding: 2rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.featureTitle {
-  color: #007bff;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.featureDescription {
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.ctaSection {
-  padding: 4rem 2rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.ctaDescription {
-  font-size: 1.1rem;
-  max-width: 600px;
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-.ctaButton {
-  padding: 12px 32px;
-  font-size: 1.1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.ctaButton:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-}
-
-.ctaButton:active {
-  transform: translateY(0);
-}
-
 .heroImagesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -175,25 +81,6 @@
   .heroImageContainer {
     height: 200px;
     max-width: 100%;
-  }
-
-  .sectionTitle {
-    font-size: 2rem;
-  }
-
-  .featuresGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .featureCard {
-    padding: 1.5rem;
-  }
-
-  .hero,
-  .featuresSection,
-  .ctaSection {
-    padding: 3rem 1rem;
   }
 }
 
@@ -227,40 +114,14 @@
     font-size: 1rem;
   }
 
-  .sectionTitle {
-    font-size: 1.6rem;
-  }
-
-  .hero,
-  .featuresSection,
-  .ctaSection {
+  .hero {
     padding: 2rem 1rem;
   }
 }
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .sectionTitle {
-    color: #fff;
-  }
-
-  .featureDescription,
-  .ctaDescription {
-    color: #ccc;
-  }
-
-  .featuresSection {
-    background-color: #1a1a1a;
-  }
-
-  .featureCard {
-    background-color: #2a2a2a;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
-  }
-
-  .featureCard:hover {
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1);
-  }
+  /* Dark mode styles */
 }
 
 /* Animation classes for GSAP */
