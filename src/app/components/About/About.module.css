@@ -1,0 +1,227 @@
+.aboutContainer {
+  width: 100%;
+  color: #333;
+  font-family: var(--font-primary);
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+}
+
+.imageHeader {
+  width: 100vw;
+  height: 300px;
+  position: relative;
+  margin-bottom: 50px;
+  margin-left: calc(-50vw + 50%);
+}
+
+.headerImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.sectionTitle {
+  color: #009b9b;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.misionSection,
+.visionSection,
+.staffSection {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.introText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #009b9b;
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.compromisosSection {
+  position: relative;
+  padding: 50px 0;
+  margin-bottom: 60px;
+  color: white;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.compromisosBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.compromisosImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.compromisosContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.compromisosTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.compromisosList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.compromisosList li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.compromisosList li:before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: white;
+}
+
+.partnersLogos {
+  margin-top: 40px;
+}
+
+.logoRow {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  height: 60px;
+  margin: 0 10px 20px;
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .imageHeader {
+    height: 200px; /* Altura reducida para móviles */
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .introText {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .compromisosTitle {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .compromisosList li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .logoRow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    min-width: 80px;
+    height: 50px;
+    margin: 0 5px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageHeader {
+    height: 150px; /* Altura aún más reducida para móviles pequeños */
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .misionSection,
+  .visionSection,
+  .staffSection {
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+
+  .compromisosSection {
+    padding: 30px 0;
+  }
+
+  .compromisosContent {
+    padding: 0 15px;
+  }
+
+  .compromisosTitle {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    min-width: 60px;
+    height: 40px;
+    margin: 0 5px 10px;
+  }
+
+  .introText {
+    text-align: left;
+  }
+}
