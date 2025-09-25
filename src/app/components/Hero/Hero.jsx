@@ -59,9 +59,11 @@ export default function Hero() {
       image: "/images/hero-car3.png",
       title: (
         <>
-          CALIDAD Y CONFIANZA
+          TECNOLOGIA DE EXCELENCIA
           <br />
-          EN CADA DETALLE
+          QUE MERECE
+          <br />
+          EL MEJOR SERVICIO
         </>
       ),
       button: {
