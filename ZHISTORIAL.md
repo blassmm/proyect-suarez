@@ -1,5 +1,5 @@
 //Que voy a hacer?
-Team marketing component
+Terminar about page
 
 
 //En donde me quede?
