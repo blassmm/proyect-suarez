@@ -1,5 +1,11 @@
 //Que voy a hacer?
-Terminar about page
+Nosotros: desplegable de la navbar
+	-quienes somos
+	-taller
+	-Crecimiento
+
+Servicios = navbar
+Equipamiento = navbar
 
 
 //En donde me quede?

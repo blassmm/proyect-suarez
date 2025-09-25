@@ -9,12 +9,22 @@ import Image from "next/image";
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Inicio", href: "/" },
+    {
+      name: "Nosotros",
+      href: "#",
+      dropdown: true,
+      items: [
+        { name: "Quienes Somos", href: "/about" },
+        { name: "Taller", href: "/taller" },
+        { name: "Crecimiento", href: "/crecimiento" },
+      ],
+    },
+    { name: "Contacto", href: "/contact" },
     { name: "Restauraciones", href: "/restauraciones" },
   ];
 
@@ -30,6 +40,23 @@ function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const toggleDropdown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleClickOutside = () => {
+    if (dropdownOpen) setDropdownOpen(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [dropdownOpen]);
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -62,13 +89,50 @@ function Navbar() {
 
         <ul className="nav-menu">
           {navItems.map((item) => (
-            <li key={item.name} className="nav-item">
-              <Link
-                href={item.href}
-                className={`nav-link ${pathname === item.href ? "active" : ""}`}
-              >
-                {item.name}
-              </Link>
+            <li
+              key={item.name}
+              className={`nav-item ${item.dropdown ? "dropdown" : ""}`}
+            >
+              {item.dropdown ? (
+                <>
+                  <button
+                    className={`nav-link ${
+                      pathname.startsWith("/about") ||
+                      pathname === "/taller" ||
+                      pathname === "/crecimiento"
+                        ? "active"
+                        : ""
+                    }`}
+                    onClick={toggleDropdown}
+                  >
+                    {item.name}
+                  </button>
+                  <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
+                    {item.items.map((subItem) => (
+                      <li key={subItem.name} className="dropdown-item">
+                        <Link
+                          href={subItem.href}
+                          className={`dropdown-link ${
+                            pathname === subItem.href ? "active" : ""
+                          }`}
+                          onClick={() => setDropdownOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <Link
+                  href={item.href}
+                  className={`nav-link ${
+                    pathname === item.href ? "active" : ""
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -86,15 +150,38 @@ function Navbar() {
         <ul className={`nav-menu-mobile ${isMenuOpen ? "active" : ""}`}>
           {navItems.map((item) => (
             <li key={item.name} className="nav-item-mobile">
-              <Link
-                href={item.href}
-                className={`nav-link-mobile ${
-                  pathname === item.href ? "active" : ""
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
+              {item.dropdown ? (
+                <>
+                  <div className="nav-link-mobile dropdown-header">
+                    {item.name}
+                  </div>
+                  <ul className="mobile-dropdown-menu">
+                    {item.items.map((subItem) => (
+                      <li key={subItem.name} className="mobile-dropdown-item">
+                        <Link
+                          href={subItem.href}
+                          className={`nav-link-mobile sub-item ${
+                            pathname === subItem.href ? "active" : ""
+                          }`}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <Link
+                  href={item.href}
+                  className={`nav-link-mobile ${
+                    pathname === item.href ? "active" : ""
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
