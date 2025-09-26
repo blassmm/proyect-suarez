@@ -1,10 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import styles from "./Contact.module.css";
-import L from "leaflet";
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,22 +18,14 @@ import {
 
 import { sendEmail } from "./actions";
 
-// Fix Leaflet marker icon issue in Next.js
-const MarkerIcon = () => {
-  useEffect(() => {
-    // Only fix the icons once the component is mounted on the client
-    delete L.Icon.Default.prototype._getIconUrl;
-    L.Icon.Default.mergeOptions({
-      iconRetinaUrl:
-        "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
-      iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
-      shadowUrl:
-        "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
-    });
-  }, []);
-
-  return null;
-};
+// Cargando el mapa dinámicamente solo en el cliente
+const MapComponent = dynamic(
+  () => import("./MapComponent").then((mod) => mod.default),
+  {
+    ssr: false, // No renderizar en el servidor
+    loading: () => <div className={styles.mapLoading}>Cargando mapa...</div>,
+  }
+);
 
 const schema = z.object({
   email: z.email("Debe ser un email válido"),
@@ -173,25 +163,7 @@ export default function Contact() {
         </div>
 
         <div className={styles.mapContainer}>
-          <MapContainer
-            center={position}
-            zoom={15}
-            scrollWheelZoom={false}
-            className={styles.map}
-          >
-            <MarkerIcon />
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={position}>
-              <Popup>
-                <strong>Taller Suarez</strong>
-                <br />
-                C. 19 N 1794 Esq. 514
-              </Popup>
-            </Marker>
-          </MapContainer>
+          <MapComponent position={position} />
         </div>
       </div>
     </div>
