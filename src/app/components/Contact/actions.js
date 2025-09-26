@@ -2,7 +2,8 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend('re_HK1dabZD_5FuQSZ2CeFTRGosSvUbCYkbe');
 
 export async function sendEmail(data) {
   // Lógica del servidor: por ej. usar Nodemailer, Resend, o escribir en la DB
@@ -46,12 +47,12 @@ export async function sendEmail(data) {
           </div>
         </div>
       `,
-    })
+    });
 
-    console.log("✅ Email enviado con Resend:", response)
-    return response
+    console.log("✅ Email enviado con Resend:", response);
+    return response;
   } catch (error) {
-    console.error("❌ Error al enviar con Resend:", error)
-    throw new Error("No se pudo enviar el email")
+    console.error("❌ Error al enviar con Resend:", error);
+    throw new Error("No se pudo enviar el email");
   }
 }

@@ -1,0 +1,408 @@
+.crecimientoContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  font-family: var(--font-primary);
+  overflow-x: hidden;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 0;
+}
+
+.mainTitle {
+  color: #009b9b;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.timelineSection {
+  position: relative;
+  padding-left: 50px;
+}
+
+.timelineSection::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e0e0e0;
+  z-index: -1;
+}
+
+.decadeMarker {
+  position: relative;
+  margin-bottom: 40px;
+  margin-left: -30px;
+}
+
+.decadeTitle {
+  color: #ccc;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.timelineArrow {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid #e0e0e0;
+  z-index: 1;
+}
+
+.timelineEvent {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.timelineEvent::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #009b9b;
+  border: 4px solid white;
+  box-shadow: 0 0 0 1px #009b9b;
+}
+
+.yearMarker {
+  color: #009b9b;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.eventContent {
+  position: relative;
+}
+
+.eventTitle,
+.eventText {
+  margin: 0 0 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.eventTitle {
+  font-weight: 500;
+}
+
+.highlight {
+  color: #009b9b;
+  font-weight: 500;
+}
+
+/* Estilos para el premio con la insignia */
+.awardContainer {
+  background-color: #009b9b;
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0 30px;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.badgePosition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  z-index: 5;
+}
+
+.awardCard {
+  padding: 15px 15px 15px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.awardHeader {
+  margin-bottom: 5px;
+}
+
+.awardTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.awardCarName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.awardCarYear {
+  font-weight: normal;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+/* Estilos para la imagen grande del auto premiado */
+.carImageWrapper {
+  position: relative;
+  margin: 20px 0 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.carImageContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.awardCarImage {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carFullImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.awardOverlayStandalone {
+  background-color: #009b9b;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 0;
+}
+
+.awardBadge {
+  background-color: #009b9b;
+  padding: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.awardBadgeImg {
+  width: 40px;
+  height: auto;
+}
+
+.awardInfo {
+  padding-left: 5px;
+  flex-grow: 1;
+}
+
+.awardYear {
+  display: block;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.carName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.carYear {
+  font-weight: normal;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .crecimientoContainer {
+    padding: 15px;
+  }
+
+  .headerSection {
+    margin-bottom: 40px;
+    padding: 30px 0;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .timelineSection {
+    padding-left: 30px;
+  }
+
+  .timelineSection::before {
+    left: 15px;
+  }
+
+  .decadeMarker {
+    margin-left: -20px;
+  }
+
+  .decadeTitle {
+    font-size: 2rem;
+  }
+
+  .timelineEvent {
+    padding-left: 20px;
+  }
+
+  .timelineEvent::before {
+    left: -27px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .yearMarker {
+    font-size: 1.3rem;
+  }
+
+  .eventTitle,
+  .eventText {
+    font-size: 0.95rem;
+  }
+
+  .awardCarName {
+    font-size: 1.3rem;
+  }
+
+  .awardCarYear {
+    font-size: 1rem;
+  }
+
+  .awardCard {
+    padding-left: 70px;
+  }
+
+  .awardCarImage {
+    height: 250px;
+  }
+
+  .carName {
+    font-size: 1.3rem;
+  }
+
+  .carYear {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .timelineSection {
+    padding-left: 25px;
+  }
+
+  .timelineSection::before {
+    left: 12px;
+  }
+
+  .decadeMarker {
+    margin-left: -15px;
+  }
+
+  .decadeTitle {
+    font-size: 1.7rem;
+  }
+
+  .timelineEvent {
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  .timelineEvent::before {
+    left: -23px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border: 3px solid white;
+  }
+
+  .yearMarker {
+    font-size: 1.2rem;
+  }
+
+  .eventTitle,
+  .eventText {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Modificando la vista del auto premiado en pantallas chicas */
+  .awardCarImage {
+    height: 220px;
+  }
+
+  .awardOverlayStandalone {
+    padding: 12px;
+  }
+
+  .carName {
+    font-size: 1.2rem;
+  }
+
+  .carYear {
+    font-size: 0.9rem;
+  }
+
+  /* Fin de modificaciones para el auto premiado */
+
+  .awardBadge {
+    margin-bottom: 8px;
+  }
+
+  .awardCard {
+    padding: 60px 15px 15px;
+  }
+
+  .awardCarName {
+    font-size: 1.1rem;
+  }
+
+  .awardCarYear {
+    font-size: 0.9rem;
+  }
+}

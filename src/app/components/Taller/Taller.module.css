@@ -1,0 +1,394 @@
+.tallerContainer {
+  width: 100%;
+  color: #333;
+  font-family: var(--font-primary);
+  overflow-x: hidden;
+}
+
+.headerSection {
+  width: 100vw;
+  height: 60vh; /* Ajustado al 60% del viewport height */
+  position: relative;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: 60px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.headerImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.headerImg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.infoSection {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  color: #009b9b;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: left;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #009b9b;
+}
+
+.paragraph {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #444;
+}
+
+.highlight {
+  color: #009b9b;
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.quoteSection {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #1e2a32;
+  color: white;
+  padding: 70px 0;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.quoteSection::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 120px;
+  opacity: 0.1;
+  font-family: Georgia, serif;
+  line-height: 0;
+}
+
+.quoteContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.quoteAuthor {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.tallerLocationsSection {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.tallerLocation {
+  display: flex;
+  margin-bottom: 70px;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.tallerLocation:hover {
+  transform: translateY(-5px);
+}
+
+.locationImage {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.locationImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+.locationImage:hover .locationImg {
+  transform: scale(1.03);
+}
+
+.locationInfo {
+  flex: 1;
+  min-width: 300px;
+  padding: 0;
+}
+
+.locationAddress {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 12px;
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.locationTitle {
+  color: #009b9b;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.locationSubtitle {
+  color: #009b9b;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.locationFeatures {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.locationFeatures li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.locationFeatures li:before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #009b9b;
+  font-weight: bold;
+}
+
+.smallText {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.homologadoSection {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  position: relative;
+}
+
+.homologadoContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.homologadoImage {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.homologadoImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.homologadoInfo {
+  flex: 1.5;
+  min-width: 300px;
+  padding: 0;
+  position: relative;
+}
+
+.homologadoTitle {
+  color: #009b9b;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 0;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.homologadoTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #009b9b;
+}
+
+.homologadoHighlight {
+  color: #009b9b;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-top: 30px;
+  padding: 15px 20px;
+  border-left: 4px solid #009b9b;
+  background-color: rgba(0, 155, 155, 0.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .headerSection {
+    height: 25vh; /* Ajustado para pantallas medianas */
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .sectionTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .quote {
+    font-size: 1.3rem;
+  }
+
+  .quoteAuthor {
+    font-size: 1rem;
+  }
+
+  .tallerLocation {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .locationInfo {
+    padding: 0;
+  }
+
+  .locationTitle,
+  .locationSubtitle {
+    text-align: center;
+  }
+
+  .homologadoContent {
+    flex-direction: column;
+  }
+
+  .homologadoInfo {
+    padding: 0;
+  }
+
+  .homologadoTitle {
+    text-align: center;
+  }
+
+  .homologadoTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .headerSection {
+    height: 20vh; /* Ajustado para pantallas pequeñas */
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .infoSection,
+  .tallerLocationsSection {
+    margin-bottom: 60px;
+    padding: 0 15px;
+  }
+
+  .homologadoSection {
+    margin-bottom: 60px;
+    padding: 20px 15px;
+  }
+
+  .quoteSection {
+    padding: 50px 0;
+    margin-bottom: 60px;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+
+  .quoteAuthor {
+    font-size: 0.9rem;
+  }
+
+  .locationTitle {
+    font-size: 1.6rem;
+  }
+
+  .locationSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .homologadoTitle {
+    font-size: 1.6rem;
+  }
+
+  .homologadoHighlight {
+    font-size: 1.05rem;
+  }
+}

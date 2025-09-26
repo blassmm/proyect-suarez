@@ -117,6 +117,116 @@
   width: 100%;
 }
 
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown .nav-link {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  top: 1px;
+}
+
+.dropdown button.nav-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 0;
+  margin: 0;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: baseline;
+}
+
+/* Ocultar el subrayado original para el botón dropdown */
+.dropdown .nav-link::after {
+  content: "▼";
+  font-size: 0.6rem;
+  margin-left: 0.5rem;
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  bottom: auto;
+  left: auto;
+}
+
+/* Restaurar el subrayado original para el botón dropdown */
+.dropdown .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.dropdown .nav-link:hover::before,
+.dropdown .nav-link.active::before {
+  width: 100%;
+}
+
+/* Ocultar el ::after original del nav-link para el dropdown */
+.nav-item.dropdown .nav-link::after {
+  background: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(30, 30, 30, 0.98);
+  min-width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+  list-style: none;
+}
+
+.dropdown-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.dropdown-link:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+}
+
+.dropdown-link.active {
+  background-color: rgba(0, 123, 255, 0.15);
+  color: #007bff;
+  font-weight: 600;
+}
+
 /* Mobile Menu Button */
 .nav-toggle {
   display: none;
@@ -211,6 +321,29 @@
   color: #007bff;
   background-color: rgba(0, 123, 255, 0.15);
   font-weight: 600;
+}
+
+/* Mobile Dropdown Styles */
+.dropdown-header {
+  font-weight: 600;
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.05);
+}
+
+.mobile-dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mobile-dropdown-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.nav-link-mobile.sub-item {
+  padding-left: 3rem;
+  font-size: 0.95rem;
 }
 
 /* Responsive Design */
