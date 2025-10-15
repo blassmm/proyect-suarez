@@ -71,7 +71,7 @@ const RestauracionesGaleria = () => {
     <div className={styles.galeriaContainer}>
       <div className={styles.header}>
         <div className={styles.logo}>
-          <h2>Restauraciones Premiadas</h2>
+          <h2>Trabajos Premiados</h2>
         </div>
         <div className={styles.navigation}>
           <button

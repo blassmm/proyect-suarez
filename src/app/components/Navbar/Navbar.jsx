@@ -22,10 +22,11 @@ function Navbar() {
         { name: "Quienes Somos", href: "/about" },
         { name: "Taller", href: "/taller" },
         { name: "Crecimiento", href: "/crecimiento" },
+        { name: "Restauraciones", href: "/restauraciones2" },
       ],
     },
     { name: "Contacto", href: "/contact" },
-    { name: "Restauraciones", href: "/restauraciones" },
+    { name: "Trabajos", href: "/restauraciones" },
   ];
 
   useEffect(() => {
@@ -99,7 +100,8 @@ function Navbar() {
                     className={`nav-link ${
                       pathname.startsWith("/about") ||
                       pathname === "/taller" ||
-                      pathname === "/crecimiento"
+                      pathname === "/crecimiento" ||
+                      pathname === "/restauraciones2"
                         ? "active"
                         : ""
                     }`}
