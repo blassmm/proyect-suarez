@@ -13,8 +13,9 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "Andrea Keili",
-      role: "Socia Directora y Directora de Operaciones Administrativas",
+      name: "Andrea Keiliff",
+      role: "Socia Directora",
+      secondaryRole: "Directora de Operaciones Administrativas",
       image: "/team-members/member-2.webp",
     },
     {
@@ -40,25 +41,33 @@ const Team = () => {
   return (
     <section className={styles.teamSection}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Equipo Suarez</h2>
-        <p className={styles.subtitle}>Conoce a los expertos detrás de nuestro éxito</p>
-
-        <div className={styles.teamGrid}>
-          {teamMembers.map((member) => (
-            <div key={member.id} className={styles.teamMember}>
-              <div className={styles.imageWrapper}>
+        <div className={styles.featuredTeamGrid}>
+          {teamMembers.slice(0, 2).map((member) => (
+            <div key={member.id} className={styles.featuredMember}>
+              <div className={styles.imageContainer}>
                 <Image
                   src={member.image}
                   alt={member.name}
-                  width={300}
-                  height={300}
+                  width={600}
+                  height={600}
                   className={styles.memberImage}
+                  priority
                 />
               </div>
-              <h3 className={styles.memberName}>{member.name}</h3>
-              <p className={styles.memberRole}>{member.role}</p>
+              <div className={styles.memberInfo}>
+                <h3 className={styles.memberName}>{member.name}</h3>
+                <p className={styles.memberRole}>{member.role}</p>
+                {member.secondaryRole && (
+                  <p className={styles.memberSecondaryRole}>
+                    {member.secondaryRole}
+                  </p>
+                )}
+              </div>
             </div>
           ))}
+        </div>
+        <div className={styles.ctaButton}>
+          <button>Conocé al resto del equipo</button>
         </div>
       </div>
     </section>

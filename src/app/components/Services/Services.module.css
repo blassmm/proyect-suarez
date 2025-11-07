@@ -40,6 +40,9 @@
 .servicesContent {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.servicesLayout {
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -51,22 +54,8 @@
   max-width: 600px;
 }
 
-.yearsText {
+.serviceDescription {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 400;
-  color: #e6e6e6;
-}
-
-.leadershipText {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: white;
-}
-
-.teamText {
-  font-size: 1.1rem;
   line-height: 1.6;
   color: #e6e6e6;
 }
@@ -109,7 +98,39 @@
   color: white;
 }
 
+/* Desktop and large screens */
+@media (min-width: 1024px) {
+  .servicesLayout {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .servicesHeader {
+    flex-basis: 30%;
+    text-align: left;
+    margin: 0;
+  }
+
+  .servicesGrid {
+    flex-basis: 70%;
+    flex-wrap: wrap;
+  }
+}
+
 /* Responsive styles */
+@media (max-width: 1023px) {
+  .servicesLayout {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .servicesHeader {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 768px) {
   .servicesGrid {
     flex-direction: column;
@@ -119,11 +140,6 @@
   .serviceCard {
     max-width: 300px;
     margin-bottom: 2rem;
-  }
-
-  .servicesHeader {
-    text-align: center;
-    margin: 0 auto;
   }
 
   .leadershipText {
@@ -136,15 +152,7 @@
     padding: 3rem 1rem;
   }
 
-  .yearsText {
-    font-size: 1rem;
-  }
-
-  .leadershipText {
-    font-size: 1.4rem;
-  }
-
-  .teamText {
+  .serviceDescription {
     font-size: 1rem;
   }
 }
