@@ -1,0 +1,170 @@
+.misionSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.diagonalOverlay {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #2d3741;
+  transform: skewY(-3deg);
+  transform-origin: top left;
+  z-index: 2;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.backgroundImage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.misionContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 3;
+}
+
+.decorativeArrows {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 200px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(141, 219, 211, 0.3) 25%,
+    transparent 25%
+  );
+  background-size: 50px 50px;
+  z-index: -1;
+}
+
+.textContainer {
+  max-width: 600px;
+  margin-left: 0;
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.misionText {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+.knowMoreButton {
+  display: inline-block;
+  background-color: #4ecdc4;
+  color: #333;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.knowMoreButton:hover {
+  background-color: #3dbdb5;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 1023px) {
+  .misionSection {
+    height: 80vh;
+  }
+
+  .textContainer {
+    max-width: 500px;
+  }
+
+  .sectionTitle {
+    font-size: 3rem;
+  }
+
+  .misionText {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .misionSection {
+    height: auto;
+    padding: 6rem 0;
+  }
+
+  .textContainer {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .misionText {
+    font-size: 1.2rem;
+  }
+
+  .decorativeArrows {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .misionSection {
+    padding: 4rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .misionText {
+    font-size: 1.1rem;
+  }
+}
