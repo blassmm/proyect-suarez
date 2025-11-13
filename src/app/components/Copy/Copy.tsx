@@ -148,23 +148,21 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }: Co
         }
     );
 
+    // For single child element case, we'll use a different approach
     if (React.Children.count(children) === 1 && React.isValidElement(children)) {
-        // Use forwardRef pattern instead of directly passing ref in props
-        const child = children as React.ReactElement;
-        return React.cloneElement(child, {
-            ref: (el: any) => {
-                // Handle the ref properly
-                if (el instanceof HTMLElement) {
-                    containerRef.current = el;
-                }
-                // Forward the ref if the child has one
-                if (typeof child.ref === 'function') {
-                    child.ref(el);
-                } else if (child.ref && typeof child.ref === 'object') {
-                    (child.ref as React.MutableRefObject<any>).current = el;
-                }
-            }
-        });
+        // Instead of trying to clone with a ref, we'll wrap it in a div
+        return (
+            <div
+                ref={(el) => {
+                    if (el instanceof HTMLElement) {
+                        containerRef.current = el;
+                    }
+                }}
+                style={{ display: 'contents' }} // This makes the div not affect layout
+            >
+                {children}
+            </div>
+        );
     }
 
     return (
