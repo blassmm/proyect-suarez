@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Team.module.css";
+import Copy from "../Copy/Copy";
 
 const Team = () => {
   const teamMembers = [
@@ -55,19 +56,27 @@ const Team = () => {
                 />
               </div>
               <div className={styles.memberInfo}>
-                <h3 className={styles.memberName}>{member.name}</h3>
-                <p className={styles.memberRole}>{member.role}</p>
+                <Copy>
+                  <h3 className={styles.memberName}>{member.name}</h3>
+                </Copy>
+                <Copy delay={0.2}>
+                  <p className={styles.memberRole}>{member.role}</p>
+                </Copy>
                 {member.secondaryRole && (
-                  <p className={styles.memberSecondaryRole}>
-                    {member.secondaryRole}
-                  </p>
+                  <Copy delay={0.4}>
+                    <p className={styles.memberSecondaryRole}>
+                      {member.secondaryRole}
+                    </p>
+                  </Copy>
                 )}
               </div>
             </div>
           ))}
         </div>
         <div className={styles.ctaButton}>
-          <button>Conocé al resto del equipo</button>
+          <Copy>
+            <button>Conocé al resto del equipo</button>
+          </Copy>
         </div>
       </div>
     </section>

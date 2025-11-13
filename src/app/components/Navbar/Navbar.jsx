@@ -1,15 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./nav.css";
 import Image from "next/image";
+import { gsap } from "gsap";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const navRef = useRef(null);
   const pathname = usePathname();
 
   const navItems = [
@@ -59,8 +62,29 @@ function Navbar() {
     };
   }, [dropdownOpen]);
 
+  useEffect(() => {
+    // Show navbar after delay with fade-in effect
+    const timer = setTimeout(() => {
+      setVisible(true);
+      if (navRef.current) {
+        gsap.to(navRef.current, {
+          opacity: 1,
+          visibility: "visible",
+          duration: 1,
+          ease: "circ.out",
+        });
+      }
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav
+      ref={navRef}
+      className={`navbar ${scrolled ? "scrolled" : ""}`}
+      style={{ opacity: 0, visibility: "hidden" }}
+    >
       <div className="nav-container">
         <div className="nav-left">
           <Link href="/" className="nav-logo">
