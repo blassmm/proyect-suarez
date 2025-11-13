@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./HomeMision.module.css";
+import Copy from "../Copy/Copy";
 
 export default function HomeMision() {
   return (
@@ -24,22 +25,28 @@ export default function HomeMision() {
         <div className={styles.decorativeArrows}></div>
 
         <div className={styles.textContainer}>
-          <h2 className={styles.sectionTitle}>Misión y Visión</h2>
+          <Copy>
+            <h2 className={styles.sectionTitle}>Misión y Visión</h2>
+          </Copy>
 
           <div className={styles.misionText}>
-            <p>
-              Nuestra <span className={styles.highlight}>misión</span> va más
-              allá de las reparaciones automotrices: nos esforzamos por{" "}
-              <span className={styles.highlight}>
-                construir una comunidad que comparte una visión común y busca la
-                excelencia en cada aspecto de nuestra labor diaria.
-              </span>
-            </p>
+            <Copy delay={0.3}>
+              <p>
+                Nuestra <span className={styles.highlight}>misión</span> va más
+                allá de las reparaciones automotrices: nos esforzamos por{" "}
+                <span className={styles.highlight}>
+                  construir una comunidad que comparte una visión común y busca
+                  la excelencia en cada aspecto de nuestra labor diaria.
+                </span>
+              </p>
+            </Copy>
           </div>
 
-          <Link href="/about" className={styles.knowMoreButton}>
-            Conocé más
-          </Link>
+          <Copy delay={0.6}>
+            <Link href="/about" className={styles.knowMoreButton}>
+              Conocé más
+            </Link>
+          </Copy>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./NuestrosTrabajos.module.css";
 import FlechaAbajo from "../FlechaAbajo/FlechaAbajo";
 import AwardBadge from "../Insignia/AwardBadge";
+import Copy from "../Copy/Copy";
 
 const NuestrosTrabajos = () => {
   const trabajos = [
@@ -73,35 +74,49 @@ const NuestrosTrabajos = () => {
   return (
     <section className={styles.trabajosSection}>
       <div className={styles.aspectosClaves}>
-        <h2 className={styles.mainTitle}>
-          Aspectos claves a atender
-          <br />
-          en la reparación del automóvil
-        </h2>
+        <Copy>
+          <h2 className={styles.mainTitle}>
+            Aspectos claves a atender
+            <br />
+            en la reparación del automóvil
+          </h2>
+        </Copy>
 
         <div className={styles.aspectosGrid}>
           <div className={styles.aspectoItem}>
-            <h3 className={styles.aspectoTitle}>SEGURIDAD</h3>
-            <p className={styles.aspectoDesc}>
-              Devolver el auto con el mismo nivel de seguridad pasiva y activa
-              con los que fue construido.
-            </p>
+            <Copy>
+              <h3 className={styles.aspectoTitle}>SEGURIDAD</h3>
+            </Copy>
+            <Copy delay={0.2}>
+              <p className={styles.aspectoDesc}>
+                Devolver el auto con el mismo nivel de seguridad pasiva y activa
+                con los que fue construido.
+              </p>
+            </Copy>
           </div>
 
           <div className={styles.aspectoItem}>
-            <h3 className={styles.aspectoTitle}>ESTÉTICA</h3>
-            <p className={styles.aspectoDesc}>
-              Reestablecer la cualidades de diseño original de brillo, color y
-              textura; sin evidenciar que el auto fue intervenido.
-            </p>
+            <Copy>
+              <h3 className={styles.aspectoTitle}>ESTÉTICA</h3>
+            </Copy>
+            <Copy delay={0.2}>
+              <p className={styles.aspectoDesc}>
+                Reestablecer la cualidades de diseño original de brillo, color y
+                textura; sin evidenciar que el auto fue intervenido.
+              </p>
+            </Copy>
           </div>
 
           <div className={styles.aspectoItem}>
-            <h3 className={styles.aspectoTitle}>FUNCIONALIDAD</h3>
-            <p className={styles.aspectoDesc}>
-              Devolver a cada uno de los elementos del automóvil su capacidad
-              funcional original.
-            </p>
+            <Copy>
+              <h3 className={styles.aspectoTitle}>FUNCIONALIDAD</h3>
+            </Copy>
+            <Copy delay={0.2}>
+              <p className={styles.aspectoDesc}>
+                Devolver a cada uno de los elementos del automóvil su capacidad
+                funcional original.
+              </p>
+            </Copy>
           </div>
         </div>
       </div>
@@ -111,11 +126,17 @@ const NuestrosTrabajos = () => {
       <div className={styles.restauracionContainer}>
         <div className={styles.restauracionPremiada}>
           <div className={styles.restauracionInfo}>
-            <h3>RESTAURACIÓN PREMIADA</h3>
-            <h2>
-              Alfa Romeo 6C 2500cc <span>(1948)</span>
-            </h2>
-            <h4>2022</h4>
+            <Copy>
+              <h3>RESTAURACIÓN PREMIADA</h3>
+            </Copy>
+            <Copy delay={0.2}>
+              <h2>
+                Alfa Romeo 6C 2500cc <span>(1948)</span>
+              </h2>
+            </Copy>
+            <Copy delay={0.4}>
+              <h4>2022</h4>
+            </Copy>
           </div>
           <div className={styles.restauracionImagen}>
             <Image
@@ -131,7 +152,9 @@ const NuestrosTrabajos = () => {
       </div>
 
       <div className={styles.trabajosContainer}>
-        <h2 className={styles.trabajosTitle}>Nuestros Trabajos</h2>
+        <Copy>
+          <h2 className={styles.trabajosTitle}>Nuestros Trabajos</h2>
+        </Copy>
 
         <div className={styles.trabajosGrid}>
           {trabajos.map((trabajo) => (
