@@ -171,3 +171,21 @@ h1{
     @apply bg-background text-foreground;
   }
 }
+
+.revealer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  transform-origin: center top;
+  background-color: #010101;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Copy component */
+.line {
+  transform: translateY(100%);
+  will-change: transform;
+}
