@@ -149,21 +149,22 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }: Co
     );
 
     if (React.Children.count(children) === 1 && React.isValidElement(children)) {
-        // Use forwardRef pattern instead of directly passing ref in props
         const child = children as React.ReactElement;
-        return React.cloneElement(child, {
-            ref: (el: any) => {
-                // Handle the ref properly
-                if (el instanceof HTMLElement) {
-                    containerRef.current = el;
-                }
-                // Forward the ref if the child has one
-                if (typeof child.ref === 'function') {
-                    child.ref(el);
-                } else if (child.ref && typeof child.ref === 'object') {
-                    (child.ref as React.MutableRefObject<any>).current = el;
+
+        // Create a callback ref function that will be called after the component mounts
+        React.useEffect(() => {
+            // Get the DOM node directly
+            if (child.type && typeof child.type !== 'string') {
+                const domNode = document.querySelector(`[data-copy-id="${child.key || 'single-child'}"]`);
+                if (domNode instanceof HTMLElement) {
+                    containerRef.current = domNode;
                 }
             }
+        }, []);
+
+        // Clone element with a data attribute we can use to find it
+        return React.cloneElement(child, {
+            'data-copy-id': child.key || 'single-child'
         });
     }
 
