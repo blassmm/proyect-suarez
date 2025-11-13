@@ -148,24 +148,21 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }: Co
         }
     );
 
+    // For single child element case, we'll use a different approach
     if (React.Children.count(children) === 1 && React.isValidElement(children)) {
-        const child = children as React.ReactElement;
-
-        // Create a callback ref function that will be called after the component mounts
-        React.useEffect(() => {
-            // Get the DOM node directly
-            if (child.type && typeof child.type !== 'string') {
-                const domNode = document.querySelector(`[data-copy-id="${child.key || 'single-child'}"]`);
-                if (domNode instanceof HTMLElement) {
-                    containerRef.current = domNode;
-                }
-            }
-        }, []);
-
-        // Clone element with a data attribute we can use to find it
-        return React.cloneElement(child, {
-            'data-copy-id': child.key || 'single-child'
-        });
+        // Instead of trying to clone with a ref, we'll wrap it in a div
+        return (
+            <div
+                ref={(el) => {
+                    if (el instanceof HTMLElement) {
+                        containerRef.current = el;
+                    }
+                }}
+                style={{ display: 'contents' }} // This makes the div not affect layout
+            >
+                {children}
+            </div>
+        );
     }
 
     return (
