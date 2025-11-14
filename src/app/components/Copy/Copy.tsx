@@ -150,7 +150,8 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }: Co
 
     // For single child element case, we'll use a different approach
     if (React.Children.count(children) === 1 && React.isValidElement(children)) {
-        // Instead of trying to clone with a ref, we'll wrap it in a div
+        // Instead of using display:contents which can break GSAP animations,
+        // we'll wrap it in a div that preserves the layout but is minimally intrusive
         return (
             <div
                 ref={(el) => {
@@ -158,7 +159,12 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }: Co
                         containerRef.current = el;
                     }
                 }}
-                style={{ display: 'contents' }} // This makes the div not affect layout
+                style={{
+                    // Use minimal styling that won't interfere with layout
+                    position: 'relative',
+                    width: '100%'
+                }}
+                className="copy-wrapper"
             >
                 {children}
             </div>
