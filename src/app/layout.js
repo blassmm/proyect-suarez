@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import LenisWrapper from "./components/LenisWrapper";
+import FloatingBarSocials from "./components/FloatingBarSocials";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +40,14 @@ export default function RootLayout({ children }) {
           </header>
           <main>{children}</main>
           <Footer />
+          <FloatingBarSocials
+            socials={[
+              { name: "Twitter", url: "https://twitter.com" },
+              { name: "Instagram", url: "https://instagram.com" },
+              { name: "Telegram", url: "https://t.me/" },
+              { name: "Discord", url: "https://discord.com" },
+            ]}
+          />
         </LenisWrapper>
       </body>
     </html>
