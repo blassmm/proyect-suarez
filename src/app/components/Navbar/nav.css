@@ -448,26 +448,13 @@ html {
   scroll-padding-top: 80px;
 }
 
-/* Add padding to body to account for fixed navbar */
-body {
-  padding-top: 80px;
-}
-
 @media (max-width: 768px) {
-  body {
-    padding-top: 70px;
-  }
-
   html {
     scroll-padding-top: 70px;
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    padding-top: 60px;
-  }
-
   html {
     scroll-padding-top: 60px;
   }
