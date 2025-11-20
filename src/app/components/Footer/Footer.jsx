@@ -13,7 +13,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="footer-container mb-15! md:mb-0!">
         <div className="footer-grid">
           {/* Logo and Brand */}
           <div className="footer-column">
