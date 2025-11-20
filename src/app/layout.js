@@ -42,10 +42,10 @@ export default function RootLayout({ children }) {
           <Footer />
           <FloatingBarSocials
             socials={[
-              { name: "Twitter", url: "https://twitter.com" },
-              { name: "Instagram", url: "https://instagram.com" },
-              { name: "Telegram", url: "https://t.me/" },
-              { name: "Discord", url: "https://discord.com" },
+              { name: "Facebook", url: "https://www.facebook.com/TallerSuarezChapayPintura" },
+              { name: "Instagram", url: "https://instagram.com/taller_suarez" },
+              { name: "Youtube", url: "https://www.youtube.com/@tallersuarez2220" },
+              { name: "Whatsapp", num: "5492213523273", defaultMsj: "Hola, somos Taller Suarez ¿cómo estás? " },
             ]}
           />
         </LenisWrapper>
