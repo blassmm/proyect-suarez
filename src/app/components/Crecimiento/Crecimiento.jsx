@@ -1,12 +1,65 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Crecimiento.module.css";
 import { AwardBadge } from "../Insignia";
 
 const Crecimiento = () => {
+  const [activeDecade, setActiveDecade] = useState("1980");
+  const [isSticky, setIsSticky] = useState(false);
+  const navRef = React.useRef(null);
+  const navOffsetRef = React.useRef(0);
+  const decades = ["1980", "1990", "2000", "2010", "2020"];
+
+  useEffect(() => {
+    if (navRef.current) {
+      navOffsetRef.current = navRef.current.offsetTop;
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const decadeElements = decades.map((decade) =>
+        document.getElementById(`decade-${decade}`)
+      );
+
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+      for (let i = decadeElements.length - 1; i >= 0; i--) {
+        const element = decadeElements[i];
+        if (element && element.offsetTop <= scrollPosition) {
+          setActiveDecade(decades[i]);
+          break;
+        }
+      }
+
+      const currentScroll = window.scrollY;
+      if (currentScroll >= navOffsetRef.current - 80) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToDecade = (decade) => {
+    const element = document.getElementById(`decade-${decade}`);
+    if (element) {
+      const offset = isSticky ? 180 : 100;
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className={styles.crecimientoContainer}>
+    <div className={`${styles.crecimientoContainer} mt-9! sm:mt-15!`}>
       <section className={styles.headerSection}>
         <h1 className={styles.mainTitle}>
           Nuestro crecimiento
@@ -16,8 +69,33 @@ const Crecimiento = () => {
       </section>
 
       <section className={styles.timelineSection}>
+        {/* Navegación interactiva de décadas */}
+        <nav
+          ref={navRef}
+          className={`${styles.decadeNavigation} ${
+            isSticky ? styles.sticky : ""
+          }`}
+        >
+          <div className={styles.decadeNavContainer}>
+            {decades.map((decade) => (
+              <button
+                key={decade}
+                onClick={() => scrollToDecade(decade)}
+                className={`${styles.decadeNavButton} ${
+                  activeDecade === decade ? styles.active : ""
+                }`}
+                aria-label={`Ir a la década de ${decade}`}
+              >
+                <span className={styles.decadeNavYear}>{decade}</span>
+                <span className={styles.decadeNavIndicator}></span>
+              </button>
+            ))}
+          </div>
+        </nav>
+
+        {isSticky && <div className={styles.navSpacer}></div>}
         {/* 1980 */}
-        <div className={styles.decadeMarker}>
+        <div id="decade-1980" className={styles.decadeMarker}>
           <h2 className={styles.decadeTitle}>1980</h2>
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineArrow}></div>
@@ -49,7 +127,7 @@ const Crecimiento = () => {
         </div>
 
         {/* 1990 */}
-        <div className={styles.decadeMarker}>
+        <div id="decade-1990" className={styles.decadeMarker}>
           <h2 className={styles.decadeTitle}>1990</h2>
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineArrow}></div>
@@ -138,7 +216,7 @@ const Crecimiento = () => {
         </div>
 
         {/* 2000 */}
-        <div className={styles.decadeMarker}>
+        <div id="decade-2000" className={styles.decadeMarker}>
           <h2 className={styles.decadeTitle}>2000</h2>
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineArrow}></div>
@@ -194,7 +272,7 @@ const Crecimiento = () => {
         </div>
 
         {/* 2010 */}
-        <div className={styles.decadeMarker}>
+        <div id="decade-2010" className={styles.decadeMarker}>
           <h2 className={styles.decadeTitle}>2010</h2>
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineArrow}></div>
@@ -349,7 +427,7 @@ const Crecimiento = () => {
         </div>
 
         {/* 2020 */}
-        <div className={styles.decadeMarker}>
+        <div id="decade-2020" className={styles.decadeMarker}>
           <h2 className={styles.decadeTitle}>2020</h2>
           <div className={styles.timelineLine}></div>
           <div className={styles.timelineArrow}></div>
