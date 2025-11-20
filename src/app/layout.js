@@ -42,6 +42,7 @@ export default function RootLayout({ children }) {
           <Footer />
           <FloatingBarSocials
             socials={[
+              { name: "LinkedIn", url: "https://www.linkedin.com/company/taller-suarez-chapa-y-pintura" },
               { name: "Facebook", url: "https://www.facebook.com/TallerSuarezChapayPintura" },
               { name: "Instagram", url: "https://instagram.com/taller_suarez" },
               { name: "Youtube", url: "https://www.youtube.com/@tallersuarez2220" },
