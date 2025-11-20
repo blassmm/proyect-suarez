@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Team.module.css";
 import Copy from "../Copy/Copy";
 
@@ -23,19 +24,19 @@ const Team = () => {
       id: 3,
       name: "Lucas Gutierrez",
       role: "Jefe de producción",
-      image: "/team-members/member-3.webp",
+      image: "/team-members/member-5.webp",
     },
     {
       id: 4,
       name: "Federico Coniglio",
       role: "Jefe del Sector Pintura",
-      image: "/team-members/member-4.webp",
+      image: "/team-members/member-3.webp",
     },
     {
       id: 5,
       name: "Marcelo Pacheco",
       role: "Jefe del taller",
-      image: "/team-members/member-5.webp",
+      image: "/team-members/member-4.webp",
     },
   ];
 
@@ -75,7 +76,9 @@ const Team = () => {
         </div>
         <div className={styles.ctaButton}>
           <Copy>
-            <button>Conocé al resto del equipo</button>
+            <Link href="/equipoCompleto">
+              <button>Conocé al resto del equipo</button>
+            </Link>
           </Copy>
         </div>
       </div>
