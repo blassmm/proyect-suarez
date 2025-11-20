@@ -14,6 +14,169 @@
   padding: 40px 0;
 }
 
+/* Interactive navigation */
+.decadeNavigation {
+  position: static;
+  width: calc(100% + 50px);
+  margin: 0 0 60px -50px;
+  padding: 0 20px;
+  z-index: 100;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.decadeNavigation.sticky {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 90vw;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.navSpacer {
+  height: 90px;
+  width: 100%;
+}
+
+.decadeNavContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+  backdrop-filter: blur(12px);
+  padding: 6px;
+  border-radius: 60px;
+  box-shadow: 0 8px 32px rgba(0, 155, 155, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(0, 155, 155, 0.12);
+  position: relative;
+  width: fit-content;
+}
+
+.decadeNavContainer::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 60px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 155, 155, 0.2),
+    rgba(0, 155, 155, 0.05)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.decadeNavButton {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 14px 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 85px;
+  isolation: isolate;
+}
+
+.decadeNavButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: rgba(0, 155, 155, 0.08);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.decadeNavButton:hover::before {
+  opacity: 1;
+}
+
+.decadeNavButton:active {
+  transform: scale(0.96);
+}
+
+.decadeNavYear {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.decadeNavButton:hover .decadeNavYear {
+  color: #009b9b;
+  transform: translateY(-1px);
+  letter-spacing: 0.04em;
+}
+
+.decadeNavButton.active {
+  background: linear-gradient(135deg, #009b9b 0%, #00b5b5 100%);
+  box-shadow: 0 4px 16px rgba(0, 155, 155, 0.25),
+    0 2px 8px rgba(0, 155, 155, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.decadeNavButton.active::before {
+  opacity: 0;
+}
+
+.decadeNavButton.active .decadeNavYear {
+  color: #ffffff;
+  font-weight: 700;
+  transform: translateY(0);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.decadeNavIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.decadeNavButton:hover .decadeNavIndicator {
+  border-color: rgba(0, 155, 155, 0.3);
+  transform: scale(1.1);
+}
+
+.decadeNavButton.active .decadeNavIndicator {
+  background: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2);
+}
+
 .mainTitle {
   color: #009b9b;
   font-size: 3rem;
@@ -31,7 +194,7 @@
   content: "";
   position: absolute;
   left: 20px;
-  top: 0;
+  top: 120px;
   bottom: 0;
   width: 2px;
   background-color: #e0e0e0;
@@ -267,8 +430,47 @@
     font-size: 2.2rem;
   }
 
+  .decadeNavigation {
+    width: calc(100% + 30px);
+    margin: 0 0 50px -30px;
+    padding: 0 15px;
+  }
+
+  .decadeNavigation.sticky {
+    top: 25%;
+    max-width: 95vw;
+    width: auto;
+  }
+
+  .navSpacer {
+    height: 85px;
+  }
+
+  .decadeNavContainer {
+    padding: 5px;
+    border-radius: 50px;
+  }
+
+  .decadeNavButton {
+    padding: 12px 18px;
+    min-width: 72px;
+  }
+
+  .decadeNavYear {
+    font-size: 0.95rem;
+  }
+
+  .decadeNavIndicator {
+    width: 7px;
+    height: 7px;
+  }
+
   .timelineSection {
     padding-left: 30px;
+  }
+
+  .timelineSection::before {
+    top: 100px;
   }
 
   .timelineSection::before {
@@ -332,12 +534,50 @@
     font-size: 1.8rem;
   }
 
+  .decadeNavigation {
+    width: calc(100% + 25px);
+    margin: 0 0 40px -25px;
+    padding: 0 10px;
+  }
+
+  .decadeNavigation.sticky {
+    top: 20%;
+    max-width: 98vw;
+    width: auto;
+  }
+
+  .navSpacer {
+    height: 75px;
+  }
+
+  .decadeNavContainer {
+    padding: 4px;
+    border-radius: 45px;
+  }
+
+  .decadeNavButton {
+    padding: 10px 14px;
+    min-width: 60px;
+    gap: 4px;
+  }
+
+  .decadeNavYear {
+    font-size: 0.85rem;
+    letter-spacing: 0.01em;
+  }
+
+  .decadeNavIndicator {
+    width: 6px;
+    height: 6px;
+  }
+
   .timelineSection {
     padding-left: 25px;
   }
 
   .timelineSection::before {
     left: 12px;
+    top: 90px;
   }
 
   .decadeMarker {
