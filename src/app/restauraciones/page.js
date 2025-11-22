@@ -1,10 +1,5 @@
-import React from "react";
-import RestauracionesGaleria from "../components/Restauraciones/RestauracionesGaleria";
+import Restauraciones from "../components/Restauraciones";
 
-export default function TrabajosPage() {
-  return (
-    <main>
-      <RestauracionesGaleria />
-    </main>
-  );
+export default function RestauracionesPage() {
+  return <Restauraciones />;
 }

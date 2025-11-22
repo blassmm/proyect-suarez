@@ -81,28 +81,26 @@ const EquipoCompleto = () => {
         </div>
       </div>
 
-
-      <div className={`${styles.sectionTeamEntero} w-full border-4 border-red-500`}>
-        <div className="flex flex-col md:relative md:h-[450px] lg:h-[500px] xl:h-[550px] md:flex-row md:items-center">
-          <div className="relative w-full h-auto md:absolute md:left-0 md:z-20 md:w-[50vw] lg:w-[45vw] xl:w-[42vw] md:h-[80%] lg:h-[85%] xl:h-[88%] overflow-hidden">
+      <div className={styles.sectionTeamEntero}>
+        <div className="flex flex-col xl:relative xl:h-[550px] xl:flex-row xl:items-center">
+          <div className="relative w-full  h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px xl:absolute xl:left-0 xl:z-20 xl:w-[42vw] xl:h-[88%]">
             <Image
               src="/team-members/team-entero.webp"
               alt="Equipo Taller Suárez"
-              width={1200}
-              height={600}
-              className="w-full h-full object-cover md:object-cover"
+              fill
+              className="w-full h-full object-cover"
             />
           </div>
 
-          <div className="bg-[#3eb6a5] text-white relative md:absolute md:right-0 md:z-10 md:w-[70vw] lg:w-[65vw] xl:w-[62vw] md:h-full">
-            <div className="py-8 px-5 md:absolute md:right-[10%] md:top-1/2 md:-translate-y-1/2 flex flex-col items-start md:items-end">
-              <p className="text-base sm:text-lg md:text-xl font-medium md:items-end leading-relaxed text-center md:text-right mb-4 md:mb-6 italic max-w-2xl">
+          <div className="bg-[#3eb6a5] text-white relative xl:absolute xl:right-0 xl:z-10 xl:w-[62vw] xl:h-full">
+            <div className="py-12 px-6 sm:py-14 sm:px-8 md:py-16 md:px-10 lg:py-20 lg:px-12 xl:absolute xl:right-[10%] xl:top-1/2 xl:-translate-y-1/2 flex flex-col items-start xl:items-end">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-medium leading-relaxed mb-6 sm:mb-7 md:mb-8 italic xl:text-right xl:max-w-2xl">
                 "De todos los valores que hoy garantizan la calidad de Taller
                 Suárez, el capital humano es, desde nuestros inicios, el más
                 importante"
               </p>
-              <p className="text-sm md:text-base font-light text-left md:text-right opacity-85">
-                Gustavo Suarez · Socio Gerente
+              <p className="text-base sm:text-lg md:text-lg font-light opacity-90">
+                Gustavo Suarez | Socio Director
               </p>
             </div>
           </div>

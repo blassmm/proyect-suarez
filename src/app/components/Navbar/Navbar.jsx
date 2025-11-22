@@ -25,11 +25,11 @@ function Navbar() {
         { name: "Quienes Somos", href: "/about" },
         { name: "Taller", href: "/taller" },
         { name: "Crecimiento", href: "/crecimiento" },
-        { name: "Restauraciones", href: "/restauraciones2" },
+        { name: "Restauraciones", href: "/restauraciones" },
       ],
     },
+    { name: "Trabajos", href: "/trabajos" },
     { name: "Contacto", href: "/contact" },
-    { name: "Trabajos", href: "/restauraciones" },
   ];
 
   useEffect(() => {
@@ -45,22 +45,13 @@ function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleDropdown = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDropdownOpen(!dropdownOpen);
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
   };
 
-  const handleClickOutside = () => {
-    if (dropdownOpen) setDropdownOpen(false);
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
   };
-
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [dropdownOpen]);
 
   useEffect(() => {
     // Show navbar after delay with fade-in effect
@@ -119,6 +110,8 @@ function Navbar() {
             <li
               key={item.name}
               className={`nav-item ${item.dropdown ? "dropdown" : ""}`}
+              onMouseEnter={item.dropdown ? handleMouseEnter : undefined}
+              onMouseLeave={item.dropdown ? handleMouseLeave : undefined}
             >
               {item.dropdown ? (
                 <>
@@ -127,11 +120,10 @@ function Navbar() {
                       pathname.startsWith("/about") ||
                       pathname === "/taller" ||
                       pathname === "/crecimiento" ||
-                      pathname === "/restauraciones2"
+                      pathname === "/restauraciones"
                         ? "active"
                         : ""
                     }`}
-                    onClick={toggleDropdown}
                   >
                     {item.name}
                   </button>
