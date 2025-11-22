@@ -143,7 +143,7 @@ const NuestrosTrabajos = () => {
           </div>
           <div className={styles.restauracionImagen}>
             <Image
-              src="/restauraciones/1.webp"
+              src="/trabajos/1.webp"
               alt="Alfa Romeo 6C 2500cc"
               width={800}
               height={450}
