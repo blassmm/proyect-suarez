@@ -92,14 +92,14 @@ const EquipoCompleto = () => {
             />
           </div>
 
-          <div className="bg-[#3eb6a5] text-white relative xl:absolute xl:right-0 xl:z-10 xl:w-[62vw] xl:h-full">
+          <div className="bg-[#3eb6a5] text-white relative text-center xl:text-left p-5! xl:absolute xl:right-0 xl:z-10 xl:w-[62vw] xl:h-full">
             <div className="py-12 px-6 sm:py-14 sm:px-8 md:py-16 md:px-10 lg:py-20 lg:px-12 xl:absolute xl:right-[10%] xl:top-1/2 xl:-translate-y-1/2 flex flex-col items-start xl:items-end">
               <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-medium leading-relaxed mb-6 sm:mb-7 md:mb-8 italic xl:text-right xl:max-w-2xl">
                 "De todos los valores que hoy garantizan la calidad de Taller
                 Suárez, el capital humano es, desde nuestros inicios, el más
                 importante"
               </p>
-              <p className="text-base sm:text-lg md:text-lg font-light opacity-90">
+              <p className="mx-auto! sm:text-lg md:text-lg font-light opacity-90">
                 Gustavo Suarez | Socio Director
               </p>
             </div>

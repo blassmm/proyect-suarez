@@ -1,3 +1,1 @@
-import Restauraciones from "./Restauraciones";
-
-export default Restauraciones;
+export { default } from "./Restauraciones";

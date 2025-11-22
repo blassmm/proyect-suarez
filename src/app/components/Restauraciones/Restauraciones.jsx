@@ -1,18 +1,34 @@
 "use client";
-import React from "react";
+
+import Image from "next/image";
+import HeroRestauraciones from "./HeroRestauraciones";
+import VehicleCarousel from "./VehicleCarousel";
+import ServicesGrid from "./ServicesGrid";
+import CTASection from "./CTASection";
 import Copy from "../Copy/Copy";
+import { vehicles } from "./data";
 
-const Restauraciones = () => {
+export default function Restauraciones() {
   return (
-    <div className="w-full py-30! text-center">
-      <Copy delay={2}>
-          <h1 className="text-5xl font-medium opacity-90 mb-4!">Restauraciones</h1>
-      </Copy>
-        <Copy delay={3}>
-        <p className="opacity-90">Contenido próximamente</p>
-      </Copy>
-    </div>
-  );
-};
+    <main className="">
+      
+      
+      {/* Hero Image */}
+      <div className="relative! mt-15! sm:mt-18! md:mt-24! w-full! h-[180px]! md:h-[200px]! lg:h-[280px]!">
+        <Image
+          src="/restauraciones/imagen1.webp"
+          alt="Mercedes Clásico Restaurado"
+          fill
+          className="object-cover! object-[center_50%]!"
+          priority
+        />
+      </div>
 
-export default Restauraciones;
+      {/* Content Sections */}
+      <HeroRestauraciones />
+      <VehicleCarousel vehicles={vehicles} />
+      <ServicesGrid />
+      <CTASection />
+    </main>
+  );
+}

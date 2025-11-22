@@ -23,6 +23,7 @@ function Navbar() {
       dropdown: true,
       items: [
         { name: "Quienes Somos", href: "/about" },
+        { name: "Equipo", href: "/equipoCompleto" },
         { name: "Taller", href: "/taller" },
         { name: "Crecimiento", href: "/crecimiento" },
         { name: "Restauraciones", href: "/restauraciones" },
