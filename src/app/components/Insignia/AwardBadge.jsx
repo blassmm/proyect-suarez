@@ -46,6 +46,8 @@ const AwardBadge = ({ year, position = "left" }) => {
     if (!containerRef.current) return;
 
     const updatePosition = () => {
+      if (!containerRef.current) return;
+
       const rect = containerRef.current.getBoundingClientRect();
       const isLeftPosition = position === "left";
 

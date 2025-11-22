@@ -5,6 +5,9 @@ import styles from "./NuestrosTrabajos.module.css";
 import FlechaAbajo from "../FlechaAbajo/FlechaAbajo";
 import AwardBadge from "../Insignia/AwardBadge";
 import Copy from "../Copy/Copy";
+import Link from "next/link";
+
+//ESTE COMPONENTE SE USA SOLO EN EL INICIO-----------------------------------------------------
 
 const NuestrosTrabajos = () => {
   const trabajos = [
@@ -178,7 +181,9 @@ const NuestrosTrabajos = () => {
         </div>
 
         <div className={styles.verMasContainer}>
-          <button className={styles.verMasBtn}>Ver más trabajos</button>
+          <Link href="/trabajos" className={styles.verMasBtn}>
+            Ver más trabajos
+          </Link>
         </div>
       </div>
 

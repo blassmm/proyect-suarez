@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./RestauracionesGaleria.module.css";
+import styles from "./TrabajosGaleria.module.css";
 import { AwardBadge } from "../Insignia";
 
 // Datos de ejemplo para las restauraciones
@@ -12,7 +12,7 @@ const trabajosRestauracion = [
     id: 1,
     nombre: "Alfa Romeo 6C",
     modelo: "2500cc (1948)",
-    imagenes: ["/restauraciones/1.webp"],
+    imagenes: ["/trabajos/1.webp"],
     premiado: true,
     anio: "2022",
   },
@@ -20,7 +20,7 @@ const trabajosRestauracion = [
     id: 2,
     nombre: "Mercedes Benz",
     modelo: "300SL Gullwing (1955)",
-    imagenes: ["/restauraciones/2.webp"],
+    imagenes: ["/trabajos/1.webp"],
     premiado: true,
     anio: "2025",
   },
@@ -28,12 +28,12 @@ const trabajosRestauracion = [
     id: 3,
     nombre: "Ferrari",
     modelo: "250 GT (1962)",
-    imagenes: ["/restauraciones/3.webp"],
+    imagenes: ["/trabajos/1.webp"],
     premiado: false,
   },
 ];
 
-const RestauracionesGaleria = () => {
+const TrabajosGaleria = () => {
   const [activeScene, setActiveScene] = useState("todos");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
@@ -156,4 +156,4 @@ const RestauracionesGaleria = () => {
   );
 };
 
-export default RestauracionesGaleria;
+export default TrabajosGaleria;
