@@ -30,6 +30,7 @@ function Navbar() {
       ],
     },
     { name: "Trabajos", href: "/trabajos" },
+    { name: "Servicios", href: "/servicios" },
     { name: "Equipamiento", href: "/equipamiento" },
     { name: "Contacto", href: "/contact" },
   ];
