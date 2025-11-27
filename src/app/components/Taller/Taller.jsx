@@ -6,16 +6,17 @@ import styles from "./Taller.module.css";
 const Taller = () => {
   return (
     <div className={styles.tallerContainer}>
-      <header className={styles.headerSection}>
-        <div className={styles.headerImage}>
+      <header className="w-auto! object-cover h-[20vh]! relative! mt-15! sm:mt-18! md:mt-24!">
+        <div className=" w-full! h-full!">
           <Image
             src="/taller/taller-header.webp"
             alt="Taller Suarez - Chapa y Pintura"
             fill
-            className={styles.headerImg}
+            style={{
+              objectFit: "cover",
+              objectPosition: "60% 30%",
+            }}
             priority
-            sizes="100vw"
-            quality={100}
           />
         </div>
       </header>
