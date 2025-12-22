@@ -1,7 +1,7 @@
 .aboutContainer {
   width: 100%;
   color: #333;
-  font-family: var(--font-primary);
+  font-family: var(--font-textos);
   overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 

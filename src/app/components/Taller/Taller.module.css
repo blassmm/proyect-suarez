@@ -1,7 +1,7 @@
 .tallerContainer {
   width: 100%;
   color: #333;
-  font-family: var(--font-primary);
+  font-family: var(--font-textos);
   overflow-x: hidden;
 }
 
@@ -80,7 +80,7 @@
   transform: translateX(-50%);
   font-size: 120px;
   opacity: 0.1;
-  font-family: Georgia, serif;
+  font-family: var(--font-titulos);
   line-height: 0;
 }
 
