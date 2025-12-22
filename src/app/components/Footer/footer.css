@@ -1,5 +1,6 @@
 /* Footer Styles */
 .footer {
+  font-family: var(--font-footer);
   background-color: rgba(20, 20, 20, 0.95);
   color: white;
   padding-top: 4rem; /* 64px */
