@@ -123,7 +123,7 @@
 }
 
 .bannerQuote {
-  background-color: #3eb6a5;
+  background-color: var(--verde-principal);
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -86,23 +86,23 @@ function Navbar() {
               <Image
                 src="/images/header-suarez.webp"
                 alt="Suarez"
-                width={90}
-                height={45}
+                width={130}
+                height={60}
                 quality={100}
                 priority
                 className="nav-logo-image"
-                sizes="(max-width: 480px) 80px, (max-width: 768px) 90px, 100px"
+                sizes="(max-width: 480px) 100px, (max-width: 768px) 115px, 130px"
               />
               <div className="nav-logo-divider"></div>
               <Image
                 src="/images/header-taller-chapa-y-pintura.webp"
                 alt="Taller de Chapa y Pintura"
-                width={145}
-                height={45}
+                width={200}
+                height={60}
                 quality={100}
                 priority
                 className="nav-logo-image"
-                sizes="(max-width: 480px) 110px, (max-width: 768px) 130px, 150px"
+                sizes="(max-width: 480px) 140px, (max-width: 768px) 170px, 200px"
               />
             </div>
           </Link>
