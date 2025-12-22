@@ -61,14 +61,14 @@
 .heroButton {
   display: inline-block;
   margin-right: 2rem;
-  background-color: #2cb8b2;
+  background-color: var(--verde-principal);
   color: white;
   padding: 0.8rem 2rem;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   border: none;
-  border-radius: 4px;
+  border-radius: 0;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
@@ -76,7 +76,7 @@
 }
 
 .heroButton:hover {
-  background-color: #239b96;
+  background-color: var(--verde-hover);
   transform: translateY(-2px);
 }
 
