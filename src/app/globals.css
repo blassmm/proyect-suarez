@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: DM Sans, sans-serif;
+  font-family: var(--font-textos);
   padding-top: 0;
 }
 
@@ -24,13 +24,17 @@ img {
   object-fit: cover;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titulos);
+  -webkit-font-smoothing: antialiased;
+}
+
 h1 {
   font-size: 5vw;
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.02em;
   color: black;
-  -webkit-font-smoothing: antialiased; /* Mejora el rendering de fuentes en navegadores webkit */
 }
 
 /* Removed global section styles to prevent conflicts with components */
@@ -95,8 +99,15 @@ h1 {
 }
 
 :root {
+  /* Colores */
   --verde-principal: #009b9b;
   --verde-hover: #008080;
+  
+  /* Tipografías */
+  --font-titulos: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-textos: "DM Sans", sans-serif;
+  --font-footer: var(--font-geist-sans), "Geist", sans-serif;
+  
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
