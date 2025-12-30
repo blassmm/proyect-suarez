@@ -1,10 +1,10 @@
 import React from "react";
-import TrabajosGaleria from "../components/Trabajos/TrabajosGaleria";
+import NuestrosTrabajos from "../components/NuestrosTrabajos/NuestrosTrabajos";
 
 export default function TrabajosPage() {
   return (
     <main>
-      <TrabajosGaleria />
+      <NuestrosTrabajos />
     </main>
   );
 }

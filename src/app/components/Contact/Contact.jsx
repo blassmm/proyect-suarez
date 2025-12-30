@@ -139,7 +139,7 @@ export default function Contact() {
 
           {/* WhatsApp */}
           <div className="flex! flex-col! items-center! text-center! p-6! rounded-none! bg-gray-50! transition-all! duration-300! hover:bg-teal-50! hover:shadow-md!">
-            <div className="flex! items-center! justify-center! w-14! h-14! bg-slate-700! rounded-full! mb-4! shadow-md!">
+            <div className="flex! items-center! justify-center! w-14! h-14! bg-green-500! rounded-full! mb-4! shadow-md!">
               <FaWhatsapp className="text-white! text-2xl!" />
             </div>
             <h3 className="font-semibold! text-gray-800! mb-2! text-lg!">
@@ -203,7 +203,7 @@ export default function Contact() {
               href="https://www.instagram.com/taller_suarez"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex! items-center! gap-3! px-6! py-3! bg-teal-500! text-white! rounded-none! font-semibold! uppercase! tracking-wide! shadow-md! transition-all! duration-300! hover:bg-teal-600! hover:shadow-lg! hover:-translate-y-1!"
+              className="flex! items-center! gap-3! px-6! py-3! bg-slate-700! text-white! rounded-none! font-semibold! uppercase! tracking-wide! shadow-md! transition-all! duration-300! hover:bg-slate-800! hover:shadow-lg! hover:-translate-y-1!"
             >
               <FaInstagram className="text-xl!" />
               <span>Instagram</span>

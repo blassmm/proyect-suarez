@@ -72,6 +72,17 @@
   z-index: -1;
 }
 
+.compromisosBackground::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+  z-index: 1;
+}
+
 .compromisosImage {
   object-fit: cover;
   object-position: center;

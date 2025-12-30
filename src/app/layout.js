@@ -42,11 +42,25 @@ export default function RootLayout({ children }) {
           <Footer />
           <FloatingBarSocials
             socials={[
-              { name: "LinkedIn", url: "https://www.linkedin.com/company/taller-suarez-chapa-y-pintura" },
-              { name: "Facebook", url: "https://www.facebook.com/TallerSuarezChapayPintura" },
+              {
+                name: "Whatsapp",
+                num: "5492213523273",
+                defaultMsj: "Hola, somos Taller Suarez ¿cómo estás? ",
+              },
+              {
+                name: "Facebook",
+                url: "https://www.facebook.com/TallerSuarezChapayPintura",
+              },
               { name: "Instagram", url: "https://instagram.com/taller_suarez" },
-              { name: "Youtube", url: "https://www.youtube.com/@tallersuarez2220" },
-              { name: "Whatsapp", num: "5492213523273", defaultMsj: "Hola, somos Taller Suarez ¿cómo estás? " },
+              {
+                name: "Youtube",
+                url: "https://www.youtube.com/@tallersuarez2220",
+              },
+              {
+                name: "LinkedIn",
+                url: "https://www.linkedin.com/company/taller-suarez-chapa-y-pintura",
+              },
+              { name: "Tiktok", url: "https://www.tiktok.com/@taller_suarez" },
             ]}
           />
         </LenisWrapper>
