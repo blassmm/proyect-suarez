@@ -268,7 +268,7 @@
 
 .nav-toggle.active .hamburger-line:nth-child(3) {
   transform: rotate(-50deg) translate(3px, -6px);
-  background-color: #0059ff;
+  background-color: #fff;
 }
 
 /* Mobile Navigation */
@@ -318,12 +318,12 @@
 }
 
 .nav-link-mobile:hover {
-  color: #007bff;
+  color: #ffffff;
   background-color: rgba(0, 123, 255, 0.1);
 }
 
 .nav-link-mobile.active {
-  color: #007bff;
+  color: #fcfcfc;
   background-color: rgba(0, 123, 255, 0.15);
   font-weight: 600;
 }
@@ -331,7 +331,7 @@
 /* Mobile Dropdown Styles */
 .dropdown-header {
   font-weight: 600;
-  color: #007bff;
+  color: #fcfcfc;
   background-color: rgba(0, 123, 255, 0.05);
 }
 

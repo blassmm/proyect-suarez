@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./TrabajosGaleria.module.css";
-import { AwardBadge } from "../Insignia";
+// import { AwardBadge } from "../Insignia";
 
 // Datos de ejemplo para las restauraciones
 const trabajosRestauracion = [
@@ -121,9 +121,9 @@ const TrabajosGaleria = () => {
                   height={300}
                   className={styles.carImage}
                 />
-                {trabajo.premiado && index === 0 && (
+                {/* {trabajo.premiado && index === 0 && (
                   <AwardBadge year={trabajo.anio} />
-                )}
+                )} */}
               </div>
               <div className={styles.carInfo}>
                 <h3>{trabajo.nombre}</h3>

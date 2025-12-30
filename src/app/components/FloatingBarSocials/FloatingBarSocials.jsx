@@ -12,8 +12,7 @@ import {
   FaEnvelope,
   FaYoutube,
 } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaTelegram, FaXTwitter, FaTiktok } from "react-icons/fa6";
 
 //npm install react-icons --save
 const socialIcons = {
@@ -26,6 +25,7 @@ const socialIcons = {
   whatsapp: <FaWhatsapp />,
   email: <FaEnvelope />,
   youtube: <FaYoutube />,
+  tiktok: <FaTiktok />,
 };
 
 const FloatingBarSocials = ({ socials = [] }) => {

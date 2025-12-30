@@ -7,9 +7,10 @@
 
 .headerSection {
   width: 100vw;
-  height: 60vh; /* Ajustado al 60% del viewport height */
+  height: 60vh;
   position: relative;
   margin-left: calc(-50vw + 50%);
+  margin-top: 95px;
   margin-bottom: 60px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -276,7 +277,8 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .headerSection {
-    height: 25vh; /* Ajustado para pantallas medianas */
+    height: 25vh;
+    margin-top: 80px;
   }
 
   .sectionTitle {
@@ -338,7 +340,8 @@
 
 @media (max-width: 480px) {
   .headerSection {
-    height: 20vh; /* Ajustado para pantallas pequeñas */
+    height: 20vh;
+    margin-top: 70px;
   }
 
   .sectionTitle {
