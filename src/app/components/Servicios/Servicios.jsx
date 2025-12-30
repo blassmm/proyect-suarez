@@ -79,7 +79,7 @@ function Servicios() {
 
       {/* Limpieza Criogénica */}
       <section className="w-full! py-16! sm:py-20! md:py-24! bg-white!">
-        <div className="max-w-3xl! mx-auto! px-6! sm:px-8! md:px-12! text-center!">
+        <div className="max-w-3xl! mx-auto! px-6! sm:px-8! md:px-12! text-left!">
           <h3 className="text-teal-500! text-2xl! sm:text-3xl! md:text-4xl! font-bold! mb-6!">
             Limpieza criogénica
           </h3>

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Crecimiento.module.css";
-import { AwardBadge } from "../Insignia";
+// import { AwardBadge } from "../Insignia";
 
 const Crecimiento = () => {
   const [activeDecade, setActiveDecade] = useState("1980");
@@ -307,9 +307,9 @@ const Crecimiento = () => {
             </h3>
 
             <div className={styles.awardContainer}>
-              <div className={styles.badgePosition}>
+              {/* <div className={styles.badgePosition}>
                 <AwardBadge year="2011" position="left" />
-              </div>
+              </div> */}
               <div className={styles.awardCard}>
                 <div className={styles.awardHeader}>
                   <span className={styles.awardTitle}>

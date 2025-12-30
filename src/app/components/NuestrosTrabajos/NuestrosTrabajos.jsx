@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./NuestrosTrabajos.module.css";
 import FlechaAbajo from "../FlechaAbajo/FlechaAbajo";
-import AwardBadge from "../Insignia/AwardBadge";
+// import AwardBadge from "../Insignia/AwardBadge";
 import Copy from "../Copy/Copy";
 import Link from "next/link";
 
@@ -149,7 +149,7 @@ const NuestrosTrabajos = () => {
               height={450}
               className={styles.restauracionImg}
             />
-            <AwardBadge year="2022" position="left" />
+            {/* <AwardBadge year="2022" position="left" /> */}
           </div>
         </div>
       </div>

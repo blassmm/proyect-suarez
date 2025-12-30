@@ -2,12 +2,13 @@
   background-color: #121212;
   color: #f8f9fa;
   padding: 0;
+  padding-top: 95px;
   overflow: hidden;
 }
 
 /* Aspectos Claves Section */
 .aspectosClaves {
-  background-color: rgba(20, 184, 154, 0.8);
+  background-color: rgba(0, 155, 155, 0.8);
   background-image: url("/nuestros-trabajos/ultima.webp");
   background-size: cover;
   background-position: center;
@@ -25,7 +26,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(20, 184, 154, 0.7);
+  background-color: rgba(0, 155, 155, 0.7);
   z-index: 0;
 }
 
@@ -284,7 +285,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(20, 184, 154, 0.8);
+  background-color: rgba(0, 155, 155, 0.8);
 }
 
 .estadisticasContainer {
@@ -337,22 +338,26 @@
 }
 
 @media (max-width: 768px) {
+  .trabajosSection {
+    padding-top: 80px;
+  }
+
+  .aspectosClaves {
+    padding: 3rem 1.5rem;
+    padding-bottom: 4rem;
+  }
+
   .aspectosGrid {
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
   }
 
   .mainTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .estadisticasContainer {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .estadisticaItem {
-    margin-bottom: 1.5rem;
+  .restauracionContainer {
+    padding: 4rem 1rem 2rem;
   }
 
   .restauracionPremiada {
@@ -366,20 +371,156 @@
   }
 
   .restauracionInfo {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .restauracionInfo h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .restauracionInfo h2 span {
+    font-size: 1.4rem;
+  }
+
+  .restauracionInfo h4 {
+    font-size: 1.8rem;
+  }
+
+  .trabajosContainer {
+    padding: 3rem 1rem;
+  }
+
+  .trabajosTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .estadisticasSection {
+    padding: 2rem 1rem;
+  }
+
+  .estadisticasContainer {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .estadisticaItem {
+    flex-basis: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .estadisticaValor {
+    font-size: 2.2rem;
+  }
+
+  .estadisticaUnidad {
+    font-size: 1.4rem;
+  }
+
+  .estadisticaDesc {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
-  .trabajosGrid {
-    grid-template-columns: 1fr;
+  .trabajosSection {
+    padding-top: 70px;
+  }
+
+  .aspectosClaves {
+    padding: 2rem 1rem;
+    padding-bottom: 3rem;
   }
 
   .mainTitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .aspectoItem {
+    padding: 1rem;
+  }
+
+  .aspectoTitle {
+    font-size: 1.2rem;
+  }
+
+  .aspectoDesc {
+    font-size: 0.9rem;
+  }
+
+  .restauracionContainer {
+    padding: 3rem 0.5rem 1.5rem;
+  }
+
+  .restauracionInfo {
+    padding: 1.5rem 1rem;
+  }
+
+  .restauracionInfo h3 {
+    font-size: 1rem;
+  }
+
+  .restauracionInfo h2 {
+    font-size: 1.6rem;
+  }
+
+  .restauracionInfo h2 span {
+    font-size: 1.1rem;
+  }
+
+  .restauracionInfo h4 {
+    font-size: 1.4rem;
+  }
+
+  .trabajosContainer {
+    padding: 2rem 0.5rem;
+  }
+
+  .trabajosTitle {
+    font-size: 1.6rem;
+  }
+
+  .trabajosGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .trabajoImageContainer {
+    height: 200px;
+  }
+
+  .trabajoInfo {
+    padding: 1rem;
+  }
+
+  .verMasContainer {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .estadisticasSection {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .estadisticasContainer {
+    gap: 1rem;
+  }
+
+  .estadisticaItem {
+    flex-basis: 100%;
+  }
+
+  .estadisticaValor {
+    font-size: 2rem;
+  }
+
+  .estadisticaUnidad {
+    font-size: 1.2rem;
+  }
+
+  .estadisticaDesc {
+    font-size: 0.75rem;
   }
 }
