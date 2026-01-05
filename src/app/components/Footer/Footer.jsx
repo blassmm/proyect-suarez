@@ -58,11 +58,11 @@ const Footer = () => {
               <span className="footer-text">221 599-1586</span>
             </Link>
             <Link
-              href="mailto:comercial@tallersuarez.com"
+              href="mailto:info@tallersuarez.com.ar"
               className="footer-link"
             >
               <FaEnvelope className="footer-icon footer-email-icon" />
-              <span className="footer-text">comercial@tallersuarez.com</span>
+              <span className="footer-text">info@tallersuarez.com.ar</span>
             </Link>
           </div>
 

@@ -15,7 +15,16 @@ export default function Home() {
     <>
       <div className="revealer"></div>
       <Hero />
-      <LogoMarquee />
+      <LogoMarquee
+        logos={[
+          { name: "Marca 1", logo: "/logos-homepage/Alfa-Romeo.png" },
+          { name: "Marca 2", logo: "/logos-homepage/audi.png" },
+          { name: "Marca 3", logo: "/logos-homepage/bmw.png" },
+          { name: "Marca 4", logo: "/logos-homepage/ferrari.png" },
+          { name: "Marca 5", logo: "/logos-homepage/maserati.webp" },
+          { name: "Marca 6", logo: "/logos-homepage/Mercedes.png" },
+        ]}
+      />
       <Services />
       <HomeMision />
       <Team />

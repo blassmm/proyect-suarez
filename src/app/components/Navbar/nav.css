@@ -220,7 +220,7 @@
   padding: 0.7rem 1.2rem;
   font-size: 0.95rem;
   transition: all 0.2s ease;
-  text-align: center;
+  text-align: left;
 }
 
 .dropdown-link:hover {
