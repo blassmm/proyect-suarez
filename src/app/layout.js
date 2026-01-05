@@ -10,17 +10,20 @@ import FloatingBarSocials from "./components/FloatingBarSocials";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["400", "600", "700", "800"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -44,7 +47,7 @@ export default function RootLayout({ children }) {
             socials={[
               {
                 name: "Whatsapp",
-                num: "5492213523273",
+                num: "5492214956079",
                 defaultMsj: "Hola, somos Taller Suarez ¿cómo estás? ",
               },
               {

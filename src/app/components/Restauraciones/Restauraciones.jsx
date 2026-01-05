@@ -11,15 +11,14 @@ import { vehicles } from "./data";
 export default function Restauraciones() {
   return (
     <main className="">
-      
-      
       {/* Hero Image */}
-      <div className="relative! mt-15! sm:mt-18! md:mt-24! w-full! h-[180px]! md:h-[200px]! lg:h-[280px]!">
+      <div className="relative! mt-15! sm:mt-18! md:mt-24! w-full! h-[180px]! md:h-[300px]! lg:h-[480px]!">
         <Image
-          src="/restauraciones/imagen1.webp"
+          src="/restauraciones/test.jpg"
           alt="Mercedes Clásico Restaurado"
           fill
-          className="object-cover! object-[center_50%]!"
+          className="object-cover"
+          style={{ objectPosition: "center 60%" }}
           priority
         />
       </div>
