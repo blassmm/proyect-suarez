@@ -13,7 +13,7 @@ export async function sendEmail(data) {
   try {
     const response = await resend.emails.send({
       from: "Formulario Web <onboarding@resend.dev>", // mejor usar dominio verificado
-      to: "montanariblas@hotmail.com",
+      to: "info@tallersuarez.com.ar",
       subject: "🚀 Nuevo contacto registrado",
       html: `
         <div style="font-family: Inter, Arial, sans-serif; background-color: #0f0f1a; padding: 30px; color: #fff;">

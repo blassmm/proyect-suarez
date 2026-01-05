@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import Image from "next/image";
+import LogoMarquee from "../Marquee/LogoMarquee";
 
 const About = () => {
   return (
@@ -252,7 +253,18 @@ const About = () => {
             </div>
           </div>
         </div>
+        
       </section>
+      <LogoMarquee
+        logos={[
+          { name: "Marca 1", logo: "/logos-marcas/1.webp" },
+          { name: "Marca 2", logo: "/logos-marcas/2.webp" },
+          { name: "Marca 3", logo: "/logos-marcas/3.webp" },
+          { name: "Marca 4", logo: "/logos-marcas/4.webp" },
+          { name: "Marca 5", logo: "/logos-marcas/5.webp" },
+          { name: "Marca 6", logo: "/logos-marcas/6.webp" },
+        ]}
+      />
     </div>
   );
 };
