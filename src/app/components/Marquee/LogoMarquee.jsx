@@ -12,18 +12,23 @@ const BrandLogo = memo(({ brand, index }) => (
     style={{ marginLeft: "100px", marginRight: "100px" }}
     className="flex items-center"
   >
-    <div className="h-24 flex items-center justify-center">
+    <div className="w-52 h-28 flex items-center justify-center py-3">
       <Image
         src={brand.logo}
         alt={brand.name}
-        width={160}
-        height={80}
+        width={200}
+        height={90}
         quality={90}
         priority={index < 3}
         loading={index < 3 ? "eager" : "lazy"}
         className="object-contain transition-transform hover:scale-110 duration-300"
-        style={{ width: "auto", height: "auto" }}
-        sizes="(max-width: 768px) 120px, 160px"
+        style={{
+          width: "auto",
+          height: "auto",
+          maxHeight: "90px",
+          maxWidth: "180px",
+        }}
+        sizes="180px"
       />
     </div>
   </div>
@@ -54,7 +59,7 @@ function LogoMarquee({ logos = [] }) {
 
   return (
     <section className="py-16 bg-gray-50">
-      <Marquee className="bg-white py-16 shadow-sm">
+      <Marquee className="bg-white py-20 shadow-sm">
         <MarqueeFade side="left" className={isMobile ? "w-40" : "w-150"} />
         <MarqueeFade side="right" className={isMobile ? "w-40" : "w-150"} />
         <MarqueeContent

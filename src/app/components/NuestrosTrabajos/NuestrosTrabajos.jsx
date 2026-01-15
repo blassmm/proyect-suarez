@@ -6,38 +6,57 @@ import FlechaAbajo from "../FlechaAbajo/FlechaAbajo";
 // import AwardBadge from "../Insignia/AwardBadge";
 import Copy from "../Copy/Copy";
 import Link from "next/link";
+import CardSlider from "../CardSlider";
 
 //ESTE COMPONENTE SE USA SOLO EN EL INICIO-----------------------------------------------------
 
 const NuestrosTrabajos = () => {
+  // Datos mapeados al formato del CardSlider
   const trabajos = [
+    {
+      id: 0,
+      imagen: "/trabajos/1.webp",
+      titulo: "Alfa Romeo 6C 2500cc",
+      subtitulo: "1948",
+      descripcion: "2022",
+      etiqueta: "RESTAURACIÓN PREMIADA",
+      trabajo: "Restauración completa",
+    },
     {
       id: 1,
       imagen: "/nuestros-trabajos/car1.webp",
-      modelo: "Modelo auto",
-      año: "Año",
-      trabajo: "Trabajo realizado",
+      titulo: "Porsche 911",
+      subtitulo: "1973",
+      descripcion: "2023",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Restauración interior",
     },
     {
       id: 2,
       imagen: "/nuestros-trabajos/car2.webp",
-      modelo: "Modelo auto",
-      año: "Año",
-      trabajo: "Trabajo realizado",
+      titulo: "Dodge Charger",
+      subtitulo: "1969",
+      descripcion: "2024",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Chapa y pintura",
     },
     {
       id: 3,
       imagen: "/nuestros-trabajos/car3.webp",
-      modelo: "Modelo auto",
-      año: "Año",
-      trabajo: "Trabajo realizado",
+      titulo: "Audi A4",
+      subtitulo: "2020",
+      descripcion: "2024",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Reparación mecánica",
     },
     {
       id: 4,
       imagen: "/nuestros-trabajos/car4.webp",
-      modelo: "Modelo auto",
-      año: "Año",
-      trabajo: "Trabajo realizado",
+      titulo: "BMW M4",
+      subtitulo: "2021",
+      descripcion: "2025",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Detailing completo",
     },
   ];
 
@@ -126,59 +145,29 @@ const NuestrosTrabajos = () => {
 
       <FlechaAbajo horizontalPosition={3} />
 
-      <div className={styles.restauracionContainer}>
-        <div className={styles.restauracionPremiada}>
-          <div className={styles.restauracionInfo}>
-            <Copy>
-              <h3>RESTAURACIÓN PREMIADA</h3>
-            </Copy>
-            <Copy delay={0.2}>
-              <h2>
-                Alfa Romeo 6C 2500cc <span>(1948)</span>
-              </h2>
-            </Copy>
-            <Copy delay={0.4}>
-              <h4>2022</h4>
-            </Copy>
-          </div>
-          <div className={styles.restauracionImagen}>
-            <Image
-              src="/trabajos/1.webp"
-              alt="Alfa Romeo 6C 2500cc"
-              width={800}
-              height={450}
-              className={styles.restauracionImg}
-            />
-            {/* <AwardBadge year="2022" position="left" /> */}
-          </div>
-        </div>
-      </div>
-
       <div className={styles.trabajosContainer}>
-        <Copy>
-          <h2 className={styles.trabajosTitle}>Nuestros Trabajos</h2>
-        </Copy>
-
-        <div className={styles.trabajosGrid}>
-          {trabajos.map((trabajo) => (
-            <div key={trabajo.id} className={styles.trabajoCard}>
+        <CardSlider
+          items={trabajos}
+          sliderTitle="Nuestros Trabajos"
+          renderItem={(item) => (
+            <div className={styles.trabajoCard}>
               <div className={styles.trabajoImageContainer}>
                 <Image
-                  src={trabajo.imagen}
-                  alt={trabajo.modelo}
+                  src={item.imagen}
+                  alt={item.titulo}
                   width={400}
                   height={300}
                   className={styles.trabajoImage}
                 />
               </div>
               <div className={styles.trabajoInfo}>
-                <h3 className={styles.trabajoModelo}>{trabajo.modelo}</h3>
-                <p className={styles.trabajoAño}>{trabajo.año}</p>
-                <p className={styles.trabajoDesc}>{trabajo.trabajo}</p>
+                <h3 className={styles.trabajoModelo}>{item.titulo}</h3>
+                <p className={styles.trabajoAño}>{item.subtitulo}</p>
+                <p className={styles.trabajoDesc}>{item.trabajo}</p>
               </div>
             </div>
-          ))}
-        </div>
+          )}
+        />
 
         <div className={styles.verMasContainer}>
           <Link href="/trabajos" className={styles.verMasBtn}>

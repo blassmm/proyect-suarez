@@ -29,6 +29,18 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Taller Suarez",
   description: "Excelencia y compromiso en cada detalle",
+  icons: {
+    icon: [
+      {
+        url: "/favicon/favicon-dark.ico",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon/favicon-light.ico",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
