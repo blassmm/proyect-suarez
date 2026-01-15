@@ -19,6 +19,8 @@ const NuestrosTrabajos = () => {
       titulo: "Alfa Romeo 6C 2500cc",
       subtitulo: "1948",
       descripcion: "2022",
+      descripcion2:
+        "Se realizó la restauración integral de este Alfa Romeo, a través de un largo proceso, en el que Jorge Martucci líderando la restauración, Héctor y Diego Bustos en la carrocería, Bruno Andreozzi en la tapicería, Cromado Los Primos en los cromados, y todo el equipo de Taller Suarez; lograron revivir la magia de un auto que es una joya casi sin igual en nuestro país.",
       etiqueta: "RESTAURACIÓN PREMIADA",
       trabajo: "Restauración completa",
     },
@@ -28,6 +30,8 @@ const NuestrosTrabajos = () => {
       titulo: "Porsche 911",
       subtitulo: "1973",
       descripcion: "2023",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
       etiqueta: "TRABAJO DESTACADO",
       trabajo: "Restauración interior",
     },
@@ -37,6 +41,8 @@ const NuestrosTrabajos = () => {
       titulo: "Dodge Charger",
       subtitulo: "1969",
       descripcion: "2024",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
       etiqueta: "TRABAJO DESTACADO",
       trabajo: "Chapa y pintura",
     },
@@ -46,6 +52,8 @@ const NuestrosTrabajos = () => {
       titulo: "Audi A4",
       subtitulo: "2020",
       descripcion: "2024",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
       etiqueta: "TRABAJO DESTACADO",
       trabajo: "Reparación mecánica",
     },
@@ -55,6 +63,8 @@ const NuestrosTrabajos = () => {
       titulo: "BMW M4",
       subtitulo: "2021",
       descripcion: "2025",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
       etiqueta: "TRABAJO DESTACADO",
       trabajo: "Detailing completo",
     },

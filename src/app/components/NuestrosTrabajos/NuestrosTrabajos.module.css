@@ -157,13 +157,17 @@
 }
 
 .verMasBtn {
+  display: inline-block;
   background-color: transparent;
-  border: 1px solid #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff;
   color: #ffffff;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .verMasBtn:hover {
