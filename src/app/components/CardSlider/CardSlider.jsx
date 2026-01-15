@@ -70,6 +70,11 @@ export default function CardSlider({
                     {selectedItem.descripcion}
                   </h4>
                 )}
+                {selectedItem.descripcion2 && (
+                  <p className={styles.featuredDescripcion2}>
+                    {selectedItem.descripcion2}
+                  </p>
+                )}
               </div>
               <div className={styles.featuredImage}>
                 <Image
