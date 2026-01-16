@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
               {
                 name: "Whatsapp",
                 num: "5492214956079",
-                defaultMsj: "Hola, somos Taller Suarez ¿cómo estás? ",
+                defaultMsj: "Hola, queria consultar..",
               },
               {
                 name: "Facebook",

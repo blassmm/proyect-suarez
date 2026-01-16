@@ -14,7 +14,7 @@ export async function sendEmail(data) {
     const response = await resend.emails.send({
       from: "Formulario Web <onboarding@resend.dev>", // mejor usar dominio verificado
       to: "info@tallersuarez.com.ar",
-      subject: "🚀 Nuevo contacto registrado",
+      subject: "Nuevo contacto recibido",
       html: `
         <div style="font-family: Inter, Arial, sans-serif; background-color: #0f0f1a; padding: 30px; color: #fff;">
           <div style="max-width: 600px; margin: auto; background: linear-gradient(135deg, #111827, #1f2937); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
