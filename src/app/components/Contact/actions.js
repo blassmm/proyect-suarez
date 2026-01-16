@@ -2,7 +2,8 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend("re_LaYSEbWp_L2k1Gw8r6UNqXbTuYfwNK8Jh");
 
 export async function sendEmail(data) {
   // Lógica del servidor: por ej. usar Nodemailer, Resend, o escribir en la DB

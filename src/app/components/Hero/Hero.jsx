@@ -29,13 +29,9 @@ export default function Hero() {
       image: "/images/hero-car.png",
       title: (
         <>
-          ESPECIALISTAS EN
+          LA DIFERENCIA ESTÁ EN
           <br />
-          REVIVIR LA MAGIA DE
-          <br />
-          LOS AUTOMÓVILES
-          <br />
-          ANTIGUOS
+          LOS DETALLES
         </>
       ),
       button: {
@@ -47,9 +43,7 @@ export default function Hero() {
       image: "/images/hero-car2.png",
       title: (
         <>
-          TRABAJAMOS CON TODAS
-          <br />
-          LAS COMPAÑÍAS
+          ESTILO Y ELEGANCIA
         </>
       ),
       button: {
@@ -61,11 +55,11 @@ export default function Hero() {
       image: "/images/hero-car3.png",
       title: (
         <>
-          TECNOLOGIA DE EXCELENCIA
+          MAS DE 1500
           <br />
-          QUE MERECE
+          AUTOS PROCESADOS
           <br />
-          EL MEJOR SERVICIO
+          EN 2025
         </>
       ),
       button: {
