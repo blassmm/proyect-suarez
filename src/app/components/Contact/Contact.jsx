@@ -2,6 +2,7 @@
 
 import styles from "./Contact.module.css";
 import MapComponent from "./MapComponent";
+import { toast } from "sonner";
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -43,11 +44,13 @@ export default function Contact() {
   const onSubmit = async (data) => {
     try {
       await sendEmail(data);
+      toast.success("Mensaje enviado correctamente");
       console.log("✅ Email enviado correctamente");
-      reset(); // Reset form after successful submission
+      reset();
     } catch (error) {
       console.error(error);
       console.log("❌ Error al enviar el email");
+      toast.error("Error al enviar el mensaje");
     }
   };
 
