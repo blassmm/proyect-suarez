@@ -1,12 +1,12 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./CardSlider.module.css";
 
 /**
  * Slider de cards con sección destacada
  * @param {Object} props
- * @param {Array} props.items - Array de items con: id, imagen, titulo, subtitulo, descripcion, etiqueta
+ * @param {Array} props.items - Array de items con: id, imagen, titulo, subtitulo, descripcion, etiqueta, masImagenes
  * @param {Function} props.renderItem - Función para renderizar cada card (recibe item, isSelected)
  * @param {Function} props.renderFeatured - Función para renderizar sección destacada (recibe selectedItem)
  * @param {boolean} props.showFeatured - Mostrar sección destacada (default: true)
@@ -27,6 +27,11 @@ export default function CardSlider({
 }) {
   const sliderRef = useRef(null);
   const [selectedItem, setSelectedItem] = useState(items[defaultSelected]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [selectedItem]);
 
   const scrollSlider = (direction) => {
     if (sliderRef.current) {
@@ -41,6 +46,19 @@ export default function CardSlider({
 
   const handleSelect = (item) => {
     setSelectedItem(item);
+    setCurrentImageIndex(0);
+  };
+
+  const handleThumbnailClick = (index) => {
+    setCurrentImageIndex(index);
+  };
+
+  const getAllImages = (item) => {
+    const images = [item.imagen];
+    if (item.masImagenes && Array.isArray(item.masImagenes)) {
+      images.push(...item.masImagenes.slice(0, 7));
+    }
+    return images;
   };
 
   const visibleItems = items.filter((item) => item.id !== selectedItem.id);
@@ -78,13 +96,44 @@ export default function CardSlider({
               </div>
               <div className={styles.featuredImage}>
                 <Image
-                  key={`img-${selectedItem.id}`}
-                  src={selectedItem.imagen}
+                  key={`img-${selectedItem.id}-${currentImageIndex}`}
+                  src={getAllImages(selectedItem)[currentImageIndex]}
                   alt={selectedItem.titulo}
                   width={800}
                   height={450}
                   className={styles.featuredImg}
                 />
+                {getAllImages(selectedItem).length > 1 && (
+                  <>
+                    <div className={styles.imageCounter}>
+                      <span className={styles.currentIndex}>
+                        {currentImageIndex + 1}
+                      </span>
+                      <span className={styles.separator}>/</span>
+                      <span className={styles.totalCount}>{getAllImages(selectedItem).length}</span>
+                    </div>
+                    <div className={styles.galleryBar}>
+                      <div className={styles.thumbnailsContainer}>
+                        {getAllImages(selectedItem).map((img, idx) => (
+                          <button
+                            key={`thumb-${idx}`}
+                            className={`${styles.thumbnail} ${currentImageIndex === idx ? styles.thumbnailActive : ""}`}
+                            onClick={() => handleThumbnailClick(idx)}
+                          >
+                            <Image
+                              src={img}
+                              alt={`${selectedItem.titulo} - ${idx + 1}`}
+                              width={80}
+                              height={50}
+                              className={styles.thumbnailImg}
+                            />
+                            <span className={styles.thumbnailOverlay} />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           )}
