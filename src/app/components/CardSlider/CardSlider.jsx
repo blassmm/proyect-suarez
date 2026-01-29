@@ -28,9 +28,12 @@ export default function CardSlider({
   const sliderRef = useRef(null);
   const [selectedItem, setSelectedItem] = useState(items[defaultSelected]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [thumbStartIndex, setThumbStartIndex] = useState(0);
+  const VISIBLE_THUMBS = 3;
 
   useEffect(() => {
     setCurrentImageIndex(0);
+    setThumbStartIndex(0);
   }, [selectedItem]);
 
   const scrollSlider = (direction) => {
@@ -51,6 +54,24 @@ export default function CardSlider({
 
   const handleThumbnailClick = (index) => {
     setCurrentImageIndex(index);
+  };
+
+  const scrollThumbs = (direction, totalImages) => {
+    const newImageIndex = currentImageIndex + direction;
+    if (newImageIndex >= 0 && newImageIndex < totalImages) {
+      setCurrentImageIndex(newImageIndex);
+      
+      // Ajustar ventana de miniaturas si es necesario
+      if (newImageIndex < thumbStartIndex) {
+        setThumbStartIndex(newImageIndex);
+      } else if (newImageIndex >= thumbStartIndex + VISIBLE_THUMBS) {
+        setThumbStartIndex(newImageIndex - VISIBLE_THUMBS + 1);
+      }
+    }
+  };
+
+  const getVisibleThumbs = (images) => {
+    return images.slice(thumbStartIndex, thumbStartIndex + VISIBLE_THUMBS);
   };
 
   const getAllImages = (item) => {
@@ -113,24 +134,47 @@ export default function CardSlider({
                       <span className={styles.totalCount}>{getAllImages(selectedItem).length}</span>
                     </div>
                     <div className={styles.galleryBar}>
+                      <button
+                        className={`${styles.thumbArrow} ${currentImageIndex === 0 ? styles.thumbArrowDisabled : ""}`}
+                        onClick={() => scrollThumbs(-1, getAllImages(selectedItem).length)}
+                        disabled={currentImageIndex === 0}
+                        aria-label="Anterior"
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
                       <div className={styles.thumbnailsContainer}>
-                        {getAllImages(selectedItem).map((img, idx) => (
-                          <button
-                            key={`thumb-${idx}`}
-                            className={`${styles.thumbnail} ${currentImageIndex === idx ? styles.thumbnailActive : ""}`}
-                            onClick={() => handleThumbnailClick(idx)}
-                          >
-                            <Image
-                              src={img}
-                              alt={`${selectedItem.titulo} - ${idx + 1}`}
-                              width={80}
-                              height={50}
-                              className={styles.thumbnailImg}
-                            />
-                            <span className={styles.thumbnailOverlay} />
-                          </button>
-                        ))}
+                        {getVisibleThumbs(getAllImages(selectedItem)).map((img, idx) => {
+                          const realIndex = thumbStartIndex + idx;
+                          return (
+                            <button
+                              key={`thumb-${realIndex}`}
+                              className={`${styles.thumbnail} ${currentImageIndex === realIndex ? styles.thumbnailActive : ""}`}
+                              onClick={() => handleThumbnailClick(realIndex)}
+                            >
+                              <Image
+                                src={img}
+                                alt={`${selectedItem.titulo} - ${realIndex + 1}`}
+                                width={80}
+                                height={50}
+                                className={styles.thumbnailImg}
+                              />
+                              <span className={styles.thumbnailOverlay} />
+                            </button>
+                          );
+                        })}
                       </div>
+                      <button
+                        className={`${styles.thumbArrow} ${currentImageIndex >= getAllImages(selectedItem).length - 1 ? styles.thumbArrowDisabled : ""}`}
+                        onClick={() => scrollThumbs(1, getAllImages(selectedItem).length)}
+                        disabled={currentImageIndex >= getAllImages(selectedItem).length - 1}
+                        aria-label="Siguiente"
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
                     </div>
                   </>
                 )}
