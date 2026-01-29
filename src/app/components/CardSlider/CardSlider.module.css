@@ -11,7 +11,7 @@
   background-color: rgba(20, 20, 20, 0.95);
   color: #ffffff;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   position: relative;
   overflow: hidden;
 }
@@ -20,6 +20,9 @@
   width: 40%;
   padding: 3rem;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .featuredInfo h3 {
@@ -49,16 +52,120 @@
 
 .featuredImage {
   width: 60%;
-  height: 450px;
+  min-height: 450px;
   position: relative;
   overflow: hidden;
 }
 
 .featuredImg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   animation: fadeIn 0.4s ease-out;
+}
+
+/* Gallery Bar - Top container */
+.galleryBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 70%, transparent 100%);
+  z-index: 10;
+}
+
+.thumbnailsContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 68px;
+  height: 46px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.thumbnailOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.thumbnail:hover .thumbnailOverlay {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail:hover {
+  transform: translateY(-2px);
+}
+
+.thumbnailActive {
+  box-shadow: 0 0 0 2px #d4af37;
+}
+
+.thumbnailActive .thumbnailOverlay {
+  background: transparent;
+}
+
+.thumbnailImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Image counter */
+.imageCounter {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  background: rgba(60, 60, 60, 0.95);
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 6px;
+  z-index: 15;
+}
+
+.currentIndex {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.separator {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.totalCount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
 }
 
 .featuredDescripcion2 {
@@ -79,6 +186,7 @@
     transform: translateY(0);
   }
 }
+
 
 .sliderTitle {
   font-size: 2.5rem;
@@ -169,6 +277,35 @@
     height: 280px;
   }
 
+  .galleryBar {
+    padding: 12px 14px;
+  }
+
+  .thumbnailsContainer {
+    gap: 6px;
+  }
+
+  .thumbnail {
+    width: 56px;
+    height: 38px;
+  }
+
+  .imageCounter {
+    top: 12px;
+    right: 14px;
+    height: 38px;
+    padding: 0 12px;
+  }
+
+  .currentIndex,
+  .totalCount {
+    font-size: 15px;
+  }
+
+  .separator {
+    font-size: 13px;
+  }
+
   .featuredInfo {
     padding: 1.5rem;
   }
@@ -204,6 +341,42 @@
 
   .featuredImage {
     height: 200px;
+  }
+
+  .galleryBar {
+    padding: 10px 12px;
+  }
+
+  .thumbnailsContainer {
+    gap: 5px;
+  }
+
+  .thumbnail {
+    width: 46px;
+    height: 32px;
+    border-radius: 4px;
+  }
+
+  .thumbnailImg,
+  .thumbnailOverlay {
+    border-radius: 4px;
+  }
+
+  .imageCounter {
+    top: 10px;
+    right: 12px;
+    height: 32px;
+    padding: 0 10px;
+    gap: 3px;
+  }
+
+  .currentIndex,
+  .totalCount {
+    font-size: 13px;
+  }
+
+  .separator {
+    font-size: 11px;
   }
 
   .featuredInfo {

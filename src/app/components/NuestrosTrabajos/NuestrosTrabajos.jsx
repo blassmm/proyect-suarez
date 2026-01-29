@@ -22,18 +22,26 @@ const NuestrosTrabajos = () => {
       descripcion2:
         "Se realizó la restauración integral de este Alfa Romeo, a través de un largo proceso, en el que Jorge Martucci líderando la restauración, Héctor y Diego Bustos en la carrocería, Bruno Andreozzi en la tapicería, Cromado Los Primos en los cromados, y todo el equipo de Taller Suarez; lograron revivir la magia de un auto que es una joya casi sin igual en nuestro país.",
       etiqueta: "RESTAURACIÓN PREMIADA",
-      trabajo: "Restauración completa",
+      trabajo: "Restauración Premiada",
     },
     {
       id: 1,
-      imagen: "/nuestros-trabajos/car1.webp",
-      titulo: "Porsche 911",
-      subtitulo: "1973",
-      descripcion: "2023",
+      imagen: "/nuestros-trabajos/jaguar-pepe/Principal.png",
+      titulo: "JAGUAR XK 120 OTS",
+      subtitulo: "1953",
+      descripcion: "Cliente Pepe Gustavo",
       descripcion2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
-      etiqueta: "TRABAJO DESTACADO",
-      trabajo: "Restauración interior",
+        "Restauración completa de la carroceria y chasis de 1500hs de trabajo, equivalente a 7 meses y medio, que incluyó un pelado manual seguido de un arenado. Se conservan todas las piezas originales, las cuales fueron restauradas tanto en chapa como en aluminio, utilizando una bancada de estirado y medición universal con calibres móviles, permitiendo medir las tres dimensiones para lograr un ajuste perfecto. Pintura completa en bicapa, en el color original Pastel Blue. Se trabajó bajo las normas de PPG, con procesos de garantía y productos de alta performance. Trabajo realizado en el año 2024. Trabajo en conjunto, en colaboracion con Diego Bustos en chasis y parte de carroceria, cromados por “Los Primos”, tapicería por Ricardo Martire, mecanica y armado Jorge Martucci",
+      // etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Restauración Completa",
+      masImagenes: [
+        "/nuestros-trabajos/jaguar-pepe/1.jpg",
+        "/nuestros-trabajos/jaguar-pepe/2.jpg",
+        "/nuestros-trabajos/jaguar-pepe/3.jpg",
+        "/nuestros-trabajos/jaguar-pepe/4.jpg",
+        "/nuestros-trabajos/jaguar-pepe/5.jpg",
+        "/nuestros-trabajos/jaguar-pepe/6.jpg",
+      ],
     },
     {
       id: 2,
@@ -59,6 +67,17 @@ const NuestrosTrabajos = () => {
     },
     {
       id: 4,
+      imagen: "/nuestros-trabajos/car4.webp",
+      titulo: "BMW M4",
+      subtitulo: "2021",
+      descripcion: "2025",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Detailing completo",
+    },
+    {
+      id: 5,
       imagen: "/nuestros-trabajos/car4.webp",
       titulo: "BMW M4",
       subtitulo: "2021",
