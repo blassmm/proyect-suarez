@@ -74,8 +74,10 @@
   left: 0;
   right: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 12px;
   padding: 16px 20px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 70%, transparent 100%);
   z-index: 10;
@@ -86,6 +88,31 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
+}
+
+.thumbArrow {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.thumbArrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.thumbArrowDisabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .thumbnail {
@@ -279,6 +306,7 @@
 
   .galleryBar {
     padding: 12px 14px;
+    gap: 10px;
   }
 
   .thumbnailsContainer {
@@ -288,6 +316,16 @@
   .thumbnail {
     width: 56px;
     height: 38px;
+  }
+
+  .thumbArrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .thumbArrow svg {
+    width: 14px;
+    height: 14px;
   }
 
   .imageCounter {
@@ -345,6 +383,7 @@
 
   .galleryBar {
     padding: 10px 12px;
+    gap: 8px;
   }
 
   .thumbnailsContainer {
@@ -360,6 +399,16 @@
   .thumbnailImg,
   .thumbnailOverlay {
     border-radius: 4px;
+  }
+
+  .thumbArrow {
+    width: 26px;
+    height: 26px;
+  }
+
+  .thumbArrow svg {
+    width: 12px;
+    height: 12px;
   }
 
   .imageCounter {
