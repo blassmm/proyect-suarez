@@ -1,0 +1,2 @@
+-Cloudinary for images (CDN imports)
+-Contact = Resend
