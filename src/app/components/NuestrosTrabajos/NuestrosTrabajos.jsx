@@ -1,39 +1,89 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import styles from "./NuestrosTrabajos.module.css";
 import FlechaAbajo from "../FlechaAbajo/FlechaAbajo";
-import AwardBadge from "../Insignia/AwardBadge";
+import Copy from "../Copy/Copy";
+import Link from "next/link";
+import CardSlider from "../CardSlider";
+
+//ESTE COMPONENTE SE USA SOLO EN EL INICIO-----------------------------------------------------
 
 const NuestrosTrabajos = () => {
+  // Datos mapeados al formato del CardSlider
   const trabajos = [
     {
+      id: 0,
+      imagen: "principal-alfa-romeo",
+      titulo: "Alfa Romeo 6C 2500cc",
+      subtitulo: "1948",
+      descripcion: "2022",
+      descripcion2:
+        "Se realizó la restauración integral de este Alfa Romeo, a través de un largo proceso, en el que Jorge Martucci líderando la restauración, Héctor y Diego Bustos en la carrocería, Bruno Andreozzi en la tapicería, Cromado Los Primos en los cromados, y todo el equipo de Taller Suarez; lograron revivir la magia de un auto que es una joya casi sin igual en nuestro país.",
+      etiqueta: "RESTAURACIÓN PREMIADA",
+      trabajo: "Restauración Premiada",
+    },
+    {
       id: 1,
-      imagen: "/nuestros-trabajos/car1.webp",
-      modelo: "Modelo auto",
-      año: "Año",
-      trabajo: "Trabajo realizado",
+      imagen: "Principal-Pepe",
+      titulo: "JAGUAR XK 120 OTS",
+      subtitulo: "1953",
+      descripcion: "Cliente Pepe Gustavo",
+      descripcion2:
+        "Restauración completa de la carroceria y chasis de 1500hs de trabajo, equivalente a 7 meses y medio, que incluyó un pelado manual seguido de un arenado. Se conservan todas las piezas originales, las cuales fueron restauradas tanto en chapa como en aluminio, utilizando una bancada de estirado y medición universal con calibres móviles, permitiendo medir las tres dimensiones para lograr un ajuste perfecto. Pintura completa en bicapa, en el color original Pastel Blue. Se trabajó bajo las normas de PPG, con procesos de garantía y productos de alta performance. Trabajo realizado en el año 2024. Trabajo en conjunto, en colaboracion con Diego Bustos en chasis y parte de carroceria, cromados por 'Los Primos', tapicería por Ricardo Martire, mecanica y armado Jorge Martucci",
+      trabajo: "Restauración Completa",
+      masImagenes: [
+        "1-pepe",
+        "2-pepe",
+        "3-pepe",
+        "4-pepe",
+        "5-pepe",
+        "6-pepe",
+      ],
     },
     {
       id: 2,
-      imagen: "/nuestros-trabajos/car2.webp",
-      modelo: "Modelo auto",
-      año: "Año",
-      trabajo: "Trabajo realizado",
+      imagen: "car2",
+      titulo: "Dodge Charger",
+      subtitulo: "1969",
+      descripcion: "2024",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Chapa y pintura",
     },
     {
       id: 3,
-      imagen: "/nuestros-trabajos/car3.webp",
-      modelo: "Modelo auto",
-      año: "Año",
-      trabajo: "Trabajo realizado",
+      imagen: "car3",
+      titulo: "Audi A4",
+      subtitulo: "2020",
+      descripcion: "2024",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Reparación mecánica",
     },
     {
       id: 4,
-      imagen: "/nuestros-trabajos/car4.webp",
-      modelo: "Modelo auto",
-      año: "Año",
-      trabajo: "Trabajo realizado",
+      imagen: "car4",
+      titulo: "BMW M4",
+      subtitulo: "2021",
+      descripcion: "2025",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Detailing completo",
+    },
+    {
+      id: 5,
+      imagen: "car4",
+      titulo: "BMW M4",
+      subtitulo: "2021",
+      descripcion: "2025",
+      descripcion2:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      etiqueta: "TRABAJO DESTACADO",
+      trabajo: "Detailing completo",
     },
   ];
 
@@ -73,89 +123,86 @@ const NuestrosTrabajos = () => {
   return (
     <section className={styles.trabajosSection}>
       <div className={styles.aspectosClaves}>
-        <h2 className={styles.mainTitle}>
-          Aspectos claves a atender
-          <br />
-          en la reparación del automóvil
-        </h2>
+        <Copy>
+          <h2 className={styles.mainTitle}>
+            Aspectos claves a atender
+            <br />
+            en la reparación del automóvil
+          </h2>
+        </Copy>
 
         <div className={styles.aspectosGrid}>
           <div className={styles.aspectoItem}>
-            <h3 className={styles.aspectoTitle}>SEGURIDAD</h3>
-            <p className={styles.aspectoDesc}>
-              Devolver el auto con el mismo nivel de seguridad pasiva y activa
-              con los que fue construido.
-            </p>
+            <Copy>
+              <h3 className={styles.aspectoTitle}>SEGURIDAD</h3>
+            </Copy>
+            <Copy delay={0.2}>
+              <p className={styles.aspectoDesc}>
+                Devolver el auto con el mismo nivel de seguridad pasiva y activa
+                con los que fue construido.
+              </p>
+            </Copy>
           </div>
 
           <div className={styles.aspectoItem}>
-            <h3 className={styles.aspectoTitle}>ESTÉTICA</h3>
-            <p className={styles.aspectoDesc}>
-              Reestablecer la cualidades de diseño original de brillo, color y
-              textura; sin evidenciar que el auto fue intervenido.
-            </p>
+            <Copy>
+              <h3 className={styles.aspectoTitle}>ESTÉTICA</h3>
+            </Copy>
+            <Copy delay={0.2}>
+              <p className={styles.aspectoDesc}>
+                Reestablecer la cualidades de diseño original de brillo, color y
+                textura; sin evidenciar que el auto fue intervenido.
+              </p>
+            </Copy>
           </div>
 
           <div className={styles.aspectoItem}>
-            <h3 className={styles.aspectoTitle}>FUNCIONALIDAD</h3>
-            <p className={styles.aspectoDesc}>
-              Devolver a cada uno de los elementos del automóvil su capacidad
-              funcional original.
-            </p>
+            <Copy>
+              <h3 className={styles.aspectoTitle}>FUNCIONALIDAD</h3>
+            </Copy>
+            <Copy delay={0.2}>
+              <p className={styles.aspectoDesc}>
+                Devolver a cada uno de los elementos del automóvil su capacidad
+                funcional original.
+              </p>
+            </Copy>
           </div>
         </div>
       </div>
 
       <FlechaAbajo horizontalPosition={3} />
 
-      <div className={styles.restauracionContainer}>
-        <div className={styles.restauracionPremiada}>
-          <div className={styles.restauracionInfo}>
-            <h3>RESTAURACIÓN PREMIADA</h3>
-            <h2>
-              Alfa Romeo 6C 2500cc <span>(1948)</span>
-            </h2>
-            <h4>2022</h4>
-          </div>
-          <div className={styles.restauracionImagen}>
-            <Image
-              src="/restauraciones/1.webp"
-              alt="Alfa Romeo 6C 2500cc"
-              width={800}
-              height={450}
-              className={styles.restauracionImg}
-            />
-            <AwardBadge year="2022" position="left" />
-          </div>
-        </div>
-      </div>
-
       <div className={styles.trabajosContainer}>
-        <h2 className={styles.trabajosTitle}>Nuestros Trabajos</h2>
-
-        <div className={styles.trabajosGrid}>
-          {trabajos.map((trabajo) => (
-            <div key={trabajo.id} className={styles.trabajoCard}>
+        <CardSlider
+          items={trabajos}
+          sliderTitle="Nuestros Trabajos"
+          renderItem={(item) => (
+            <div className={styles.trabajoCard}>
               <div className={styles.trabajoImageContainer}>
-                <Image
-                  src={trabajo.imagen}
-                  alt={trabajo.modelo}
+                <CldImage
+                  src={item.imagen}
+                  alt={item.titulo}
                   width={400}
                   height={300}
+                  format="webp"
+                  quality="auto"
+                  loading="lazy"
                   className={styles.trabajoImage}
                 />
               </div>
               <div className={styles.trabajoInfo}>
-                <h3 className={styles.trabajoModelo}>{trabajo.modelo}</h3>
-                <p className={styles.trabajoAño}>{trabajo.año}</p>
-                <p className={styles.trabajoDesc}>{trabajo.trabajo}</p>
+                <h3 className={styles.trabajoModelo}>{item.titulo}</h3>
+                <p className={styles.trabajoAño}>{item.subtitulo}</p>
+                <p className={styles.trabajoDesc}>{item.trabajo}</p>
               </div>
             </div>
-          ))}
-        </div>
+          )}
+        />
 
         <div className={styles.verMasContainer}>
-          <button className={styles.verMasBtn}>Ver más trabajos</button>
+          <Link href="/trabajos" className={styles.verMasBtn}>
+            Ver más trabajos
+          </Link>
         </div>
       </div>
 

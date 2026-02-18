@@ -3,6 +3,7 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend("re_LaYSEbWp_L2k1Gw8r6UNqXbTuYfwNK8Jh"); DEV MODE ONLY
 
 export async function sendEmail(data) {
   // Lógica del servidor: por ej. usar Nodemailer, Resend, o escribir en la DB
@@ -12,8 +13,8 @@ export async function sendEmail(data) {
   try {
     const response = await resend.emails.send({
       from: "Formulario Web <onboarding@resend.dev>", // mejor usar dominio verificado
-      to: "montanariblas@hotmail.com",
-      subject: "🚀 Nuevo contacto registrado",
+      to: "info@tallersuarez.com.ar",
+      subject: "Nuevo contacto recibido",
       html: `
         <div style="font-family: Inter, Arial, sans-serif; background-color: #0f0f1a; padding: 30px; color: #fff;">
           <div style="max-width: 600px; margin: auto; background: linear-gradient(135deg, #111827, #1f2937); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
@@ -46,12 +47,12 @@ export async function sendEmail(data) {
           </div>
         </div>
       `,
-    })
+    });
 
-    console.log("✅ Email enviado con Resend:", response)
-    return response
+    console.log("✅ Email enviado con Resend:", response);
+    return response;
   } catch (error) {
-    console.error("❌ Error al enviar con Resend:", error)
-    throw new Error("No se pudo enviar el email")
+    console.error("❌ Error al enviar con Resend:", error);
+    throw new Error("No se pudo enviar el email");
   }
 }

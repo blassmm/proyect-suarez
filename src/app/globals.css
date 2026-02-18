@@ -3,34 +3,38 @@
 
 @custom-variant dark (&:is(.dark *));
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: DM Sans, sans-serif;
-  padding-top: 140px; /* Space for fixed navbar */
+  font-family: var(--font-textos);
+  padding-top: 0;
 }
 
 main {
   min-height: calc(100vh - 140px);
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-h1{
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-titulos);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
   font-size: 5vw;
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.02em;
   color: black;
-  -webkit-font-smoothing: antialiased; /* Mejora el rendering de fuentes en navegadores webkit */
 }
 
 /* Removed global section styles to prevent conflicts with components */
@@ -38,7 +42,7 @@ h1{
 /* Responsive padding for navbar */
 @media (max-width: 768px) {
   body {
-    padding-top: 70px;
+    padding-top: 0;
   }
 
   main {
@@ -48,7 +52,7 @@ h1{
 
 @media (max-width: 480px) {
   body {
-    padding-top: 60px;
+    padding-top: 0;
   }
 
   main {
@@ -95,6 +99,15 @@ h1{
 }
 
 :root {
+  /* Colores */
+  --verde-principal: #009b9b;
+  --verde-hover: #008080;
+  
+  /* Tipografías */
+  --font-titulos: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-textos: "DM Sans", sans-serif;
+  --font-footer: var(--font-geist-sans), "Geist", sans-serif;
+  
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -170,4 +183,22 @@ h1{
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.revealer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  transform-origin: center top;
+  background-color: #010101;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Copy component */
+.line {
+  transform: translateY(100%);
+  will-change: transform;
 }

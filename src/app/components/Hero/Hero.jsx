@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Hero.module.css";
 
+import Copy from "../Copy/Copy";
+
 export default function Hero() {
   const heroRef = useRef();
   const [activeSlide, setActiveSlide] = useState(0);
@@ -27,17 +29,13 @@ export default function Hero() {
       image: "/images/hero-car.png",
       title: (
         <>
-          ESPECIALISTAS EN
+          LA DIFERENCIA ESTÁ EN
           <br />
-          REVIVIR LA MAGIA DE
-          <br />
-          LOS AUTOMÓVILES
-          <br />
-          ANTIGUOS
+          LOS DETALLES
         </>
       ),
       button: {
-        text: "Restauraciones",
+        text: "Trabajos",
         link: "/restauraciones",
       },
     },
@@ -45,9 +43,7 @@ export default function Hero() {
       image: "/images/hero-car2.png",
       title: (
         <>
-          TRABAJAMOS CON TODAS
-          <br />
-          LAS COMPAÑÍAS
+          ESTILO Y ELEGANCIA
         </>
       ),
       button: {
@@ -59,9 +55,11 @@ export default function Hero() {
       image: "/images/hero-car3.png",
       title: (
         <>
-          CALIDAD Y CONFIANZA
+          MAS DE 1500
           <br />
-          EN CADA DETALLE
+          AUTOS PROCESADOS
+          <br />
+          EN 2025
         </>
       ),
       button: {
@@ -145,16 +143,20 @@ export default function Hero() {
               pointerEvents: activeSlide === index ? "auto" : "none",
             }}
           >
-            <h1
-              className={styles.heroTitle}
-              style={{ textAlign: isMobile ? "center" : "right" }}
-            >
-              {slide.title}
-            </h1>
+            <Copy animateOnScroll={false} delay={2.5}>
+              <h1
+                className={styles.heroTitle}
+                style={{ textAlign: isMobile ? "center" : "right" }}
+              >
+                {slide.title}
+              </h1>
+            </Copy>
 
-            <Link href={slide.button.link} className={styles.heroButton}>
-              {slide.button.text}
-            </Link>
+            <Copy animateOnScroll={false} delay={1}>
+              <Link href={slide.button.link} className={styles.heroButton}>
+                {slide.button.text}
+              </Link>
+            </Copy>
           </div>
         ))}
       </div>

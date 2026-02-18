@@ -13,7 +13,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="footer-container mb-15! md:mb-0!">
         <div className="footer-grid">
           {/* Logo and Brand */}
           <div className="footer-column">
@@ -58,11 +58,11 @@ const Footer = () => {
               <span className="footer-text">221 599-1586</span>
             </Link>
             <Link
-              href="mailto:comercial@tallersuarez.com"
+              href="mailto:info@tallersuarez.com.ar"
               className="footer-link"
             >
               <FaEnvelope className="footer-icon footer-email-icon" />
-              <span className="footer-text">comercial@tallersuarez.com</span>
+              <span className="footer-text">info@tallersuarez.com.ar</span>
             </Link>
           </div>
 

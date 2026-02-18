@@ -5,37 +5,30 @@ import {
   Marquee,
   MarqueeContent,
   MarqueeFade,
-  MarqueeItem,
 } from "@/components/ui/shadcn-io/marquee";
 
-// Lista de marcas usando las imágenes de la carpeta logos-marcas
-const brands = [
-  { name: "Marca 1", logo: "/logos-marcas/1.webp" },
-  { name: "Marca 2", logo: "/logos-marcas/2.webp" },
-  { name: "Marca 3", logo: "/logos-marcas/3.webp" },
-  { name: "Marca 4", logo: "/logos-marcas/4.webp" },
-  { name: "Marca 5", logo: "/logos-marcas/5.webp" },
-  { name: "Marca 6", logo: "/logos-marcas/6.webp" },
-];
-
-// Componente de logo optimizado
 const BrandLogo = memo(({ brand, index }) => (
   <div
     style={{ marginLeft: "100px", marginRight: "100px" }}
     className="flex items-center"
   >
-    <div className="h-24 flex items-center justify-center">
+    <div className="w-52 h-28 flex items-center justify-center py-3">
       <Image
         src={brand.logo}
         alt={brand.name}
-        width={160}
-        height={80}
+        width={200}
+        height={90}
         quality={90}
         priority={index < 3}
         loading={index < 3 ? "eager" : "lazy"}
         className="object-contain transition-transform hover:scale-110 duration-300"
-        style={{ width: "auto", height: "auto" }}
-        sizes="(max-width: 768px) 120px, 160px"
+        style={{
+          width: "auto",
+          height: "auto",
+          maxHeight: "90px",
+          maxWidth: "180px",
+        }}
+        sizes="180px"
       />
     </div>
   </div>
@@ -43,7 +36,7 @@ const BrandLogo = memo(({ brand, index }) => (
 
 BrandLogo.displayName = "BrandLogo";
 
-function LogoMarquee() {
+function LogoMarquee({ logos = [] }) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -66,7 +59,7 @@ function LogoMarquee() {
 
   return (
     <section className="py-16 bg-gray-50">
-      <Marquee className="bg-white py-16 shadow-sm">
+      <Marquee className="bg-white py-20 shadow-sm">
         <MarqueeFade side="left" className={isMobile ? "w-40" : "w-150"} />
         <MarqueeFade side="right" className={isMobile ? "w-40" : "w-150"} />
         <MarqueeContent
@@ -75,7 +68,7 @@ function LogoMarquee() {
           speed={100}
           gradient={false}
         >
-          {brands.map((brand, index) => (
+          {logos.map((brand, index) => (
             <BrandLogo key={index} brand={brand} index={index} />
           ))}
         </MarqueeContent>

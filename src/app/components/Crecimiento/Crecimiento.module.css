@@ -1,0 +1,648 @@
+.crecimientoContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  font-family: var(--font-textos);
+  overflow-x: hidden;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 0;
+}
+
+/* Interactive navigation */
+.decadeNavigation {
+  position: static;
+  width: calc(100% + 50px);
+  margin: 0 0 60px -50px;
+  padding: 0 20px;
+  z-index: 100;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.decadeNavigation.sticky {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 90vw;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+  animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.navSpacer {
+  height: 90px;
+  width: 100%;
+}
+
+.decadeNavContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+  backdrop-filter: blur(12px);
+  padding: 6px;
+  border-radius: 60px;
+  box-shadow: 0 8px 32px rgba(0, 155, 155, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(0, 155, 155, 0.12);
+  position: relative;
+  width: fit-content;
+}
+
+.decadeNavContainer::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 60px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 155, 155, 0.2),
+    rgba(0, 155, 155, 0.05)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.decadeNavButton {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 14px 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 85px;
+  isolation: isolate;
+}
+
+.decadeNavButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: rgba(0, 155, 155, 0.08);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.decadeNavButton:hover::before {
+  opacity: 1;
+}
+
+.decadeNavButton:active {
+  transform: scale(0.96);
+}
+
+.decadeNavYear {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.decadeNavButton:hover .decadeNavYear {
+  color: var(--verde-principal);
+  transform: translateY(-1px);
+  letter-spacing: 0.04em;
+}
+
+.decadeNavButton.active {
+  background: linear-gradient(135deg, var(--verde-principal) 0%, #00b5b5 100%);
+  box-shadow: 0 4px 16px rgba(0, 155, 155, 0.25),
+    0 2px 8px rgba(0, 155, 155, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.decadeNavButton.active::before {
+  opacity: 0;
+}
+
+.decadeNavButton.active .decadeNavYear {
+  color: #ffffff;
+  font-weight: 700;
+  transform: translateY(0);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.decadeNavIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.decadeNavButton:hover .decadeNavIndicator {
+  border-color: rgba(0, 155, 155, 0.3);
+  transform: scale(1.1);
+}
+
+.decadeNavButton.active .decadeNavIndicator {
+  background: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2);
+}
+
+.mainTitle {
+  color: var(--verde-principal);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.timelineSection {
+  position: relative;
+  padding-left: 50px;
+}
+
+.timelineSection::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 120px;
+  bottom: 0;
+  width: 2px;
+  background-color: #e0e0e0;
+  z-index: -1;
+}
+
+.decadeMarker {
+  position: relative;
+  margin-bottom: 40px;
+  margin-left: -30px;
+}
+
+.decadeTitle {
+  color: #ccc;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.timelineArrow {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid #e0e0e0;
+  z-index: 1;
+}
+
+.timelineEvent {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.timelineEvent::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--verde-principal);
+  border: 4px solid white;
+  box-shadow: 0 0 0 1px var(--verde-principal);
+}
+
+.yearMarker {
+  color: var(--verde-principal);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.eventContent {
+  position: relative;
+}
+
+.eventTitle,
+.eventText {
+  margin: 0 0 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.eventTitle {
+  font-weight: 500;
+}
+
+.highlight {
+  color: var(--verde-principal);
+  font-weight: 500;
+}
+
+/* Estilos para el premio con la insignia */
+.awardContainer {
+  background-color: var(--verde-principal);
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0 30px;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.badgePosition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  z-index: 5;
+}
+
+.awardCard {
+  padding: 15px 15px 15px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.awardHeader {
+  margin-bottom: 5px;
+}
+
+.awardTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.awardCarName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.awardCarYear {
+  font-weight: normal;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+/* Estilos para la imagen grande del auto premiado */
+.carImageWrapper {
+  position: relative;
+  margin: 20px 0 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.carImageContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.awardCarImage {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carFullImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.awardOverlayStandalone {
+  background-color: var(--verde-principal);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 0;
+}
+
+.awardBadge {
+  background-color: var(--verde-principal);
+  padding: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.awardBadgeImg {
+  width: 40px;
+  height: auto;
+}
+
+.awardInfo {
+  padding-left: 5px;
+  flex-grow: 1;
+}
+
+.awardYear {
+  display: block;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.carName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.carYear {
+  font-weight: normal;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .crecimientoContainer {
+    padding: 15px;
+  }
+
+  .headerSection {
+    margin-bottom: 40px;
+    padding: 30px 0;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .decadeNavigation {
+    width: calc(100% + 30px);
+    margin: 0 0 50px -30px;
+    padding: 0 15px;
+  }
+
+  .decadeNavigation.sticky {
+    top: 25%;
+    max-width: 95vw;
+    width: auto;
+  }
+
+  .navSpacer {
+    height: 85px;
+  }
+
+  .decadeNavContainer {
+    padding: 5px;
+    border-radius: 50px;
+  }
+
+  .decadeNavButton {
+    padding: 12px 18px;
+    min-width: 72px;
+  }
+
+  .decadeNavYear {
+    font-size: 0.95rem;
+  }
+
+  .decadeNavIndicator {
+    width: 7px;
+    height: 7px;
+  }
+
+  .timelineSection {
+    padding-left: 30px;
+  }
+
+  .timelineSection::before {
+    top: 100px;
+  }
+
+  .timelineSection::before {
+    left: 15px;
+  }
+
+  .decadeMarker {
+    margin-left: -20px;
+  }
+
+  .decadeTitle {
+    font-size: 2rem;
+  }
+
+  .timelineEvent {
+    padding-left: 20px;
+  }
+
+  .timelineEvent::before {
+    left: -27px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .yearMarker {
+    font-size: 1.3rem;
+  }
+
+  .eventTitle,
+  .eventText {
+    font-size: 0.95rem;
+  }
+
+  .awardCarName {
+    font-size: 1.3rem;
+  }
+
+  .awardCarYear {
+    font-size: 1rem;
+  }
+
+  .awardCard {
+    padding-left: 70px;
+  }
+
+  .awardCarImage {
+    height: 250px;
+  }
+
+  .carName {
+    font-size: 1.3rem;
+  }
+
+  .carYear {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .decadeNavigation {
+    width: calc(100% + 25px);
+    margin: 0 0 40px -25px;
+    padding: 0 10px;
+  }
+
+  .decadeNavigation.sticky {
+    top: 20%;
+    max-width: 98vw;
+    width: auto;
+  }
+
+  .navSpacer {
+    height: 75px;
+  }
+
+  .decadeNavContainer {
+    padding: 4px;
+    border-radius: 45px;
+  }
+
+  .decadeNavButton {
+    padding: 10px 14px;
+    min-width: 60px;
+    gap: 4px;
+  }
+
+  .decadeNavYear {
+    font-size: 0.85rem;
+    letter-spacing: 0.01em;
+  }
+
+  .decadeNavIndicator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .timelineSection {
+    padding-left: 25px;
+  }
+
+  .timelineSection::before {
+    left: 12px;
+    top: 90px;
+  }
+
+  .decadeMarker {
+    margin-left: -15px;
+  }
+
+  .decadeTitle {
+    font-size: 1.7rem;
+  }
+
+  .timelineEvent {
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  .timelineEvent::before {
+    left: -23px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border: 3px solid white;
+  }
+
+  .yearMarker {
+    font-size: 1.2rem;
+  }
+
+  .eventTitle,
+  .eventText {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Modificando la vista del auto premiado en pantallas chicas */
+  .awardCarImage {
+    height: 220px;
+  }
+
+  .awardOverlayStandalone {
+    padding: 12px;
+  }
+
+  .carName {
+    font-size: 1.2rem;
+  }
+
+  .carYear {
+    font-size: 0.9rem;
+  }
+
+  /* Fin de modificaciones para el auto premiado */
+
+  .awardBadge {
+    margin-bottom: 8px;
+  }
+
+  .awardCard {
+    padding: 60px 15px 15px;
+  }
+
+  .awardCarName {
+    font-size: 1.1rem;
+  }
+
+  .awardCarYear {
+    font-size: 0.9rem;
+  }
+}
