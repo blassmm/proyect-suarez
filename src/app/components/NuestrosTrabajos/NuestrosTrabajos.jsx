@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import styles from "./NuestrosTrabajos.module.css";
 import FlechaAbajo from "../FlechaAbajo/FlechaAbajo";
-// import AwardBadge from "../Insignia/AwardBadge";
 import Copy from "../Copy/Copy";
 import Link from "next/link";
 import CardSlider from "../CardSlider";
@@ -15,7 +14,7 @@ const NuestrosTrabajos = () => {
   const trabajos = [
     {
       id: 0,
-      imagen: "/trabajos/1.webp",
+      imagen: "principal-alfa-romeo",
       titulo: "Alfa Romeo 6C 2500cc",
       subtitulo: "1948",
       descripcion: "2022",
@@ -26,26 +25,25 @@ const NuestrosTrabajos = () => {
     },
     {
       id: 1,
-      imagen: "/nuestros-trabajos/jaguar-pepe/Principal.png",
+      imagen: "Principal-Pepe",
       titulo: "JAGUAR XK 120 OTS",
       subtitulo: "1953",
       descripcion: "Cliente Pepe Gustavo",
       descripcion2:
-        "Restauración completa de la carroceria y chasis de 1500hs de trabajo, equivalente a 7 meses y medio, que incluyó un pelado manual seguido de un arenado. Se conservan todas las piezas originales, las cuales fueron restauradas tanto en chapa como en aluminio, utilizando una bancada de estirado y medición universal con calibres móviles, permitiendo medir las tres dimensiones para lograr un ajuste perfecto. Pintura completa en bicapa, en el color original Pastel Blue. Se trabajó bajo las normas de PPG, con procesos de garantía y productos de alta performance. Trabajo realizado en el año 2024. Trabajo en conjunto, en colaboracion con Diego Bustos en chasis y parte de carroceria, cromados por “Los Primos”, tapicería por Ricardo Martire, mecanica y armado Jorge Martucci",
-      // etiqueta: "TRABAJO DESTACADO",
+        "Restauración completa de la carroceria y chasis de 1500hs de trabajo, equivalente a 7 meses y medio, que incluyó un pelado manual seguido de un arenado. Se conservan todas las piezas originales, las cuales fueron restauradas tanto en chapa como en aluminio, utilizando una bancada de estirado y medición universal con calibres móviles, permitiendo medir las tres dimensiones para lograr un ajuste perfecto. Pintura completa en bicapa, en el color original Pastel Blue. Se trabajó bajo las normas de PPG, con procesos de garantía y productos de alta performance. Trabajo realizado en el año 2024. Trabajo en conjunto, en colaboracion con Diego Bustos en chasis y parte de carroceria, cromados por 'Los Primos', tapicería por Ricardo Martire, mecanica y armado Jorge Martucci",
       trabajo: "Restauración Completa",
       masImagenes: [
-        "/nuestros-trabajos/jaguar-pepe/1.jpg",
-        "/nuestros-trabajos/jaguar-pepe/2.jpg",
-        "/nuestros-trabajos/jaguar-pepe/3.jpg",
-        "/nuestros-trabajos/jaguar-pepe/4.jpg",
-        "/nuestros-trabajos/jaguar-pepe/5.jpg",
-        "/nuestros-trabajos/jaguar-pepe/6.jpg",
+        "1-pepe",
+        "2-pepe",
+        "3-pepe",
+        "4-pepe",
+        "5-pepe",
+        "6-pepe",
       ],
     },
     {
       id: 2,
-      imagen: "/nuestros-trabajos/car2.webp",
+      imagen: "car2",
       titulo: "Dodge Charger",
       subtitulo: "1969",
       descripcion: "2024",
@@ -56,7 +54,7 @@ const NuestrosTrabajos = () => {
     },
     {
       id: 3,
-      imagen: "/nuestros-trabajos/car3.webp",
+      imagen: "car3",
       titulo: "Audi A4",
       subtitulo: "2020",
       descripcion: "2024",
@@ -67,7 +65,7 @@ const NuestrosTrabajos = () => {
     },
     {
       id: 4,
-      imagen: "/nuestros-trabajos/car4.webp",
+      imagen: "car4",
       titulo: "BMW M4",
       subtitulo: "2021",
       descripcion: "2025",
@@ -78,7 +76,7 @@ const NuestrosTrabajos = () => {
     },
     {
       id: 5,
-      imagen: "/nuestros-trabajos/car4.webp",
+      imagen: "car4",
       titulo: "BMW M4",
       subtitulo: "2021",
       descripcion: "2025",
@@ -181,11 +179,14 @@ const NuestrosTrabajos = () => {
           renderItem={(item) => (
             <div className={styles.trabajoCard}>
               <div className={styles.trabajoImageContainer}>
-                <Image
+                <CldImage
                   src={item.imagen}
                   alt={item.titulo}
                   width={400}
                   height={300}
+                  format="webp"
+                  quality="auto"
+                  loading="lazy"
                   className={styles.trabajoImage}
                 />
               </div>

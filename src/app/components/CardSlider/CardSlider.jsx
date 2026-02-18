@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import styles from "./CardSlider.module.css";
 
 /**
@@ -116,12 +116,15 @@ export default function CardSlider({
                 )}
               </div>
               <div className={styles.featuredImage}>
-                <Image
+                <CldImage
                   key={`img-${selectedItem.id}-${currentImageIndex}`}
                   src={getAllImages(selectedItem)[currentImageIndex]}
                   alt={selectedItem.titulo}
                   width={800}
                   height={450}
+                  format="webp"
+                  quality="auto"
+                  loading="eager"
                   className={styles.featuredImg}
                 />
                 {getAllImages(selectedItem).length > 1 && (
@@ -153,11 +156,14 @@ export default function CardSlider({
                               className={`${styles.thumbnail} ${currentImageIndex === realIndex ? styles.thumbnailActive : ""}`}
                               onClick={() => handleThumbnailClick(realIndex)}
                             >
-                              <Image
+                              <CldImage
                                 src={img}
                                 alt={`${selectedItem.titulo} - ${realIndex + 1}`}
                                 width={80}
                                 height={50}
+                                format="webp"
+                                quality="auto"
+                                loading="lazy"
                                 className={styles.thumbnailImg}
                               />
                               <span className={styles.thumbnailOverlay} />
