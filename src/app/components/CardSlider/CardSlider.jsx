@@ -77,7 +77,7 @@ export default function CardSlider({
   const getAllImages = (item) => {
     const images = [item.imagen];
     if (item.masImagenes && Array.isArray(item.masImagenes)) {
-      images.push(...item.masImagenes.slice(0, 7));
+      images.push(...item.masImagenes);
     }
     return images;
   };

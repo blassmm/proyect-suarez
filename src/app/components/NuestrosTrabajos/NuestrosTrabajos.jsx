@@ -22,6 +22,17 @@ const NuestrosTrabajos = () => {
         "Se realizó la restauración integral de este Alfa Romeo, a través de un largo proceso, en el que Jorge Martucci líderando la restauración, Héctor y Diego Bustos en la carrocería, Bruno Andreozzi en la tapicería, Cromado Los Primos en los cromados, y todo el equipo de Taller Suarez; lograron revivir la magia de un auto que es una joya casi sin igual en nuestro país.",
       etiqueta: "RESTAURACIÓN PREMIADA",
       trabajo: "Restauración Premiada",
+      masImagenes: [
+        "alfa-romeo-1",
+        "alfa-romeo-2",
+        "alfa-romeo-3",
+        "alfa-romeo-4",
+        "alfa-romeo-5",
+        "alfa-romeo-6",
+        "alfa-romeo-7",
+        "alfa-romeo-8",
+        "alfa-romeo-9",
+      ],
     },
     {
       id: 1,
@@ -43,47 +54,60 @@ const NuestrosTrabajos = () => {
     },
     {
       id: 2,
-      imagen: "car2",
-      titulo: "Dodge Charger",
-      subtitulo: "1969",
-      descripcion: "2024",
+      imagen: "polara-principal",
+      titulo: "DODGE GTX",
+      subtitulo: "1974",
+      descripcion: "Cliente Santuccione Leonardo",
       descripcion2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+        "Trabajo de restauración integral. Desmontaje general y reparación exhaustiva de la chapa, conservando y restaurando todas las piezas originales. Pintura completa en monocapa de poliuretano en su color original trabajando con procesos determinados por PPG de garantía con productos de alta performance. Cromado y reparación de partes de cristalería llevado a cabo por \"Los Primos\". Trabajo garantizado. Restauración interior, incluyendo tapicería y vinilos, en colaboración con Daniello Sport, y mecánica realizada por Peneta.",
       etiqueta: "TRABAJO DESTACADO",
-      trabajo: "Chapa y pintura",
+      trabajo: "Restauración Integral",
+      masImagenes: [
+        "polara1",
+        "polara2",
+        "polara-3",
+        "polara-4",
+        "polara-5",
+      ],
     },
     {
       id: 3,
-      imagen: "car3",
-      titulo: "Audi A4",
-      subtitulo: "2020",
-      descripcion: "2024",
+      imagen: "m1-1",
+      titulo: "BMW M1",
+      subtitulo: "",
+      descripcion: "Cliente Litvin Cesar",
       descripcion2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+        "Se realizó una puesta en valor integral del vehículo, con reparación de chasis y restauración completa de la carrocería en fibra de vidrio. El trabajo incluyó el desarme total, reparación estructural, pintura general y posterior armado de la carrocería. El proyecto se desarrolló en colaboración con Pastorino Clásicos y el tapicero Nicolás Rnsky, quienes participaron en este trabajo.",
       etiqueta: "TRABAJO DESTACADO",
-      trabajo: "Reparación mecánica",
+      trabajo: "Puesta en Valor Integral",
+      masImagenes: [
+        "m1-2",
+        "m1-3",
+        "m1-4",
+        "m1-5",
+        "m1-6",
+        "m1-7",
+      ],
     },
     {
       id: 4,
-      imagen: "car4",
-      titulo: "BMW M4",
-      subtitulo: "2021",
-      descripcion: "2025",
+      imagen: "toyota2000-principal",
+      titulo: "TOYOTA 2000 GT ROJO",
+      subtitulo: "1968",
+      descripcion: "Cliente Scalise Claudio",
       descripcion2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+        "Restauración integral de carrocería con desarme completo de paragolpes delanteros y traseros, ópticas, faros traseros, cerraduras, manijas, colizas y molduras de cristalería, incluyendo desmontaje de luneta. Trabajo de pelado de carrocería manual mediante decapante en gel, reparación de parches y sectores intervenidos previamente en pasarruedas, preparación integral para proceso de pintura con aplicación de anticorrosivo epoxi y aparejos de alto espesor para nivelación y terminación superficial. El proceso de pintado incluyó pisos inferiores en color gris, piso de habitáculo, techo, capot, ambos guardabarros delanteros, frente, puertas, guardabarros traseros, portón y panel de cola. Terminación en sistema bicapa color rojo, respetando especificaciones técnicas y estándares de acabado profesional. Trabajo realizado bajo los estándares de calidad de Taller Suárez.",
       etiqueta: "TRABAJO DESTACADO",
-      trabajo: "Detailing completo",
-    },
-    {
-      id: 5,
-      imagen: "car4",
-      titulo: "BMW M4",
-      subtitulo: "2021",
-      descripcion: "2025",
-      descripcion2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
-      etiqueta: "TRABAJO DESTACADO",
-      trabajo: "Detailing completo",
+      trabajo: "Restauración Integral",
+      masImagenes: [
+        "toyota2000-1",
+        "toyota2000-2",
+        "toyota2000-3",
+        "toyota2000-4",
+        "toyota2000-5",
+        "toyota2000-6",
+        "toyota2000-7",
+      ],
     },
   ];
 
@@ -192,7 +216,7 @@ const NuestrosTrabajos = () => {
               </div>
               <div className={styles.trabajoInfo}>
                 <h3 className={styles.trabajoModelo}>{item.titulo}</h3>
-                <p className={styles.trabajoAño}>{item.subtitulo}</p>
+                <p className={styles.trabajoAño}>{item.subtitulo || "\u00A0"}</p>
                 <p className={styles.trabajoDesc}>{item.trabajo}</p>
               </div>
             </div>
