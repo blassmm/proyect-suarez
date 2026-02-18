@@ -1,2 +1,4 @@
 -Cloudinary for images (CDN imports)
+    1. taller-suarez/nuestros-trabajos (Dynamic folder structure dont includes folder route)
+    
 -Contact = Resend
