@@ -506,6 +506,64 @@ const Crecimiento = () => {
             </h3>
           </div>
         </div>
+
+        <div className={styles.timelineEvent}>
+          <div className={styles.yearMarker}>2024</div>
+          <div className={styles.eventContent}>
+            <h3 className={styles.eventTitle}>Open Garage</h3>
+            <h3 className={styles.eventText}>
+              Evento{" "}
+              <span className={styles.highlight}>Open Garage</span> con
+              presentación oficial de la división y exhibición de vehículos
+              restaurados junto a sus propietarios.
+            </h3>
+
+            <h3
+              className={styles.eventTitle}
+              style={{ marginTop: "25px" }}
+            >
+              Reunión de taller
+            </h3>
+            <h3 className={styles.eventText}>
+              Jornada de intercambio profesional y exposición de nuestro sistema
+              de gestión{" "}
+              <span className={styles.highlight}>GCP</span>.
+            </h3>
+          </div>
+        </div>
+
+        <div className={styles.timelineEvent}>
+          <div className={styles.yearMarker}>2025</div>
+          <div className={styles.eventContent}>
+            <h3 className={styles.eventTitle}>
+              Presentación de máquina MoonWalk
+            </h3>
+            <h3 className={styles.eventText}>
+              Incorporación de la primera{" "}
+              <span className={styles.highlight}>MoonWalk</span> del país junto
+              al ecosistema{" "}
+              <span className={styles.highlight}>PPG</span>, marcando un avance
+              en tecnología de repintado automotriz.
+            </h3>
+
+            <h3
+              className={styles.eventTitle}
+              style={{ marginTop: "25px" }}
+            >
+              Autoclásica 2025 — Autos premiados
+            </h3>
+            <h3 className={styles.eventText}>
+              Tres vehículos restaurados por el taller fueron distinguidos en{" "}
+              <span className={styles.highlight}>Autoclásica 2025</span>,
+              incluyendo un{" "}
+              <span className={styles.highlight}>Best of Show</span> con el{" "}
+              <span className={styles.highlight}>Jaguar XK</span> y dos
+              unidades adicionales premiadas:{" "}
+              <span className={styles.highlight}>BMW De Carlo 700</span> y{" "}
+              <span className={styles.highlight}>BMW Isetta</span>.
+            </h3>
+          </div>
+        </div>
       </section>
     </div>
   );
