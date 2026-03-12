@@ -44,6 +44,7 @@ export default function Hero() {
       title: (
         <>
           ESTILO Y ELEGANCIA
+          <br /><br />
         </>
       ),
       button: {
@@ -55,11 +56,9 @@ export default function Hero() {
       image: "/images/hero-car3.png",
       title: (
         <>
-          MAS DE 1500
+          MAS DE 1500 AUTOS
           <br />
-          AUTOS PROCESADOS
-          <br />
-          EN 2025
+          PROCESADOS EN 2025
         </>
       ),
       button: {

@@ -22,7 +22,7 @@ export default function HomeMision() {
       </div>
 
       <div className={styles.misionContent}>
-        <div className={styles.decorativeArrows}></div>
+        {/* <div className={styles.decorativeArrows}></div> */}
 
         <div className={styles.textContainer}>
           <Copy>
