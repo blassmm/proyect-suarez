@@ -69,7 +69,7 @@ const Taller = () => {
             />
           </div>
           <div className={styles.locationInfo}>
-            <p className={styles.locationAddress}>19 y 514 - 1200m²</p>
+            <p className={styles.locationAddress}>19 N° 1794 ESQ 514, B1897 Gonnet, la plata</p>
             <h3 className={styles.locationTitle}>Taller de 514</h3>
             <p className={styles.locationSubtitle}>
               Administración y Terminaciones
@@ -136,7 +136,7 @@ const Taller = () => {
             <p className={styles.locationAddress}>
               8 n°1434 esquina 517 bis - 500m²
             </p>
-            <h3 className={styles.locationTitle}>Taller de 516</h3>
+            <h3 className={styles.locationTitle}>Taller de 8</h3>
             <p className={styles.locationSubtitle}>
               Trabajos especiales y cochera
             </p>

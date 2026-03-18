@@ -12,31 +12,35 @@ const EquipoCompleto = () => {
       name: "Gustavo Suarez",
       role: "Socio Director",
       image: "/team-members/member-1.webp",
+      objectPosition: "center 15%",
     },
     {
       id: 2,
       name: "Andrea Keiliff",
       role: "Socia Directora",
-      secondaryRole: "Directora de Operaciones Administrativas",
       image: "/team-members/member-2.webp",
+      objectPosition: "center 22%",
     },
     {
       id: 3,
       name: "Lucas Gutierrez",
       role: "Jefe de producción",
       image: "/team-members/member-5.webp",
+      objectPosition: "center 18%",
     },
     {
       id: 4,
       name: "Federico Coniglio",
       role: "Jefe del Sector Pintura",
       image: "/team-members/member-4.webp",
+      objectPosition: "center 15%",
     },
     {
       id: 5,
       name: "Marcelo Pacheco",
       role: "Jefe del taller",
       image: "/team-members/member-3.webp",
+      objectPosition: "center 20%",
     },
   ];
 
@@ -64,6 +68,7 @@ const EquipoCompleto = () => {
                   width={600}
                   height={600}
                   className={styles.memberImage}
+                  style={{ objectPosition: member.objectPosition }}
                   priority={index < 3}
                 />
               </div>
@@ -94,7 +99,7 @@ const EquipoCompleto = () => {
 
           <div className="bg-[#3eb6a5] text-white relative text-center xl:text-left p-5! xl:absolute xl:right-0 xl:z-10 xl:w-[62vw] xl:h-full">
             <div className="py-12 px-6 sm:py-14 sm:px-8 md:py-16 md:px-10 lg:py-20 lg:px-12 xl:absolute xl:right-[10%] xl:top-1/2 xl:-translate-y-1/2 flex flex-col items-start xl:items-end">
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-medium leading-relaxed mb-6 sm:mb-7 md:mb-8 italic xl:text-right xl:max-w-2xl">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl font-medium leading-relaxed mb-6 sm:mb-7 md:mb-8 italic xl:text-right xl:max-w-2xl text-pretty">
                 "De todos los valores que hoy garantizan la calidad de Taller
                 Suárez, el capital humano es, desde nuestros inicios, el más
                 importante"

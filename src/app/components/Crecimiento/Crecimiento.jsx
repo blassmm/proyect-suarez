@@ -20,7 +20,7 @@ const Crecimiento = () => {
   useEffect(() => {
     const handleScroll = () => {
       const decadeElements = decades.map((decade) =>
-        document.getElementById(`decade-${decade}`)
+        document.getElementById(`decade-${decade}`),
       );
 
       const scrollPosition = window.scrollY + window.innerHeight / 3;
@@ -301,9 +301,8 @@ const Crecimiento = () => {
           <div className={styles.yearMarker}>2011</div>
           <div className={styles.eventContent}>
             <h3 className={styles.eventText}>
-              Auto premiado Best of Show en Autoclásica.
-              <br />
-              Jaguar Drophead coupé (1947).
+              Auto premiado Best of Show en Autoclásica. Jaguar Drophead coupé
+              (1947).
             </h3>
 
             <div className={styles.awardContainer}>
@@ -331,9 +330,7 @@ const Crecimiento = () => {
             <h3 className={styles.eventText}>
               Visita a la planta{" "}
               <span className={styles.highlight}>Volkswagen</span> Arg.
-              produciendo Amarok.
-              <br />
-              Visita a la planta de pintura de{" "}
+              produciendo Amarok. Visita a la planta de pintura de{" "}
               <span className={styles.highlight}>Ferrari</span> en Módena
               (Italia), el Museo, la Fábrica y la Pista de Pruebas con personal
               de PPG.
@@ -371,19 +368,14 @@ const Crecimiento = () => {
           <div className={styles.eventContent}>
             <h3 className={styles.eventText}>
               Taller elegido por 3M como representantes en Argentina, para
-              capacitación en Minnesota.
-              <br />
-              Viaje a Alemania{" "}
+              capacitación en Minnesota. Viaje a Alemania{" "}
               <span className={styles.highlight}>Stuttgart</span> y{" "}
-              <span className={styles.highlight}>Munich</span>
-              <br />
-              Capacitación en empresa{" "}
-              <span className={styles.highlight}>SATA</span>, fábrica de
-              pistolas especializadas para pintura de vehículos.
-              <br />A <span className={styles.highlight}>Wislander+Schtil</span>
-              , herramientas homologadas Professional body Shop Tools.
-              <br />
-              Visita a museo{" "}
+              <span className={styles.highlight}>Munich</span>. Capacitación en
+              empresa <span className={styles.highlight}>SATA</span>, fábrica de
+              pistolas especializadas para pintura de vehículos. A{" "}
+              <span className={styles.highlight}>Wislander+Schtil</span>,
+              herramientas homologadas Professional body Shop Tools. Visita a
+              museo{" "}
               <span className={styles.highlight}>
                 BMW, Mercedes Benz, Porsche
               </span>{" "}
@@ -396,10 +388,8 @@ const Crecimiento = () => {
           <div className={styles.yearMarker}>2017</div>
           <div className={styles.eventContent}>
             <h3 className={styles.eventText}>
-              Inicia obra del Taller en 19 y 514.
-              <br />
-              Capacitación en el Centro de Entrenamiento de PPG, Iberia,
-              Barcelona (Esp.)
+              Inicia obra del Taller en 19 y 514. Capacitación en el Centro de
+              Entrenamiento de PPG, Iberia, Barcelona (Esp.)
             </h3>
           </div>
         </div>
@@ -419,9 +409,7 @@ const Crecimiento = () => {
           <div className={styles.eventContent}>
             <h3 className={styles.eventText}>
               Invitación a la presentación de la máquina MoonWalk PPG, San Pablo
-              (Brasil)
-              <br />
-              Inauguración del 2° taller en 19 y 514.
+              (Brasil). Inauguración del 2° taller en 19 y 514.
             </h3>
           </div>
         </div>
@@ -446,9 +434,8 @@ const Crecimiento = () => {
           <div className={styles.yearMarker}>2022</div>
           <div className={styles.eventContent}>
             <h3 className={styles.eventText}>
-              Auto premiado 2° Best of Show en Autoclásica.
-              <br />
-              Alfa Romeo 6C 2500cc (1948)
+              Auto premiado 2° Best of Show en Autoclásica. Alfa Romeo 6C
+              2500cc (1948).
             </h3>
 
             <div className={styles.carImageWrapper}>
@@ -486,10 +473,8 @@ const Crecimiento = () => {
             </div>
 
             <h3 className={styles.eventText} style={{ marginTop: "20px" }}>
-              Capacitación White Belt Arg. MVP PPG.
-              <br />
-              Puesta en valor y en funcionamiento del taller inicial en 8 y 517
-              Bis.
+              Capacitación White Belt Arg. MVP PPG. Puesta en valor y en
+              funcionamiento del taller inicial en 8 y 517 Bis.
             </h3>
           </div>
         </div>
@@ -512,22 +497,17 @@ const Crecimiento = () => {
           <div className={styles.eventContent}>
             <h3 className={styles.eventTitle}>Open Garage</h3>
             <h3 className={styles.eventText}>
-              Evento{" "}
-              <span className={styles.highlight}>Open Garage</span> con
+              Evento <span className={styles.highlight}>Open Garage</span> con
               presentación oficial de la división y exhibición de vehículos
               restaurados junto a sus propietarios.
             </h3>
 
-            <h3
-              className={styles.eventTitle}
-              style={{ marginTop: "25px" }}
-            >
+            <h3 className={styles.eventTitle} style={{ marginTop: "25px" }}>
               Reunión de taller
             </h3>
             <h3 className={styles.eventText}>
               Jornada de intercambio profesional y exposición de nuestro sistema
-              de gestión{" "}
-              <span className={styles.highlight}>GCP</span>.
+              de gestión <span className={styles.highlight}>GCP</span>.
             </h3>
           </div>
         </div>
@@ -535,20 +515,16 @@ const Crecimiento = () => {
         <div className={styles.timelineEvent}>
           <div className={styles.yearMarker}>2025</div>
           <div className={styles.eventContent}>
-            <h3 className={styles.eventTitle}>
-              Presentación de máquina MoonWalk
-            </h3>
+            <h3 className={styles.eventTitle}>Presentación de máquina MoonWalk</h3>
             <h3 className={styles.eventText}>
               Incorporación de la primera{" "}
               <span className={styles.highlight}>MoonWalk</span> del país junto
-              al ecosistema{" "}
-              <span className={styles.highlight}>PPG</span>, marcando un avance
-              en tecnología de repintado automotriz.
+              al ecosistema <span className={styles.highlight}>PPG</span>,
+              marcando un avance en tecnología de repintado automotriz.
             </h3>
 
             <h3
               className={styles.eventTitle}
-              style={{ marginTop: "25px" }}
             >
               Autoclásica 2025 — Autos premiados
             </h3>
@@ -557,8 +533,8 @@ const Crecimiento = () => {
               <span className={styles.highlight}>Autoclásica 2025</span>,
               incluyendo un{" "}
               <span className={styles.highlight}>Best of Show</span> con el{" "}
-              <span className={styles.highlight}>Jaguar XK</span> y dos
-              unidades adicionales premiadas:{" "}
+              <span className={styles.highlight}>Jaguar XK</span> y dos unidades
+              adicionales premiadas:{" "}
               <span className={styles.highlight}>BMW De Carlo 700</span> y{" "}
               <span className={styles.highlight}>BMW Isetta</span>.
             </h3>

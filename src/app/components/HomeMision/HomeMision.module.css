@@ -98,7 +98,7 @@
 .knowMoreButton {
   display: inline-block;
   background-color: var(--verde-principal);
-  color: #333;
+  color: #ffffff;
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
   font-weight: 500;
@@ -115,6 +115,7 @@
 /* Responsive styles */
 @media (max-width: 1023px) {
   .misionSection {
+    padding-top: 10rem;
     height: 80vh;
   }
 
@@ -135,6 +136,7 @@
   .misionSection {
     height: auto;
     padding: 6rem 0;
+    padding-top: 10rem;
   }
 
   .textContainer {
@@ -158,6 +160,7 @@
 @media (max-width: 480px) {
   .misionSection {
     padding: 4rem 0;
+    padding-top: 10rem;
   }
 
   .sectionTitle {

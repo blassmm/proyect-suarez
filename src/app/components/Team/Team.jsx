@@ -12,31 +12,35 @@ const Team = () => {
       name: "Gustavo Suarez",
       role: "Socio Director",
       image: "/team-members/member-1.webp",
+      objectPosition: "center 15%",
     },
     {
       id: 2,
       name: "Andrea Keiliff",
       role: "Socia Directora",
-      secondaryRole: "Directora de Operaciones Administrativas",
       image: "/team-members/member-2.webp",
+      objectPosition: "center 12%",
     },
     {
       id: 3,
       name: "Lucas Gutierrez",
       role: "Jefe de producción",
       image: "/team-members/member-5.webp",
+      objectPosition: "center 80%",
     },
     {
       id: 4,
       name: "Federico Coniglio",
       role: "Jefe del Sector Pintura",
       image: "/team-members/member-3.webp",
+      objectPosition: "center 45%",
     },
     {
       id: 5,
       name: "Marcelo Pacheco",
       role: "Jefe del taller",
       image: "/team-members/member-4.webp",
+      objectPosition: "center 20%",
     },
   ];
 
@@ -53,6 +57,7 @@ const Team = () => {
                   width={600}
                   height={600}
                   className={styles.memberImage}
+                  style={{ objectPosition: member.objectPosition }}
                   priority
                 />
               </div>

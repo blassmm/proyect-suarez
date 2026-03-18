@@ -43,8 +43,15 @@ function Equipamiento() {
         </div>
       </div>
 
+      {/* Título Equipamiento */}
+      <div className="w-full! bg-white! pt-10! sm:pt-14! md:pt-16! pb-2!">
+        <h2 className="text-center! text-teal-500! text-3xl! sm:text-4xl! md:text-5xl! font-bold! italic!">
+          Equipamiento
+        </h2>
+      </div>
+
       {/* Reparación de Chapa */}
-      <section className="w-full! py-12! sm:py-16! md:py-20! bg-white!">
+      <section className="w-full! pt-20! pb-12! sm:pb-16! md:pb-20! bg-white!">
         <div className="max-w-4xl! mx-auto! px-6! sm:px-8! md:px-12!">
           <h3 className="text-teal-500! text-2xl! sm:text-3xl! md:text-4xl! font-bold! italic! mb-8!">
             Reparación de Chapa
