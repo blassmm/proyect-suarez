@@ -18,21 +18,22 @@ const Footer = () => {
           {/* Logo and Brand */}
           <div className="footer-column">
             <Image
-              src="/images/header-suarez.webp"
+              // src="/images/header-suarez.webp"
+              src="/favicon/favicon-dark.svg"
               alt="Suarez"
-              width={120}
-              height={60}
+              width={180}
+              height={100}
               quality={100}
               className="footer-logo"
             />
-            <Image
+            {/* <Image
               src="/images/header-taller-chapa-y-pintura.webp"
               alt="Taller de Chapa y Pintura"
               width={180}
               height={60}
               quality={100}
               className="footer-logo"
-            />
+            /> */}
           </div>
 
           {/* Contact Information */}

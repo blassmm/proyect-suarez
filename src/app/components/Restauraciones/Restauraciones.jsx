@@ -14,11 +14,11 @@ export default function Restauraciones() {
       {/* Hero Image */}
       <div className="relative! mt-15! sm:mt-18! md:mt-24! w-full! h-[180px]! md:h-[300px]! lg:h-[480px]!">
         <Image
-          src="/restauraciones/test.jpg"
+          src="/restauraciones/banner2.jpg"
           alt="Mercedes Clásico Restaurado"
           fill
           className="object-cover"
-          style={{ objectPosition: "center 60%" }}
+          style={{ objectPosition: "center 20%" }}
           priority
         />
       </div>

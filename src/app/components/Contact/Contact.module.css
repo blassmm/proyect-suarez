@@ -18,7 +18,7 @@
 
 .formTitle {
   font-size: 1.8rem;
-  color: #333;
+  color: var(--verde-principal);
   margin-bottom: 1.5rem;
   text-align: center;
 }

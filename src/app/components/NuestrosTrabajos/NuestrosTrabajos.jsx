@@ -17,7 +17,7 @@ const NuestrosTrabajos = () => {
       imagen: "principal-alfa-romeo",
       titulo: "Alfa Romeo 6C 2500cc",
       subtitulo: "1948",
-      descripcion: "2022",
+      // descripcion: "2022",
       descripcion2:
         "Se realizó la restauración integral de este Alfa Romeo, a través de un largo proceso, en el que Jorge Martucci líderando la restauración, Héctor y Diego Bustos en la carrocería, Bruno Andreozzi en la tapicería, Cromado Los Primos en los cromados, y todo el equipo de Taller Suarez; lograron revivir la magia de un auto que es una joya casi sin igual en nuestro país.",
       etiqueta: "RESTAURACIÓN PREMIADA",
@@ -39,7 +39,7 @@ const NuestrosTrabajos = () => {
       imagen: "Principal-Pepe",
       titulo: "JAGUAR XK 120 OTS",
       subtitulo: "1953",
-      descripcion: "Cliente Pepe Gustavo",
+      // descripcion: "Cliente Pepe Gustavo",
       descripcion2:
         "Restauración completa de la carroceria y chasis de 1500hs de trabajo, equivalente a 7 meses y medio, que incluyó un pelado manual seguido de un arenado. Se conservan todas las piezas originales, las cuales fueron restauradas tanto en chapa como en aluminio, utilizando una bancada de estirado y medición universal con calibres móviles, permitiendo medir las tres dimensiones para lograr un ajuste perfecto. Pintura completa en bicapa, en el color original Pastel Blue. Se trabajó bajo las normas de PPG, con procesos de garantía y productos de alta performance. Trabajo realizado en el año 2024. Trabajo en conjunto, en colaboracion con Diego Bustos en chasis y parte de carroceria, cromados por 'Los Primos', tapicería por Ricardo Martire, mecanica y armado Jorge Martucci",
       trabajo: "Restauración Completa",
@@ -57,7 +57,7 @@ const NuestrosTrabajos = () => {
       imagen: "polara-principal",
       titulo: "DODGE GTX",
       subtitulo: "1974",
-      descripcion: "Cliente Santuccione Leonardo",
+      // descripcion: "Cliente Santuccione Leonardo",
       descripcion2:
         "Trabajo de restauración integral. Desmontaje general y reparación exhaustiva de la chapa, conservando y restaurando todas las piezas originales. Pintura completa en monocapa de poliuretano en su color original trabajando con procesos determinados por PPG de garantía con productos de alta performance. Cromado y reparación de partes de cristalería llevado a cabo por \"Los Primos\". Trabajo garantizado. Restauración interior, incluyendo tapicería y vinilos, en colaboración con Daniello Sport, y mecánica realizada por Peneta.",
       etiqueta: "TRABAJO DESTACADO",
@@ -75,7 +75,7 @@ const NuestrosTrabajos = () => {
       imagen: "m1-1",
       titulo: "BMW M1",
       subtitulo: "",
-      descripcion: "Cliente Litvin Cesar",
+      // descripcion: "Cliente Litvin Cesar",
       descripcion2:
         "Se realizó una puesta en valor integral del vehículo, con reparación de chasis y restauración completa de la carrocería en fibra de vidrio. El trabajo incluyó el desarme total, reparación estructural, pintura general y posterior armado de la carrocería. El proyecto se desarrolló en colaboración con Pastorino Clásicos y el tapicero Nicolás Rnsky, quienes participaron en este trabajo.",
       etiqueta: "TRABAJO DESTACADO",
@@ -94,7 +94,7 @@ const NuestrosTrabajos = () => {
       imagen: "toyota2000-principal",
       titulo: "TOYOTA 2000 GT ROJO",
       subtitulo: "1968",
-      descripcion: "Cliente Scalise Claudio",
+      // descripcion: "Cliente Scalise Claudio",
       descripcion2:
         "Restauración integral de carrocería con desarme completo de paragolpes delanteros y traseros, ópticas, faros traseros, cerraduras, manijas, colizas y molduras de cristalería, incluyendo desmontaje de luneta. Trabajo de pelado de carrocería manual mediante decapante en gel, reparación de parches y sectores intervenidos previamente en pasarruedas, preparación integral para proceso de pintura con aplicación de anticorrosivo epoxi y aparejos de alto espesor para nivelación y terminación superficial. El proceso de pintado incluyó pisos inferiores en color gris, piso de habitáculo, techo, capot, ambos guardabarros delanteros, frente, puertas, guardabarros traseros, portón y panel de cola. Terminación en sistema bicapa color rojo, respetando especificaciones técnicas y estándares de acabado profesional. Trabajo realizado bajo los estándares de calidad de Taller Suárez.",
       etiqueta: "TRABAJO DESTACADO",
@@ -146,6 +146,43 @@ const NuestrosTrabajos = () => {
 
   return (
     <section className={styles.trabajosSection}>
+
+      <div className={styles.trabajosContainer}>
+        <CardSlider
+          items={trabajos}
+          sliderTitle="Nuestros Trabajos"
+          renderItem={(item) => (
+            <div className={styles.trabajoCard}>
+              <div className={styles.trabajoImageContainer}>
+                <CldImage
+                  src={item.imagen}
+                  alt={item.titulo}
+                  width={400}
+                  height={300}
+                  format="webp"
+                  quality="auto"
+                  loading="lazy"
+                  className={styles.trabajoImage}
+                />
+              </div>
+              <div className={styles.trabajoInfo}>
+                <h3 className={styles.trabajoModelo}>{item.titulo}</h3>
+                <p className={styles.trabajoAño}>{item.subtitulo || "\u00A0"}</p>
+                <p className={styles.trabajoDesc}>{item.trabajo}</p>
+              </div>
+            </div>
+          )}
+        />
+
+        <div className={styles.verMasContainer}>
+          <Link href="/trabajos" className={styles.verMasBtn}>
+            Ver más trabajos
+          </Link>
+        </div>
+      </div>
+
+      <FlechaAbajo horizontalPosition={3} />
+
       <div className={styles.aspectosClaves}>
         <Copy>
           <h2 className={styles.mainTitle}>
@@ -191,42 +228,6 @@ const NuestrosTrabajos = () => {
               </p>
             </Copy>
           </div>
-        </div>
-      </div>
-
-      <FlechaAbajo horizontalPosition={3} />
-
-      <div className={styles.trabajosContainer}>
-        <CardSlider
-          items={trabajos}
-          sliderTitle="Nuestros Trabajos"
-          renderItem={(item) => (
-            <div className={styles.trabajoCard}>
-              <div className={styles.trabajoImageContainer}>
-                <CldImage
-                  src={item.imagen}
-                  alt={item.titulo}
-                  width={400}
-                  height={300}
-                  format="webp"
-                  quality="auto"
-                  loading="lazy"
-                  className={styles.trabajoImage}
-                />
-              </div>
-              <div className={styles.trabajoInfo}>
-                <h3 className={styles.trabajoModelo}>{item.titulo}</h3>
-                <p className={styles.trabajoAño}>{item.subtitulo || "\u00A0"}</p>
-                <p className={styles.trabajoDesc}>{item.trabajo}</p>
-              </div>
-            </div>
-          )}
-        />
-
-        <div className={styles.verMasContainer}>
-          <Link href="/trabajos" className={styles.verMasBtn}>
-            Ver más trabajos
-          </Link>
         </div>
       </div>
 

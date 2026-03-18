@@ -117,15 +117,15 @@ export default function Contact() {
 
       {/* Info de contacto y socials - Tercero, full width abajo */}
       <div className="bg-white! rounded-none! p-8! shadow-lg! w-full! lg:p-10!">
-        <h2 className="text-3xl! font-bold! mb-8! text-gray-900! text-center! lg:text-4xl!">
+        <h2 className="text-3xl! font-bold! mb-8! text-gray-800! text-center! lg:text-4xl!">
           Información de Contacto
         </h2>
 
         {/* Grid de información de contacto */}
         <div className="grid! grid-cols-1! gap-6! mb-10! md:grid-cols-3! md:gap-8!">
           {/* Dirección */}
-          <div className="flex! flex-col! items-center! text-center! p-6! rounded-none! bg-gray-50! transition-all! duration-300! hover:bg-teal-50! hover:shadow-md!">
-            <div className="flex! items-center! justify-center! w-14! h-14! bg-teal-500! rounded-full! mb-4! shadow-md!">
+          <div className="flex! flex-col! items-center! text-center! p-6! rounded-none! bg-gray-50! transition-all! duration-300! hover:bg-[#009b9b0d]! hover:shadow-md!">
+            <div className="flex! items-center! justify-center! w-14! h-14! bg-[var(--verde-principal)]! rounded-full! mb-4! shadow-md!">
               <FaMapMarkerAlt className="text-white! text-2xl!" />
             </div>
             <h3 className="font-semibold! text-gray-800! mb-2! text-lg!">
@@ -141,8 +141,8 @@ export default function Contact() {
           </div>
 
           {/* WhatsApp */}
-          <div className="flex! flex-col! items-center! text-center! p-6! rounded-none! bg-gray-50! transition-all! duration-300! hover:bg-teal-50! hover:shadow-md!">
-            <div className="flex! items-center! justify-center! w-14! h-14! bg-green-500! rounded-full! mb-4! shadow-md!">
+          <div className="flex! flex-col! items-center! text-center! p-6! rounded-none! bg-gray-50! transition-all! duration-300! hover:bg-[#009b9b0d]! hover:shadow-md!">
+            <div className="flex! items-center! justify-center! w-14! h-14! bg-[var(--verde-principal)]! rounded-full! mb-4! shadow-md!">
               <FaWhatsapp className="text-white! text-2xl!" />
             </div>
             <h3 className="font-semibold! text-gray-800! mb-2! text-lg!">
@@ -152,7 +152,7 @@ export default function Contact() {
               href="https://wa.me/5492214956079"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-teal-600! hover:text-teal-700! font-medium! transition-colors!"
+              className="text-[var(--verde-principal)]! hover:text-[var(--verde-hover)]! font-medium! transition-colors!"
             >
               +54 221 495-6079
             </a>
@@ -160,15 +160,15 @@ export default function Contact() {
               href="https://wa.me/5492215991586"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-teal-600! hover:text-teal-700! font-medium! transition-colors!"
+              className="text-[var(--verde-principal)]! hover:text-[var(--verde-hover)]! font-medium! transition-colors!"
             >
               +54 221 599-1586
             </a>
           </div>
 
           {/* Email */}
-          <div className="flex! flex-col! items-center! text-center! p-6! rounded-none! bg-gray-50! transition-all! duration-300! hover:bg-teal-50! hover:shadow-md!">
-            <div className="flex! items-center! justify-center! w-14! h-14! bg-teal-500! rounded-full! mb-4! shadow-md!">
+          <div className="flex! flex-col! items-center! text-center! p-6! rounded-none! bg-gray-50! transition-all! duration-300! hover:bg-[#009b9b0d]! hover:shadow-md!">
+            <div className="flex! items-center! justify-center! w-14! h-14! bg-[var(--verde-principal)]! rounded-full! mb-4! shadow-md!">
               <FaEnvelope className="text-white! text-2xl!" />
             </div>
             <h3 className="font-semibold! text-gray-800! mb-2! text-lg!">
@@ -176,7 +176,7 @@ export default function Contact() {
             </h3>
             <a
               href="mailto:info@tallersuarez.com.ar"
-              className="text-teal-600! hover:text-teal-700! font-medium! transition-colors! break-all!"
+              className="text-[var(--verde-principal)]! hover:text-[var(--verde-hover)]! font-medium! transition-colors! break-all!"
             >
               info@tallersuarez.com.ar
             </a>
@@ -196,7 +196,7 @@ export default function Contact() {
               href="https://www.facebook.com/TallerSuarezChapaYPintura"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex! items-center! gap-3! px-6! py-3! bg-slate-700! text-white! rounded-none! font-semibold! uppercase! tracking-wide! shadow-md! transition-all! duration-300! hover:bg-slate-800! hover:shadow-lg! hover:-translate-y-1!"
+              className="flex! items-center! gap-3! px-6! py-3! bg-[var(--verde-principal)]! text-white! rounded-none! font-semibold! uppercase! tracking-wide! shadow-md! transition-all! duration-300! hover:bg-[var(--verde-hover)]! hover:shadow-lg! hover:-translate-y-1!"
             >
               <FaFacebook className="text-xl!" />
               <span>Facebook</span>
@@ -206,7 +206,7 @@ export default function Contact() {
               href="https://www.instagram.com/taller_suarez"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex! items-center! gap-3! px-6! py-3! bg-slate-700! text-white! rounded-none! font-semibold! uppercase! tracking-wide! shadow-md! transition-all! duration-300! hover:bg-slate-800! hover:shadow-lg! hover:-translate-y-1!"
+              className="flex! items-center! gap-3! px-6! py-3! bg-[var(--verde-principal)]! text-white! rounded-none! font-semibold! uppercase! tracking-wide! shadow-md! transition-all! duration-300! hover:bg-[var(--verde-hover)]! hover:shadow-lg! hover:-translate-y-1!"
             >
               <FaInstagram className="text-xl!" />
               <span>Instagram</span>
@@ -215,7 +215,7 @@ export default function Contact() {
               href="https://www.linkedin.com/company/taller-suarez-chapa-y-pintura"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex! items-center! gap-3! px-6! py-3! bg-slate-700! text-white! rounded-none! font-semibold! uppercase! tracking-wide! shadow-md! transition-all! duration-300! hover:bg-slate-800! hover:shadow-lg! hover:-translate-y-1!"
+              className="flex! items-center! gap-3! px-6! py-3! bg-[var(--verde-principal)]! text-white! rounded-none! font-semibold! uppercase! tracking-wide! shadow-md! transition-all! duration-300! hover:bg-[var(--verde-hover)]! hover:shadow-lg! hover:-translate-y-1!"
             >
               <FaLinkedin className="text-xl!" />
               <span>LinkedIn</span>
