@@ -26,6 +26,7 @@ export default function CardSlider({
   defaultSelected = 0,
 }) {
   const sliderRef = useRef(null);
+  const featuredRef = useRef(null);
   const [selectedItem, setSelectedItem] = useState(items[defaultSelected]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [thumbStartIndex, setThumbStartIndex] = useState(0);
@@ -50,6 +51,7 @@ export default function CardSlider({
   const handleSelect = (item) => {
     setSelectedItem(item);
     setCurrentImageIndex(0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleThumbnailClick = (index) => {
@@ -87,7 +89,7 @@ export default function CardSlider({
   return (
     <div className={`${styles.container} ${className}`}>
       {showFeatured && (
-        <div className={styles.featured}>
+        <div className={styles.featured} ref={featuredRef}>
           {renderFeatured ? (
             renderFeatured(selectedItem)
           ) : (
