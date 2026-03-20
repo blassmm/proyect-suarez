@@ -185,73 +185,7 @@ const About = () => {
         </p>
 
         <div className={styles.partnersLogos}>
-          <div className={styles.logoRow}>
-            <div className={styles.logo}>
-              <Image
-                src="/about/1.webp"
-                alt="PPG"
-                width={70}
-                height={35}
-                className={styles.logoImage}
-              />
-            </div>
-            <div className={styles.logo}>
-              <Image
-                src="/about/2.webp"
-                alt="3M"
-                width={70}
-                height={35}
-                className={styles.logoImage}
-              />
-            </div>
-            <div className={styles.logo}>
-              <Image
-                src="/about/4.webp"
-                alt="BMW"
-                width={70}
-                height={35}
-                className={styles.logoImage}
-              />
-            </div>
-            <div className={styles.logo}>
-              <Image
-                src="/about/5.webp"
-                alt="SATA"
-                width={70}
-                height={35}
-                className={styles.logoImage}
-              />
-            </div>
-          </div>
-          <div className={styles.logoRow}>
-            <div className={styles.logo}>
-              <Image
-                src="/about/7.webp"
-                alt="Mercedes-Benz"
-                width={70}
-                height={35}
-                className={styles.logoImage}
-              />
-            </div>
-            <div className={styles.logo}>
-              <Image
-                src="/about/8.webp"
-                alt="WS"
-                width={70}
-                height={35}
-                className={styles.logoImage}
-              />
-            </div>
-            <div className={styles.logo}>
-              <Image
-                src="/about/9.webp"
-                alt="TEROSON"
-                width={70}
-                height={35}
-                className={styles.logoImage}
-              />
-            </div>
-          </div>
+          
         </div>
         
       </section>
