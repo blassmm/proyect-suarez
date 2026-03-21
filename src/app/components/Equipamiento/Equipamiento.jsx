@@ -208,7 +208,7 @@ function Equipamiento() {
         </div>
 
         {/* Texto Final */}
-        <div className="w-full! md:basis-1/2! bg-slate-700! flex! flex-col! justify-center! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! py-10! sm:py-14! md:py-16! relative!">
+        <div className="w-full! md:basis-1/2! bg-black! flex! flex-col! justify-center! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! py-10! sm:py-14! md:py-16! relative!">
           {/* Patrón de puntos decorativo */}
           <div
             className="absolute! inset-0! opacity-20! pointer-events-none!"

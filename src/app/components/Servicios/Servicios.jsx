@@ -15,7 +15,7 @@ function Servicios() {
           />
         </div>
 
-        <div className="w-full! md:basis-1/2! bg-slate-700! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
+        <div className="w-full! md:basis-1/2! bg-black! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
           <div
             className="absolute! inset-0! opacity-20! pointer-events-none!"
             style={{
@@ -105,7 +105,7 @@ function Servicios() {
 
       {/* Grúa de Traslado */}
       <section className="w-full! flex! flex-col! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
-        <div className="w-full! md:basis-1/2! bg-slate-700! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
+        <div className="w-full! md:basis-1/2! bg-black! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
           <div
             className="absolute! inset-0! opacity-20! pointer-events-none!"
             style={{
