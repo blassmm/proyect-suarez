@@ -2,10 +2,9 @@ import Image from "next/image";
 
 function Equipamiento() {
   return (
-    <div className="mt-20! sm:mt-16! md:mt-20! w-full! overflow-hidden!">
+    <div className="mt-15! sm:mt-16! md:mt-20! w-full! overflow-hidden!">
       {/* Hero Section */}
       <div className="w-full! flex! flex-col! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
-        {/* Columna Imagen */}
         <div className="w-full! md:basis-1/2! relative! min-h-[40vh]! md:min-h-[60vh]!">
           <Image
             src="/equipamiento/img-1.webp"
@@ -16,15 +15,9 @@ function Equipamiento() {
           />
         </div>
 
-        {/* Columna Texto */}
-        <div className="w-full! md:basis-1/2! bg-teal-500! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! lg:py-20! xl:py-24!">
-          <h2 className="text-white! text-2xl! sm:text-3xl! md:text-4xl! lg:text-5xl! xl:text-5xl! text-left! font-bold! leading-[1.15]! italic!">
-            Todos nuestros equipos
-            <br />
-            están homologados
-            <br />
-            por las principales
-            <br />
+        <div className="w-full! md:basis-1/2! bg-teal-500! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16!">
+          <h2 className="text-white! text-xl! sm:text-2xl! md:text-3xl! lg:text-4xl! xl:text-5xl! text-left! font-bold! leading-[1.2]! italic!">
+            Todos nuestros equipos están homologados por las principales
             terminales automotrices.
           </h2>
         </div>
@@ -32,15 +25,7 @@ function Equipamiento() {
 
       {/* Marcas */}
       <div className="w-full! bg-white!">
-        <div className="">
-          <Image
-            src="/equipamiento/Screenshot_2.png"
-            alt="Marcas homologadas"
-            width={1200}
-            height={100}
-            className="w-full! h-auto!"
-          />
-        </div>
+        
       </div>
 
       {/* Título Equipamiento */}
@@ -196,7 +181,6 @@ function Equipamiento() {
 
       {/* Sección Final */}
       <section className="w-full! flex! flex-col! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
-        {/* Imagen Auto */}
         <div className="w-full! md:basis-1/2! relative! min-h-[40vh]! md:min-h-[60vh]!">
           <Image
             src="/equipamiento/auto-6.png"
@@ -207,9 +191,7 @@ function Equipamiento() {
           />
         </div>
 
-        {/* Texto Final */}
-        <div className="w-full! md:basis-1/2! bg-slate-700! flex! flex-col! justify-center! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! py-10! sm:py-14! md:py-16! relative!">
-          {/* Patrón de puntos decorativo */}
+        <div className="w-full! md:basis-1/2! bg-black! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
           <div
             className="absolute! inset-0! opacity-20! pointer-events-none!"
             style={{
@@ -219,15 +201,17 @@ function Equipamiento() {
             }}
           ></div>
 
-          <p className="text-white! text-lg! sm:text-xl! md:text-2xl! leading-relaxed! mb-6! relative! z-10!">
-            Hoy somos líderes en el mercado de la reparación de automóviles
-            gracias al cuidado del detalle en cada uno de estos aspectos claves.
-          </p>
-          <p className="text-teal-200! text-xl! sm:text-2xl! md:text-3xl! font-bold! italic! leading-tight! relative! z-10!">
-            Quien trae su auto al Taller Suarez,
-            <br />
-            lo retira como nuevo.
-          </p>
+          <div className="relative! z-10!">
+            <p className="text-white! text-base! sm:text-lg! md:text-xl! leading-relaxed! mb-6!">
+              Hoy somos líderes en el mercado de la reparación de automóviles
+              gracias al cuidado del detalle en cada uno de estos aspectos claves.
+            </p>
+            <p className="text-teal-200! text-lg! sm:text-xl! md:text-2xl! font-bold! italic! leading-tight!">
+              Quien trae su auto al Taller Suarez,
+              <br />
+              lo retira como nuevo.
+            </p>
+          </div>
         </div>
       </section>
     </div>
