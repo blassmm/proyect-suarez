@@ -26,7 +26,7 @@ export default function Hero() {
 
   const slides = [
     {
-      image: "/images/hero-car.png",
+      image: "/1-a.jpg",
       title: (
         <>
           LA DIFERENCIA ESTÁ EN
@@ -40,7 +40,7 @@ export default function Hero() {
       },
     },
     {
-      image: "/images/hero-car2.png",
+      image: "/2-a.jpg",
       title: (
         <>
           ESTILO Y ELEGANCIA
@@ -53,7 +53,7 @@ export default function Hero() {
       },
     },
     {
-      image: "/images/hero-car3.png",
+      image: "/3-b.jpg",
       title: (
         <>
           MAS DE 1500 AUTOS
