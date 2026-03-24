@@ -434,8 +434,8 @@ const Crecimiento = () => {
           <div className={styles.yearMarker}>2022</div>
           <div className={styles.eventContent}>
             <h3 className={styles.eventText}>
-              Auto premiado 2° Best of Show en Autoclásica. Alfa Romeo 6C
-              2500cc (1948).
+              Auto premiado 2° Best of Show en Autoclásica. Alfa Romeo 6C 2500cc
+              (1948).
             </h3>
 
             <div className={styles.carImageWrapper}>
@@ -495,19 +495,16 @@ const Crecimiento = () => {
         <div className={styles.timelineEvent}>
           <div className={styles.yearMarker}>2024</div>
           <div className={styles.eventContent}>
-            <h3 className={styles.eventTitle}>Open Garage</h3>
-            <h3 className={styles.eventText}>
+            <h3 className={styles.eventTitle}>
               Evento <span className={styles.highlight}>Open Garage</span> con
               presentación oficial de la división y exhibición de vehículos
-              restaurados junto a sus propietarios.
+              restaurados junto a sus propietarios
             </h3>
 
-            <h3 className={styles.eventTitle} style={{ marginTop: "25px" }}>
-              Reunión de taller
-            </h3>
-            <h3 className={styles.eventText}>
-              Jornada de intercambio profesional y exposición de nuestro sistema
-              de gestión <span className={styles.highlight}>GCP</span>.
+            <h3 className={styles.eventTitle}>
+              Reunión de taller: Jornada de intercambio profesional y exposición
+              de nuestro sistema de gestión{" "}
+              <span className={styles.highlight}>GCP</span>.
             </h3>
           </div>
         </div>
@@ -515,21 +512,16 @@ const Crecimiento = () => {
         <div className={styles.timelineEvent}>
           <div className={styles.yearMarker}>2025</div>
           <div className={styles.eventContent}>
-            <h3 className={styles.eventTitle}>Presentación de máquina MoonWalk</h3>
-            <h3 className={styles.eventText}>
-              Incorporación de la primera{" "}
+            <h3 className={styles.eventTitle}>
+              Incorporación y presentación de la primera máquina{" "}
               <span className={styles.highlight}>MoonWalk</span> del país junto
               al ecosistema <span className={styles.highlight}>PPG</span>,
               marcando un avance en tecnología de repintado automotriz.
             </h3>
 
-            <h3
-              className={styles.eventTitle}
-            >
-              Autoclásica 2025 — Autos premiados
-            </h3>
-            <h3 className={styles.eventText}>
-              Tres vehículos restaurados por el taller fueron distinguidos en{" "}
+            <h3 className={styles.eventTitle}>
+              Autoclásica 2025 — Autos premiados: Tres vehículos restaurados por
+              el taller fueron distinguidos en{" "}
               <span className={styles.highlight}>Autoclásica 2025</span>,
               incluyendo un{" "}
               <span className={styles.highlight}>Best of Show</span> con el{" "}

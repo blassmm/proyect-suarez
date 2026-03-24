@@ -6,7 +6,7 @@ import LogoMarquee from "../Marquee/LogoMarquee";
 
 const About = () => {
   return (
-    <div className={styles.aboutContainer}>
+    <div className={`${styles.aboutContainer} mt-18! lg:mt-25! `}>
       <div className={styles.imageHeader}>
         {/* Imagen de cabecera */}
         <Image
