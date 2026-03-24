@@ -7,7 +7,7 @@ function Equipamiento() {
       <div className="w-full! flex! flex-col! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
         <div className="w-full! md:basis-1/2! relative! min-h-[40vh]! md:min-h-[60vh]!">
           <Image
-            src="/equipamiento/img-1.webp"
+            src="/equipamiento/img-1.jpg"
             alt="Equipamiento"
             className="w-full! h-full! object-cover! object-[center_30%]!"
             fill
