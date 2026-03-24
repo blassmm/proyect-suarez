@@ -46,10 +46,11 @@
   top: 0;
   right: 0;
 
+  /* Color al expandirse en hover */
   background: linear-gradient(
     to left,
-    rgba(0, 199, 234, 0.6),
-    rgba(0, 153, 221, 0.6)
+    rgba(6, 245, 245, 0.6),
+    rgba(0, 133, 133, 0.6)
   );
 
   backdrop-filter: blur(8px);

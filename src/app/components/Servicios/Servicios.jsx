@@ -77,31 +77,7 @@ function Servicios() {
         </div>
       </section>
 
-      {/* Limpieza Criogénica */}
-      <section className="w-full! py-16! sm:py-20! md:py-24! bg-white!">
-        <div className="max-w-3xl! mx-auto! px-6! sm:px-8! md:px-12! text-left!">
-          <h3 className="text-teal-500! text-2xl! sm:text-3xl! md:text-4xl! font-bold! mb-6!">
-            Limpieza criogénica
-          </h3>
-          <p className="text-gray-700! text-base! sm:text-lg! leading-relaxed! mb-4!">
-            Remueve toda la suciedad sin dañar el circuito eléctrico. Contamos
-            con la máquina con partículas de hielo seco peletizado 3 milímetros,
-            que{" "}
-            <strong>
-              limpia profundamente el chasis, motor y superficies más
-              inaccesibles del vehículo
-            </strong>
-            .
-          </p>
-          <p className="text-gray-700! text-base! sm:text-lg! leading-relaxed!">
-            Tendencia mundial, por su capacidad de limpiar sin mojar, que
-            permite detectar daños, fisuras y fatiga de materiales; evitando
-            futuras roturas. Complementa un trabajo de restauración de la
-            carrocería de una excelente manera, permitiéndote conservar en mejor
-            estado su vehículo.
-          </p>
-        </div>
-      </section>
+      
 
       {/* Grúa de Traslado */}
       <section className="w-full! flex! flex-col! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">

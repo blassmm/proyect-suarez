@@ -69,7 +69,9 @@ const Taller = () => {
             />
           </div>
           <div className={styles.locationInfo}>
-            <p className={styles.locationAddress}>19 N° 1794 ESQ 514, B1897 Gonnet, la plata</p>
+            <p className={styles.locationAddress}>
+              Calle 19 N° 1794 ESQ 514, B1897, Gonnet, Provincia de Buenos Aires
+            </p>
             <h3 className={styles.locationTitle}>Taller de 514</h3>
             <p className={styles.locationSubtitle}>
               Administración y Terminaciones
@@ -99,7 +101,7 @@ const Taller = () => {
           </div>
           <div className={styles.locationInfo}>
             <p className={styles.locationAddress}>
-              19 n°1565 e/ 516 y 517 - 1500m²
+              Calle 19 n° 1565 entre 516 y 517, Gonnet, Provincia de Buenos Aires
             </p>
             <h3 className={styles.locationTitle}>Taller de 516</h3>
             <p className={styles.locationSubtitle}>Circuitos de Producción</p>
@@ -126,7 +128,7 @@ const Taller = () => {
           <div className={styles.locationImage}>
             <Image
               src="/taller/3.webp"
-              alt="Taller de 516 - Trabajos especiales y cochera"
+              alt="Taller de 8 - Trabajos especiales y cochera"
               width={500}
               height={300}
               className={styles.locationImg}
@@ -134,7 +136,7 @@ const Taller = () => {
           </div>
           <div className={styles.locationInfo}>
             <p className={styles.locationAddress}>
-              8 n°1434 esquina 517 bis - 500m²
+            Calle 8 n°1434 esquina 517 bis, Ringuelet, Provincia de Buenos Aires
             </p>
             <h3 className={styles.locationTitle}>Taller de 8</h3>
             <p className={styles.locationSubtitle}>

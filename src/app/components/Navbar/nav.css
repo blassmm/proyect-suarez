@@ -224,11 +224,11 @@
 }
 
 .dropdown-link:hover {
-  background-color: rgba(0, 123, 255, 0.1);
+  background-color: rgba(0, 155, 155, 0.15);
 }
 
 .dropdown-link.active {
-  background-color: rgba(0, 123, 255, 0.15);
+  background-color: rgba(0, 155, 155, 0.2);
   font-weight: 600;
 }
 
@@ -319,12 +319,12 @@
 
 .nav-link-mobile:hover {
   color: #ffffff;
-  background-color: rgba(0, 123, 255, 0.1);
+  background-color: rgba(0, 155, 155, 0.15);
 }
 
 .nav-link-mobile.active {
   color: #fcfcfc;
-  background-color: rgba(0, 123, 255, 0.15);
+  background-color: rgba(0, 155, 155, 0.2);
   font-weight: 600;
 }
 
@@ -332,7 +332,7 @@
 .dropdown-header {
   font-weight: 600;
   color: #fcfcfc;
-  background-color: rgba(0, 123, 255, 0.05);
+  background-color: rgba(0, 155, 155, 0.1);
 }
 
 .mobile-dropdown-menu {

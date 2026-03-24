@@ -36,7 +36,7 @@ export default function Hero() {
       ),
       button: {
         text: "Trabajos",
-        link: "/restauraciones",
+        link: "/trabajos",
       },
     },
     {
