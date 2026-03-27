@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import VehicleBadge from "./VehicleBadge";
-
 export default function VehicleCarousel({ vehicles }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -35,7 +33,7 @@ export default function VehicleCarousel({ vehicles }) {
       <div className="absolute! inset-0!">
         <Image
           src={currentVehicle.image}
-          alt={`${currentVehicle.brand} ${currentVehicle.model}`}
+          alt={`Restauración ${currentVehicle.id}`}
           fill
           className="object-cover! transition-opacity! duration-500!"
           priority
@@ -44,13 +42,6 @@ export default function VehicleCarousel({ vehicles }) {
 
       {/* Gradient Overlay */}
       <div className="absolute! inset-0! bg-gradient-to-t! from-black/50! to-transparent!" />
-
-      {/* Badge */}
-      <VehicleBadge
-        brand={currentVehicle.brand}
-        model={currentVehicle.model}
-        year={currentVehicle.year}
-      />
 
       {/* Navigation Arrows */}
       <button

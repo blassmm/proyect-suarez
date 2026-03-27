@@ -46,9 +46,18 @@ function Servicios() {
 
       {/* Servicios Complementarios */}
       <section className="w-full! flex! flex-col-reverse! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
-        <div className="w-full! md:basis-1/2! bg-teal-500! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16!">
-          <div>
-            <h2 className="text-slate-800! text-xl! sm:text-2xl! md:text-3xl! font-bold! uppercase! tracking-wide! mb-6!">
+        <div className="w-full! md:basis-1/2! bg-black! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
+          <div
+            className="absolute! inset-0! opacity-20! pointer-events-none!"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, #fff 1px, transparent 1px)",
+              backgroundSize: "20px 20px",
+            }}
+          ></div>
+
+          <div className="relative! z-10!">
+            <h2 className="text-teal-400! text-xl! sm:text-2xl! md:text-3xl! font-bold! uppercase! tracking-wide! mb-6!">
               Servicios
               <br />
               Complementarios
@@ -60,7 +69,7 @@ function Servicios() {
               <li>» Personalización de Vehículos</li>
               <li>» Cochera</li>
             </ul>
-            <p className="text-slate-800! text-base! sm:text-lg! italic! leading-relaxed! max-w-md!">
+            <p className="text-white! text-base! sm:text-lg! italic! leading-relaxed! max-w-md!">
               Trabajos que combinan un preciso oficio manual, con la última
               tecnología de marcas líderes.
             </p>
@@ -80,7 +89,16 @@ function Servicios() {
       
 
       {/* Grúa de Traslado */}
-      <section className="w-full! flex! flex-col! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
+      <section className="w-full! flex! flex-col-reverse! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
+        <div className="w-full! md:basis-1/2! relative! min-h-[40vh]! md:min-h-[60vh]!">
+          <Image
+            src="/servicios/img-3.webp"
+            alt="Grúa de Traslado"
+            className="w-full! h-full! object-cover!"
+            fill
+          />
+        </div>
+
         <div className="w-full! md:basis-1/2! bg-black! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
           <div
             className="absolute! inset-0! opacity-20! pointer-events-none!"
@@ -105,29 +123,11 @@ function Servicios() {
             </p>
           </div>
         </div>
-
-        <div className="w-full! md:basis-1/2! relative! min-h-[40vh]! md:min-h-[60vh]!">
-          <Image
-            src="/servicios/img-3.webp"
-            alt="Grúa de Traslado"
-            className="w-full! h-full! object-cover!"
-            fill
-          />
-        </div>
       </section>
 
       {/* Servicios Adicionales */}
-      <section className="w-full! flex! flex-col-reverse! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
-        <div className="w-full! md:basis-1/2! relative! min-h-[40vh]! md:min-h-[60vh]!">
-          <Image
-            src="/servicios/img-4.webp"
-            alt="Recepción Taller Suarez"
-            className="w-full! h-full! object-cover!"
-            fill
-          />
-        </div>
-
-        <div className="w-full! md:basis-1/2! bg-teal-500! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
+      <section className="w-full! flex! flex-col! md:flex-row! min-h-[50vh]! md:min-h-[60vh]!">
+        <div className="w-full! md:basis-1/2! bg-black! flex! items-center! justify-start! min-h-[40vh]! md:min-h-[60vh]! px-6! sm:px-10! md:px-12! lg:px-16! xl:px-20! py-8! sm:py-12! md:py-16! relative!">
           <div
             className="absolute! inset-0! opacity-20! pointer-events-none!"
             style={{
@@ -138,7 +138,7 @@ function Servicios() {
           ></div>
 
           <div className="relative! z-10!">
-            <h2 className="text-slate-800! text-xl! sm:text-2xl! md:text-3xl! font-bold! uppercase! tracking-wide! mb-6!">
+            <h2 className="text-teal-400! text-xl! sm:text-2xl! md:text-3xl! font-bold! uppercase! tracking-wide! mb-6!">
               Servicios
               <br />
               Adicionales
@@ -149,6 +149,15 @@ function Servicios() {
               <li>» Planes de desarrollo de carreras</li>
             </ul>
           </div>
+        </div>
+
+        <div className="w-full! md:basis-1/2! relative! min-h-[40vh]! md:min-h-[60vh]!">
+          <Image
+            src="/servicios/img-4.webp"
+            alt="Recepción Taller Suarez"
+            className="w-full! h-full! object-cover!"
+            fill
+          />
         </div>
       </section>
 

@@ -14,69 +14,15 @@ export const processSteps = [
 ];
 
 export const vehicles = [
-  {
-    id: 1,
-    image: "/restauraciones/slider/rest1.webp",
-    brand: "CHEVROLET",
-    model: "Chevy Coupe Serie 2",
-    year: "194X",
-  },
-  {
-    id: 2,
-    image: "/restauraciones/slider/rest2.webp",
-    brand: "MERCEDES-BENZ",
-    model: "Clásico Restaurado",
-    year: "19XX", 
-  },
-  {
-    id: 3,
-    image: "/restauraciones/slider/rest3.webp",
-    brand: "CLASSIC",
-    model: "Modelo Antiguo",
-    year: "19XX",
-  },
-  {
-    id: 4,
-    image: "/restauraciones/slider/rest4.webp",
-    brand: "CLASSIC",
-    model: "Modelo Antiguo",
-    year: "19XX",
-  },
-  {
-    id: 5,
-    image: "/restauraciones/slider/rest5.webp",
-    brand: "CLASSIC",
-    model: "Modelo Antiguo",
-    year: "19XX",
-  }, 
-  {
-    id: 6,
-    image: "/restauraciones/slider/rest6.webp",
-    brand: "CLASSIC",
-    model: "Modelo Antiguo",
-    year: "19XX",
-  },
-  {
-    id: 7,
-    image: "/restauraciones/slider/rest7.webp",
-    brand: "CLASSIC",
-    model: "Modelo Antiguo",
-    year: "19XX",
-  },
-  {
-    id: 8,
-    image: "/restauraciones/slider/rest8.webp",
-    brand: "CLASSIC",
-    model: "Modelo Antiguo",
-    year: "19XX",
-  },
-  {
-    id: 9,
-    image: "/restauraciones/slider/rest9.webp",
-    brand: "CLASSIC",
-    model: "Modelo Antiguo",
-    year: "19XX",
-  },
+  { id: 1, image: "/restauraciones/slider/rest1.webp" },
+  { id: 2, image: "/restauraciones/slider/rest2.webp" },
+  { id: 3, image: "/restauraciones/slider/rest3.webp" },
+  { id: 4, image: "/restauraciones/slider/rest4.webp" },
+  { id: 5, image: "/restauraciones/slider/rest5.webp" },
+  { id: 6, image: "/restauraciones/slider/rest6.webp" },
+  { id: 7, image: "/restauraciones/slider/rest7.webp" },
+  { id: 8, image: "/restauraciones/slider/rest8.webp" },
+  { id: 9, image: "/restauraciones/slider/rest9.webp" },
 ];
 
 export const services = [
