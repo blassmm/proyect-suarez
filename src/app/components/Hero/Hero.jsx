@@ -53,7 +53,7 @@ export default function Hero() {
       },
     },
     {
-      image: "/3-b.jpg",
+      image: "/4-a.jpeg",
       title: (
         <>
           MAS DE 1500 AUTOS
