@@ -21,6 +21,11 @@
 
 .heroImage {
   object-fit: cover;
+  object-position: center 85%;
+}
+
+.heroImageThird {
+  object-position: center 30%;
 }
 
 .heroOverlay {
@@ -114,6 +119,14 @@
 @media (max-width: 768px) {
   .heroSection {
     height: 60vh;
+  }
+
+  .heroImage {
+    object-position: center center;
+  }
+
+  .heroImageThird {
+    object-position: center center;
   }
 
   .heroTitle {

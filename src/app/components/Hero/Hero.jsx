@@ -113,10 +113,7 @@ export default function Hero() {
               fill
               priority={index === 0}
               quality={100}
-              style={{
-                objectFit: "cover",
-                objectPosition: isMobile ? "center center" : "center 85%",
-              }}
+              className={`${styles.heroImage} ${index === 2 ? styles.heroImageThird : ""}`}
             />
           </div>
         ))}
