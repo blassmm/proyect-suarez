@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { CldImage } from "next-cloudinary";
+import CloudinaryImage from "../CloudinaryImage/CloudinaryImage";
 import styles from "./NuestrosTrabajos.module.css";
 import FlechaAbajo from "../FlechaAbajo/FlechaAbajo";
 import Copy from "../Copy/Copy";
@@ -154,7 +154,7 @@ const NuestrosTrabajos = () => {
           renderItem={(item) => (
             <div className={styles.trabajoCard}>
               <div className={styles.trabajoImageContainer}>
-                <CldImage
+                <CloudinaryImage
                   src={item.imagen}
                   alt={item.titulo}
                   width={400}

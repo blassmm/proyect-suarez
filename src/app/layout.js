@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -50,6 +51,18 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-345391242"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+            window.gtag('js', new Date());
+            window.gtag('config', 'AW-345391242');
+          `}
+        </Script>
         <Toaster richColors position="top-center" />
         <LenisWrapper>
           <header>
